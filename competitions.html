@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MBI BIG FAIR XVII</title>
+    <meta
+      name="description"
+      content="MBI BIG FAIR XVII – The biggest SMP-level competition across Java–Bali. Find competitions, events, and galleries here."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="site-header container">
+      <a href="#" class="brand">MBI BIG FAIR</a>
+      <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="competitions.html">Competitions</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-inner coXVIIntainer">
+        <h1>Competitions</h1>
+        <p>The most prestigious SMP-level competition across Java–Bali.</p>
+      </div>
+    </section>
+
+    <!-- Competitions Highlights -->
+    <section id="competitions" class="section container">
+      <h2>Competitions</h2>
+      <p class="lead">
+        Explore various competitions like Robotics, Art, Debate, and
+        more—designed to showcase your talents and creativity.
+      </p>
+    </section>
+
+    <!-- Event Highlights -->
+    <section id="events" class="section container">
+      <h2>Main Events</h2>
+      <p class="lead">
+        Join exciting events such as Opening Ceremony, Seminars, Workshops, and
+        Closing Ceremony filled with performances and prizes.
+      </p>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section id="gallery" class="section container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Contoh gambar -->
+        <img
+          src="https://source.unsplash.com/300x200/?competition"
+          alt="Competition highlight 1"
+        />
+        <img
+          src="https://source.unsplash.com/300x200/?exhibition"
+          alt="Event highlight 2"
+        />
+        <img
+          src="https://source.unsplash.com/300x200/?performance"
+          alt="Performance highlight 3"
+        />
+        <img
+          src="https://source.unsplash.com/300x200/?award"
+          alt="Award highlight 4"
+        />
+      </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="section container">
+      <h2>Contact Us</h2>
+      <p>
+        Need more info? Reach out via
+        <a href="mailto:info@mbibigfair.events">info@mbibigfair.events</a>
+      </p>
+    </section>
+
+    <footer class="footer container">
+      <h3>MBI BIG FAIR XVII</h3>
+      <p>© <span id="year"></span> MBI BIG FAIR XVII</p>
+      <p>
+        <a href="#contact">Contact Us</a> |
+        <a href="mailto:info@mbibigfair.events">info@mbibigfair.events</a>
+      </p>
+    </footer>
+
+    <script>
+      // Auto-update tahun di footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Burger menu toggle untuk mobile
+      const burger = document.querySelector(".burger");
+      const navLinks = document.querySelector(".nav-links");
+      burger.addEventListener("click", () => {
+        const expanded = burger.getAttribute("aria-expanded") === "true";
+        burger.setAttribute("aria-expanded", String(!expanded));
+        navLinks.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MBI BIG FAIR XVII</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #071021;
+        --muted: #98a0aa;
+        --white: #ffffff;
+        --accent: #06b6d4;
+        --container: 1100px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--white);
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* ===== Header ===== */
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: transparent;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .site-header.scrolled {
+        background: rgba(7, 16, 33, 0.95);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .brand {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--white);
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        font-weight: 500;
+        color: var(--white);
+        position: relative;
+        transition: color 0.3s;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: var(--accent);
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* Burger Menu */
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .burger span {
+        width: 25px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 2px;
+      }
+
+      /* Hero Video */
+      .video-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(7, 16, 33, 0.6);
+        z-index: 2;
+      }
+
+      /* Hero Text */
+      .hero-text {
+        text-align: center;
+        padding: 3rem 1rem;
+        margin-top: 100vh; /* muncul setelah video */
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .hero-text p {
+        font-size: 1.2rem;
+        color: var(--muted);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 0;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      section p {
+        text-align: center;
+        color: var(--muted);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Footer */
+      footer {
+        background: #050b17;
+        padding: 2rem 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+        margin: 0 0.5rem;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          background: var(--bg);
+          flex-direction: column;
+          width: 220px;
+          padding: 1rem;
+          gap: 1rem;
+          transform: translateX(100%);
+          transition: 0.3s ease;
+        }
+
+        .nav-links.open {
+          transform: translateX(0);
+        }
+
+        .burger {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header container" id="header">
+      <a href="#" class="brand">MBI BIG FAIR</a>
+      <button class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#competitions">Competitions</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Video Background -->
+    <section class="video-section">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="video-overlay"></div>
+    </section>
+
+    <!-- Welcome -->
+    <section class="hero-text container">
+      <h1>Welcome to MBI BIG FAIR XVII</h1>
+      <p>The most prestigious SMP-level competition across Java–Bali.</p>
+    </section>
+
+    <!-- Competitions -->
+    <section id="competitions" class="container">
+      <h2>Competitions</h2>
+      <p>
+        Explore various exciting competitions designed to challenge your skills.
+      </p>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="container">
+      <h2>Events</h2>
+      <p>Catch inspiring events, talks, and performances during the fair.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="container">
+      <h2>Gallery</h2>
+      <p>
+        Relive the best moments from our previous fairs through our gallery.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+      <h2>Contact Us</h2>
+      <p>
+        Have questions? Reach out to the committee via email or social media.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 MBI BIG FAIR XVII. All Rights Reserved.</p>
+      <p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </p>
+    </footer>
+
+    <script>
+      // Navbar scroll effect
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Burger menu
+      const burger = document.getElementById("burger");
+      const navLinks = document.getElementById("nav-links");
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
