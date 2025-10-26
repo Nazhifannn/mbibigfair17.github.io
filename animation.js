@@ -1,3 +1,34 @@
+const translations = {
+  id: {
+    title: "Selamat Datang",
+    desc: "Ini adalah contoh website dengan fitur ganti bahasa.",
+    button: "Pelajari Lebih Lanjut",
+  },
+  en: {
+    title: "Welcome",
+    desc: "This is an example website with language switch feature.",
+    button: "Learn More",
+  },
+};
+
+function setLanguage(lang) {
+  localStorage.setItem("lang", lang);
+  updateLanguage(lang);
+}
+
+function updateLanguage(lang) {
+  document.querySelectorAll("[data-lang]").forEach((el) => {
+    const key = el.getAttribute("data-lang");
+    el.textContent = translations[lang][key];
+  });
+
+  document.getElementById("id-btn").classList.toggle("active", lang === "id");
+  document.getElementById("en-btn").classList.toggle("active", lang === "en");
+}
+
+// Set bahasa default
+const savedLang = localStorage.getItem("lang") || "id";
+updateLanguage(savedLang);
 /*animasi zoom in*/
 document.addEventListener("DOMContentLoaded", () => {
   const zoomTexts = document.querySelectorAll(".zoom-text");
@@ -15,12 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   zoomTexts.forEach((text) => observer.observe(text));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("promo-popup");
+  const closeBtnPromo = document.getElementById("close-promo"); // pakai id baru
+
+  // Tampilkan popup saat halaman dibuka
+  setTimeout(() => {
+    popup.classList.add("active");
+  }, 500);
+
+  // Tombol close → tutup popup
+  closeBtnPromo.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+});
+const buttons = document.querySelectorAll(".toggle-btn");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    // hapus class active dari semua tombol
+    buttons.forEach((b) => b.classList.remove("active"));
+    // tambahkan class active ke tombol yang diklik
+    this.classList.add("active");
+  });
+});
 /*animasi teks tulis hapus */
 document.addEventListener("DOMContentLoaded", function () {
   const texts = [
-    "WELCOME TO MBI BIG FAIR 17!",
-    "TAKE PART IN VARIOUS EXCITING COMPETITIONS!",
-    "ENJOY THE EVENT AND OTHER FUN!",
+    "WELCOME TO 17ᵗʰ MBI BIG FAIR!",
+    "JOIN THE EPIC CHALLENGES!",
+    "HAVE FUN AND EXPLORE!",
   ];
 
   const typingSpeed = 25;
@@ -111,29 +166,19 @@ function slide() {
 setInterval(slide, 3000);
 /*animasi set 1 */
 // Set awal
-updateActiveItem();
 const cards = document.querySelectorAll(".card");
 const overlay = document.getElementById("cardOverlay");
 const cardTitle = document.getElementById("cardTitle");
 const cardImage = document.getElementById("cardImage");
 const cardDesc = document.getElementById("cardDesc");
-const closeBtn = document.querySelector(".close-btn");
+const closeBtn = document.querySelector("#cardOverlay .close-btn"); // lebih spesifik
 
 const cardInfo = {
-  left: {
-    title: "makot PA",
-    desc: "deskripsi maskot PA.",
-  },
-  middle: {
-    title: "logo MBF 17",
-    desc: "deskripsi logo MBF 17.",
-  },
-  right: {
-    title: "maskot PI",
-    desc: "deskripsi maskot PI.",
-  },
+  left: { title: "maskot PA", desc: "deskripsi maskot PA." },
+  middle: { title: "logo MBF 17", desc: "deskripsi logo MBF 17." },
+  right: { title: "maskot PI", desc: "deskripsi maskot PI." },
 };
-/*animasi kartu ke 2 */
+
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     let type = "middle";
@@ -146,22 +191,13 @@ cards.forEach((card) => {
     cardDesc.textContent = cardInfo[type].desc;
 
     overlay.classList.remove("hidden");
-    document.body.style.overflow = "hidden"; // lock scroll
+    document.body.style.overflow = "hidden";
   });
 });
 
 closeBtn.addEventListener("click", () => {
   overlay.classList.add("hidden");
-  document.body.style.overflow = "auto"; // unlock scroll
-});
-/*pamflet dan guidebook */
-const buttons = document.querySelectorAll(".toggle-btn");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    buttons.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-  });
+  document.body.style.overflow = "auto";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -223,4 +259,125 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observer.observe(timeline);
+});
+// Data hadiah (Prizepool) untuk SEMUA LOMBA dengan hadiah yang berbeda
+const allPrizepools = {
+  // 1. MATEMATIKA (Hadiah Paling Besar)
+  matematika: [
+    { rank: "Juara 1 (1st Place)", amount: "Rp. 1.500.000" },
+    { rank: "Juara 2 (2nd Place)", amount: "Rp. 1.250.000" },
+    { rank: "Juara 3 (3rd Place)", amount: "Rp. 1.000.000" },
+    { rank: "1st Runner Up", amount: "Rp. 750.000" },
+    { rank: "2nd Runner Up", amount: "Rp. 500.000" },
+  ],
+  // 2. FISIKA (Hadiah Menengah)
+  fisika: [
+    { rank: "Juara 1 (1st Place)", amount: "Rp. 1.000.000" },
+    { rank: "Juara 2 (2nd Place)", amount: "Rp. 750.000" },
+    { rank: "Juara 3 (3rd Place)", amount: "Rp. 500.000" },
+    { rank: "1st Runner Up", amount: "Rp. 250.000" },
+  ],
+  // 3. KIMIA (Hadiah Agak Kecil)
+  kimia: [
+    { rank: "Juara 1 (1st Place)", amount: "Rp. 1.000.000" },
+    { rank: "Juara 2 (2nd Place)", amount: "Rp. 750.000" },
+    { rank: "Juara 3 (3rd Place)", amount: "Rp. 500.000" },
+    { rank: "1st Runner Up", amount: "Rp. 250.000" },
+    { rank: "2nd Runner Up", amount: "Rp. 150.000" },
+  ],
+  // 4. BIOLOGI (Hadiah Sama dengan Kimia)
+  biologi: [
+    { rank: "Juara 1 (1st Place)", amount: "Rp. 2.500.000" },
+    { rank: "Juara 2 (2nd Place)", amount: "Rp. 2.000.000" },
+    { rank: "Juara 3 (3rd Place)", amount: "Rp. 1.500.000" },
+    { rank: "1st Runner Up", amount: "Rp. 250.000" },
+    { rank: "2nd Runner Up", amount: "Rp. 150.000" },
+  ],
+};
+
+// Urutan Lomba dan Kunci Data
+const eventKeys = ["matematika", "fisika", "kimia", "biologi"];
+const totalEvents = eventKeys.length;
+
+// Inisialisasi index rank saat ini untuk setiap event (array)
+// Kita buat 4 elemen, semuanya dimulai dari index 0 (Juara 1)
+const currentRankIndices = [0, 0, 0, 0];
+
+// --- FUNGSI NAVIGASI RANK (DI DALAM KARTU) ---
+
+/**
+ * Fungsi untuk menampilkan hadiah lomba tertentu
+ * @param {number} eventId - Index lomba (0, 1, 2, atau 3)
+ */
+function displayCurrentRank(eventId) {
+  const eventKey = eventKeys[eventId]; // Dapatkan kunci data (misal: 'matematika')
+  const prizeStructure = allPrizepools[eventKey]; // Dapatkan data prizepool untuk lomba ini
+  const currentRankIndex = currentRankIndices[eventId];
+  const currentPrize = prizeStructure[currentRankIndex];
+
+  // Ambil elemen spesifik menggunakan ID unik (contoh: rank-text-0, prize-amount-1)
+  const rankTextElement = document.getElementById(`rank-text-${eventId}`);
+  const prizeAmountElement = document.getElementById(`prize-amount-${eventId}`);
+
+  if (rankTextElement && prizeAmountElement) {
+    rankTextElement.textContent = currentPrize.rank;
+    prizeAmountElement.textContent = currentPrize.amount;
+
+    // Tambahkan animasi visual
+    prizeAmountElement.classList.add("fade-in");
+    setTimeout(() => {
+      prizeAmountElement.classList.remove("fade-in");
+    }, 500);
+  }
+}
+
+// Tambahkan event listener untuk semua tombol panah rank
+document.querySelectorAll(".nav-btn").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const eventId = parseInt(e.currentTarget.getAttribute("data-event-id"));
+    const isNext = e.currentTarget.classList.contains("next-btn");
+
+    // Dapatkan struktur hadiah untuk event ini
+    const eventKey = eventKeys[eventId];
+    const prizeStructure = allPrizepools[eventKey];
+    const totalRanks = prizeStructure.length;
+
+    let newIndex = currentRankIndices[eventId];
+
+    if (isNext) {
+      // Geser ke depan
+      newIndex = (newIndex + 1) % totalRanks;
+    } else {
+      // Geser ke belakang
+      newIndex = (newIndex - 1 + totalRanks) % totalRanks;
+    }
+
+    // Simpan index baru
+    currentRankIndices[eventId] = newIndex;
+
+    // Tampilkan rank yang baru
+    displayCurrentRank(eventId);
+  });
+});
+
+// --- INISIALISASI ---
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Tampilkan rank awal (Juara 1) untuk semua event saat dimuat
+  for (let i = 0; i < totalEvents; i++) {
+    displayCurrentRank(i);
+  }
+
+  // Tambahkan style animasi (dari kode sebelumnya)
+  const style = document.createElement("style");
+  style.textContent = `
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    `;
+  document.head.appendChild(style);
 });

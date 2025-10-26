@@ -1,0 +1,399 @@
+** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  @font-face {
+    font-family: "apple";
+    src: url("Apple.otf") format("truetype");
+  }
+}
+@font-face {
+  font-family: "fantasy1";
+  src: url("Fantasy Script.otf") format("truetype");
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: 4%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
+
+.logo img {
+  align-items: center;
+  height: 75px;
+  width: auto;
+  border-radius: 10px;
+}
+
+/* Menu box tengah */
+.menu-box {
+  background: #91ba8f;
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 48%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+}
+
+.menu-box span {
+  margin-left: 50px;
+  color: #f5eac9;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.menu-box a {
+  font-family: "Poppins";
+  color: #f5eac9;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.title-container {
+  text-align: center;
+  font-family: "Times New Roman", Georgia, serif;
+  line-height: 1.1;
+}
+
+.title-container h1 {
+  font-size: 90px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.title-container h1 sup {
+  font-size: 25px;
+  vertical-align: super;
+  letter-spacing: 1px;
+}
+
+.subtitle-top {
+  margin-top: 100px;
+  font-size: 25px;
+}
+
+.subtitle-bottom {
+  font-size: 25px;
+}
+.guest-section {
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 40px 0;
+}
+
+.guest-section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Container untuk semua kartu */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Kartu utama */
+.card {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Gambar di dalam kartu */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay warna transparan */
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.7;
+}
+
+/* Warna overlay sesuai kelas */
+.card.red .overlay {
+  background: linear-gradient(to top, red, transparent);
+}
+
+.card.blue .overlay {
+  background: linear-gradient(to top, blue, transparent);
+}
+
+/* Teks di atas overlay */
+.card-text {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+.card-text h3 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.card-text p {
+  margin: 3px 0 0;
+  font-size: 25px;
+}
+.text {
+  text-align: center;
+  margin-top: 50px;
+}
+.text h1 {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+.layout-wrapper {
+  position: relative;
+  width: 800px;
+  height: 500px;
+}
+
+/* gaya umum untuk semua box */
+.box {
+  position: absolute;
+  background: #fff;
+  border-radius: 12px;
+  border: 3px solid #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* posisi dan ukuran masing-masing kartu */
+.box-one {
+  top: 0;
+  left: 20px;
+  width: 500px;
+  height: 310px;
+}
+.box-one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-one h1 {
+  size: 20px;
+  margin-left: 10px;
+}
+.box-one p {
+  size: 20px;
+  margin-left: 10px;
+}
+.box-two {
+  top: 0;
+  left: 540px;
+  width: 440px;
+  height: 150px;
+}
+.box-two img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-two h1 {
+  size: 10px;
+  margin-left: 100px;
+}
+.box-two p {
+  size: 10px;
+  margin-left: 140px;
+}
+.box-three {
+  top: 160px;
+  left: 540px;
+  width: 440px;
+  height: 150px;
+}
+.box-three img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-three h1 {
+  size: 10px;
+  margin-left: 120px;
+}
+.box-three p {
+  size: 10px;
+  margin-left: 140px;
+}
+
+.box-four {
+  top: 0;
+  left: 1000px;
+  width: 500px;
+  height: 310px;
+}
+.box-four img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-four h1 {
+  size: 20px;
+  margin-left: 285px;
+}
+.box-four p {
+  size: 20px;
+  margin-left: 320px;
+}
+.box-five {
+  top: 330px;
+  left: 15px;
+  width: 740px;
+  height: 240px;
+}
+.box-five img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-five h1 {
+  size: 20px;
+  margin-left: 10px;
+}
+.box-five p {
+  size: 20px;
+  margin-left: 10px;
+}
+.box-six {
+  top: 330px;
+  left: 765px;
+  width: 740px;
+  height: 240px;
+}
+.box-six img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-six h1 {
+  size: 20px;
+  margin-left: 550px;
+}
+.box-six p {
+  size: 20px;
+  margin-left: 553px;
+}
+.footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5eac9;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer-left h2 {
+  color: #8d1f1e;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-left h3 {
+  color: #8d1f1e;
+  font-size: 15px;
+  font-weight: bold;
+}
+.footer-left span {
+  color: #8d1f1e;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.divider {
+  width: 1px;
+  height: 100px;
+  background: #8d1f1e;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  color: #8d1f1e;
+}
+
+.contact p {
+  color: #8d1f1e;
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.contact a {
+  font-size: 23px;
+  color: #8d1f1e;
+}
+
+.footer-right {
+  color: #8d1f1e;
+  font-weight: bold;
+}

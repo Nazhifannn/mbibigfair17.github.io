@@ -2,116 +2,145 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MBI BIG FAIR XVII</title>
-    <meta
-      name="description"
-      content="MBI BIG FAIR XVII – The biggest SMP-level competition across Java–Bali. Find competitions, events, and galleries here."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBI BIG FAIR 17</title>
+    <link rel="stylesheet" href="style2.css" />
 
+    <!-- Font Awesome -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header & Navigation -->
-    <header class="site-header container">
-      <a href="#" class="brand">MBI BIG FAIR</a>
-      <button class="burger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="competitions.html">Competitions</a></li>
-          <li><a href="event.html">Events</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="section white">
+      <div class="navbar">
+        <!-- Box Merah Tengah -->
+        <div class="menu-box">
+          <div class="logo">
+            <img src="assets/mbf17.png" alt="Logo MBF" />
+          </div>
+          <span>17ᵗʰ MBF</span>
+          <a href="index.html">Home</a>
+          <a href="competitions.html">Competitions</a>
+          <a href="event.html">Events</a>
+          <a href="https://galangceria.events/id">Galang Ceria</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="title-container">
+        <div class="subtitle-top">Previous</div>
+        <h1>17<sup>TH</sup> MBF</h1>
+        <div class="subtitle-bottom">Guest star</div>
+      </div>
+    </div>
+    <section class="guest-section">
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card red">
+          <img
+            src="foto/aifaceswap-raw_6986960bb70a6b35f95696d696239ab4.png"
+            alt="Erick Thohir"
+          />
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h1>Erick Thohir</h1>
+            <p>IPNAS MBF XVI Event</p>
+          </div>
+        </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-inner container">
-        <h1>Welcome to MBI BIG FAIR XVII</h1>
-        <p>The most prestigious SMP-level competition across Java–Bali.</p>
+        <!-- Card 2 -->
+        <div class="card blue">
+          <img src="foto/DSC09652.JPG" alt="Iwa Caknan" />
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h1>Nadia Puti Dianesti</h1>
+            <p>ILC MBF XVI Event</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card red">
+          <img src="foto/LM100224.JPG" alt="Rania Karamoy" />
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h1>Khoirul Trian</h1>
+            <p>INAYA MBF XVI Event</p>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Competitions Highlights -->
-    <section id="competitions" class="section container">
-      <h2>Competitions</h2>
-      <p class="lead">
-        Explore various competitions like Robotics, Art, Debate, and
-        more—designed to showcase your talents and creativity.
-      </p>
-    </section>
-
-    <!-- Event Highlights -->
-    <section id="events" class="section container">
-      <h2>Main Events</h2>
-      <p class="lead">
-        Join exciting events such as Opening Ceremony, Seminars, Workshops, and
-        Closing Ceremony filled with performances and prizes.
-      </p>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section id="gallery" class="section container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <!-- Contoh gambar -->
-        <img
-          src="https://source.unsplash.com/300x200/?competition"
-          alt="Competition highlight 1"
-        />
-        <img
-          src="https://source.unsplash.com/300x200/?exhibition"
-          alt="Event highlight 2"
-        />
-        <img
-          src="https://source.unsplash.com/300x200/?performance"
-          alt="Performance highlight 3"
-        />
-        <img
-          src="https://source.unsplash.com/300x200/?award"
-          alt="Award highlight 4"
-        />
+    <div class="text">
+      <h1>Guest Star History</h1>
+    </div>
+    <div class="layout-wrapper">
+      <div class="box box-one">
+        <img src="foto/tereliye.png" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Tere Liye</h1>
+          <p>INAYA MBF 13 Event</p>
+        </div>
       </div>
-    </section>
-
-    <!-- Contact & Footer -->
-    <section id="contact" class="section container">
-      <h2>Contact Us</h2>
-      <p>
-        Need more info? Reach out via
-        <a href="mailto:info@mbibigfair.events">info@mbibigfair.events</a>
-      </p>
-    </section>
-
-    <footer class="footer container">
-      <h3>MBI BIG FAIR XVII</h3>
-      <p>© <span id="year"></span> MBI BIG FAIR XVII</p>
-      <p>
-        <a href="#contact">Contact Us</a> |
-        <a href="mailto:info@mbibigfair.events">info@mbibigfair.events</a>
-      </p>
-    </footer>
-
-    <script>
-      // Auto-update tahun di footer
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Burger menu toggle untuk mobile
-      const burger = document.querySelector(".burger");
-      const navLinks = document.querySelector(".nav-links");
-      burger.addEventListener("click", () => {
-        const expanded = burger.getAttribute("aria-expanded") === "true";
-        burger.setAttribute("aria-expanded", String(!expanded));
-        navLinks.classList.toggle("open");
-      });
-    </script>
+      <div class="box box-two">
+        <img src="foto/ipnas.jpg" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Gus Irfan Wahid</h1>
+          <p>IPNAS MBF 14</p>
+        </div>
+      </div>
+      <div class="box box-three">
+        <img src="foto/gusmuwafiq.jpg" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Gus Muwafiq</h1>
+          <p>IPNAS MBF 15</p>
+        </div>
+      </div>
+      <div class="box box-four">
+        <img src="foto/belva.png" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Belva Devara</h1>
+          <p>IPNAS MBF 11</p>
+        </div>
+      </div>
+      <div class="box box-five">
+        <img src="foto/abahkirun.png" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Abah Kirun</h1>
+          <p>IPNAS MBF 15</p>
+        </div>
+      </div>
+      <div class="box box-six">
+        <img src="foto/vania.png" alt="Rania Karamoy" />
+        <div class="card-text">
+          <h1>Vania Viola</h1>
+          <p>ILC MBF 13</p>
+        </div>
+      </div>
+    </div>
   </body>
+  <footer class="footer">
+    <div class="footer-left">
+      <h2>17<sup>th</sup> MBI BIG FAIR</h2>
+      <h3>© 2025 MBF XVI · MBI Amanatul Ummah</h3>
+      <span>Created by IT Team of MBF XVI · All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <div class="divider"></div>
+      <div class="contact">
+        <p>Contact Us</p>
+        <a href="#"
+          ><i class="fa-brands fa-whatsapp"><span> :</span></i></a
+        >
+        <a href="#"
+          ><i class="fa-brands fa-whatsapp"><span> :</span></i></a
+        >
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p>Email Us</p>
+    </div>
+  </footer>
 </html>
