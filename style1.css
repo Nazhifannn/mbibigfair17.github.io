@@ -24,12 +24,8 @@ html {
   width: 100%;
 }
 
-.black {
-  background-color: black;
-}
-
 .white {
-  background-color: white;
+  background: linear-gradient(to top, #402c5c, #886eaf);
 }
 
 /* ===== Navbar ===== */
@@ -40,7 +36,7 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: 4%;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -62,7 +58,7 @@ html {
 
 /* Menu box tengah */
 .menu-box {
-  background: #91ba8f;
+  background: #2e294e;
   padding: 15px 30px;
   border-radius: 25px;
   display: flex;
@@ -77,7 +73,7 @@ html {
 
 .menu-box span {
   margin-left: 50px;
-  color: #f5eac9;
+  color: #ffffff;
   font-weight: bold;
   font-size: 20px;
   font-family: "Poppins";
@@ -85,9 +81,53 @@ html {
 
 .menu-box a {
   font-family: "Poppins";
-  color: #f5eac9;
+  color: #ffffff;
   font-size: 14px;
   transition: 0.3s;
+}
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.lang-btn {
+  background-color: #4a0d23;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.lang-btn img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.lang-btn:hover {
+  background-color: #630d2f;
+  transform: scale(1.05);
+}
+
+.lang-btn.active {
+  box-shadow: 0 0 5px #fff;
+  background-color: #8c1a40;
+}
+
+.content {
+  background: white;
+  width: 60%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .hero-img {
   width: 100%;
@@ -98,7 +138,7 @@ html {
 .hero-text0 {
   position: absolute;
   top: 85%;
-  left: 34%;
+  left: 29%;
   transform: translate(50%, 50%);
   color: white;
   text-align: left; /* atau left jika ingin rata kiri */
@@ -112,7 +152,7 @@ html {
   text-align: center;
   margin-top: 50px;
   font-family: "Times New Roman", Times, serif;
-  color: #000;
+  color: #e6e6fa;
 }
 
 .hero-text h1 {
@@ -151,8 +191,19 @@ html {
   font-weight: 600;
   margin: 0;
   line-height: 1;
+  color: #e6e6fa;
 }
-
+.title-main1 {
+  display: flex;
+  align-items: flex-start;
+}
+.title-main1 h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #120a2a;
+}
 .title-sub {
   margin-left: 10px;
 }
@@ -162,6 +213,7 @@ html {
   font-weight: 400;
   margin: 20px 0 0 0;
   line-height: 1;
+  color: #e6e6fa;
 }
 
 .title-sub p {
@@ -170,6 +222,27 @@ html {
   margin: 2px 0 0 0;
   text-align: right;
   letter-spacing: 1px;
+  color: #e6e6fa;
+}
+.title-sub1 {
+  margin-left: 10px;
+}
+
+.title-sub1 h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+  line-height: 1;
+  color: #120a2a;
+}
+
+.title-sub1 p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #120a2a;
 }
 .card-buttons .btn.disabled {
   position: relative;
@@ -304,7 +377,20 @@ html {
   position: absolute;
   width: 50%;
   height: 100%;
-  background: #000000;
+  background: #e6e6fa;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.8s ease;
+  transform-origin: center left;
+}
+.door1 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #120a2a;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -324,12 +410,20 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left-door {
   background-image: url("assets/ocians\ colored.png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 
 /* Belakang kartu */
@@ -386,12 +480,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left1-door {
   background-image: url("assets/IRHAMNA\(coloring\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left1-door {
@@ -436,12 +542,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left2-door {
   background-image: url("assets/ERUDITE\(coloring\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left2-door {
@@ -486,12 +604,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left3-door {
   background-image: url("assets/STORM-logo\ \(color\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left3-door {
@@ -536,12 +666,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left4-door {
   background-image: url("assets/ESCIMO\(coloring\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left4-door {
@@ -586,12 +728,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left5-door {
   background-image: url("assets/AKRIMNA\(coloring\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left5-door {
@@ -636,12 +790,24 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left6-door {
   background-image: url("assets/mutaqina\ colored.png.png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left6-door {
@@ -686,12 +852,20 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left7-door {
   background-image: url("assets/BARIKNA\(koloring\).png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 /* Efek pintu membuka */
 .card-stack:hover .left7-door {
@@ -736,12 +910,20 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left8-door {
   background-image: url("assets/colored\ korona.png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 
 /* Efek pintu membuka */
@@ -787,12 +969,20 @@ html {
   background-size: 200% 68%;
   background-position: right center;
   background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
 }
 .left9-door {
   background-image: url("assets/FESBAN-\ COLOR.png");
   background-size: 200% 68%; /* agar satu gambar terbagi dua */
   background-position: left center;
   background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 
 /* Efek pintu membuka */
@@ -818,7 +1008,7 @@ html {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
+  color: #6a4a87;
   position: relative;
 }
 .card-title1 h2 {
@@ -826,7 +1016,7 @@ html {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #6a4a87;
   position: relative;
   margin-top: -10px;
 }
@@ -834,7 +1024,7 @@ html {
   margin-top: 275px;
   font-size: 18px;
   font-weight: 400;
-  color: white;
+  color: #6a4a87;
 }
 .card-title2 {
   position: absolute;
@@ -851,7 +1041,7 @@ html {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
+  color: #6a4a87;
   position: relative;
 }
 .card-title2 h2 {
@@ -859,7 +1049,7 @@ html {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #6a4a87;
   position: relative;
   margin-top: -10px;
 }
@@ -867,7 +1057,7 @@ html {
   margin-top: 290px;
   font-size: 18px;
   font-weight: 400;
-  color: white;
+  color: #6a4a87;
 }
 .card-title3 {
   position: absolute;
@@ -884,7 +1074,7 @@ html {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
+  color: #6a4a87;
   position: relative;
 }
 .card-title3 h2 {
@@ -892,7 +1082,7 @@ html {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #6a4a87;
   position: relative;
   margin-top: -10px;
 }
@@ -900,7 +1090,7 @@ html {
   margin-top: 275px;
   font-size: 18px;
   font-weight: 400;
-  color: white;
+  color: #6a4a87;
 }
 .card-title4 {
   position: absolute;
@@ -917,7 +1107,7 @@ html {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
+  color: #5f3a80;
   position: relative;
 }
 .card-title4 h2 {
@@ -925,7 +1115,7 @@ html {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #5f3a80;
   position: relative;
   margin-top: -10px;
 }
@@ -933,7 +1123,7 @@ html {
   margin-top: 310px;
   font-size: 18px;
   font-weight: 400;
-  color: white;
+  color: #5f3a80;
 }
 .card-title5 {
   position: absolute;
@@ -950,7 +1140,7 @@ html {
   font-size: 45px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: white;
+  color: #5f3a80;
   position: relative;
 }
 .card-title5 h2 {
@@ -958,7 +1148,7 @@ html {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #5f3a80;
   position: relative;
   margin-top: -10px;
 }
@@ -966,9 +1156,41 @@ html {
   margin-top: 310px;
   font-size: 18px;
   font-weight: 400;
+  color: #5f3a80;
+}
+.card-title6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
+  z-index: 1;
 }
 
+.card-title6 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5f3a80;
+  position: relative;
+}
+.card-title6 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #5f3a80;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title6 p {
+  margin-top: 290px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5f3a80;
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -1017,6 +1239,12 @@ html {
   font-weight: bold;
 }
 @media (max-width: 768px) {
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 550px;
+    margin-bottom: 30px;
+  }
   .cards-row {
     margin-bottom: 10px;
     margin-top: 20px;
@@ -1026,6 +1254,19 @@ html {
     gap: 150px;
     flex-direction: column;
     width: 90%;
+  }
+  .hero-text0 {
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    transform: translate(50%, 50%);
+    color: white;
+    text-align: left; /* atau left jika ingin rata kiri */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  .hero-text0 h1 {
+    font-size: 30px;
+    margin: 0;
   }
   .navbar {
     display: flex;
@@ -1042,39 +1283,36 @@ html {
 
   /* Logo kiri */
   .logo {
+    position: absolute;
+    left: 20px; /* sejajarkan sesuai padding navbar */
     flex: 1;
-    margin-right: 1px; /* tambahkan jarak dari menu box */
   }
 
   .logo img {
-    height: 20px;
+    align-items: center;
+    height: 75px;
     width: auto;
     border-radius: 10px;
-    background: #f5f5f5;
-    padding: 5px;
   }
 
   /* Menu box tengah */
   .menu-box {
-    height: 50px;
-    margin-top: 50px;
-    background: #91ba8f;
+    background: #2e294e;
     padding: 15px 30px;
     border-radius: 25px;
     display: flex;
     align-items: center;
     gap: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
     position: absolute;
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
     z-index: 2; /* biar tidak ketumpuk logo */
   }
 
   .menu-box span {
-    margin-left: 115px;
-    color: #f5eac9;
+    margin-left: 50px;
+    color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     font-family: "Poppins";
@@ -1082,7 +1320,7 @@ html {
 
   .menu-box a {
     font-family: "Poppins";
-    color: #f5eac9;
+    color: #ffffff;
     font-size: 14px;
     transition: 0.3s;
   }
@@ -1098,5 +1336,67 @@ html {
     justify-content: center;
     align-items: center;
     gap: 10px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e6e6fa;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .footer-left h2 {
+    color: #120a2a;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .footer-left h3 {
+    color: #120a2a;
+    font-size: q0px;
+    font-weight: bold;
+  }
+  .footer-left span {
+    color: #120a2a;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .footer-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 100px;
+    background: #120a2a;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: #120a2a;
+  }
+
+  .contact p {
+    color: #120a2a;
+    margin: 0 0 1px;
+    font-weight: bold;
+  }
+
+  .contact a {
+    margin-right: 20px;
+    font-size: 15px;
+    color: #120a2a;
+  }
+
+  .footer-right {
+    color: #120a2a;
+    font-weight: bold;
   }
 }

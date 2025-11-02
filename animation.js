@@ -1,13 +1,96 @@
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  const reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
 const translations = {
   id: {
-    title: "Selamat Datang",
-    desc: "Ini adalah contoh website dengan fitur ganti bahasa.",
-    button: "Pelajari Lebih Lanjut",
+    glow: "Acara terbesar di",
+    highlight: "Madrasah Bertaraf Internasional",
+    "zoom-text1": "LOGO & MASKOT",
+    "zoom-text2": "RESMI KAMI",
+    text: "LOGO MBF",
+    left: "LUKY",
+    mid: "LOGO MBF 17",
+    right: "LUCY",
+    mbf: "APA ITU MBF?",
+    mbft: `MBI Big Fair (MBF) adalah acara tahunan dari MBI Amanatul Ummah
+              yang berlokasi di Pacet, Mojokerto. Selama hampir 16 tahun
+              terakhir, MBI Big Fair selalu berhasil menyuguhkan berbagai lomba
+              dan acara spektakuler setiap tahunnya. Acara ini juga diramaikan
+              oleh kreasi para santri MBI yang memukau dan luar biasa.`,
+    galcer: "APA ITU GALANG CERIA?",
+    galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) merupakan acara tahunan berupa lomba pramuka yang diselenggarakan oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang Ceria selalu berhasil menyuguhkan berbagai pengalaman menarik bagi pesertanya.`,
+    pamflet: "Pamflet Utama",
+    guidebook: "Buku Panduan",
+    daftar: `PENDAFTAR MBI BIG FAIR XVI`,
+    dibuka: `pendaftaran dibuka`,
+    ditutup: `pendaftaran di tutup`,
+    meeting: `pertemuan teknis`,
+    acara1: `pembukaan acara`,
+    acara2: `penutupan acara`,
+    timeline: `garis waktu `,
+    compe: `kompetisi`,
+    pr: `kumpulan hadiah`,
+    compe: `kategori lomba`,
+    upto: `HINGGA`,
+    olim: `OLIMPIADE`,
+    eng: `INGGRIS`,
+    arab: `ARAB`,
+    sp: `SPESIAL`,
+    media: `MEDIA PARTNER`,
+    transfoot: `MBI BIG FAIR 17`,
+    mbf2025: `© MBF 17 2025 · MBI Amanatul Ummah`,
+    created: `Dibuat oleh Tim IT MBF 17 · Hak cipta dilindungi`,
+    contact: `Kontak Kami`,
+    email: `Email Kami`,
   },
   en: {
-    title: "Welcome",
-    desc: "This is an example website with language switch feature.",
-    button: "Learn More",
+    glow: "The biggest events in",
+    highlight: "Madrasah Bertaraf International",
+    "zoom-text1": "OUR OFFICIAL",
+    "zoom-text2": "LOGO & MASCOT",
+    text: "MBF LOGO",
+    left: "LUKY",
+    mid: "MBF 17 LOGO",
+    right: "LUCY",
+    mbf: "WHAT IS MBF?",
+    mbft: `The MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, located in Pacet, Mojokerto. For nearly 16 years, the MBI Big Fair has consistently presented a variety of spectacular competitions and events. The event is also enlivened by the stunning and extraordinary creations of MBI students.`,
+    galcer: "WHAT IS GALANG CERIA",
+    galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) is an annual Scouting competition organized by the Nurul Ummah Scout Movement (Ambalan Nurul Ummah) in Pacet, Mojokerto. Over the past 16 years, Galang Ceria has consistently provided a variety of engaging experiences for its participants.`,
+    pamflet: "Main Pamphlet",
+    guidebook: "Guidebook",
+    daftar: `MBI BIG FAIR XVI REGISTRATION`,
+    dibuka: `registration is open`,
+    ditutup: `registration is close`,
+    meeting: `technical meeting`,
+    acara1: `opening event`,
+    acara2: `closing event`,
+    timeline: `timeline`,
+    compe: `competition category`,
+    pr: `prizepool`,
+    upto: `UP TO:`,
+    olim: `OLYMPIC`,
+    eng: `ENGLISH`,
+    arab: `ARABIC`,
+    sp: `SPECIAL`,
+    media: `OUR MEDIA PARTNER`,
+    transfoot: `17th MBI BIG FAIR`,
+    mbf2025: `© 2025 MBF 17 · MBI Amanatul Ummah`,
+    created: `Created by IT Team of MBF 17 · All rights reserved`,
+    contact: `Contact Us`,
+    email: `Email Us`,
   },
 };
 
@@ -53,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tampilkan popup saat halaman dibuka
   setTimeout(() => {
     popup.classList.add("active");
-  }, 500);
+  }, 4000);
 
   // Tombol close → tutup popup
   closeBtnPromo.addEventListener("click", () => {
@@ -72,45 +155,175 @@ buttons.forEach((btn) => {
 });
 /*animasi teks tulis hapus */
 document.addEventListener("DOMContentLoaded", function () {
-  const texts = [
-    "WELCOME TO 17ᵗʰ MBI BIG FAIR!",
-    "JOIN THE EPIC CHALLENGES!",
-    "HAVE FUN AND EXPLORE!",
-  ];
+  const textSets = {
+    id: [
+      "SELAMAT DATANG DI MBI BIG FAIR KE-17!",
+      "IKUTI BERBAGAI LOMBA SERU!",
+      "BERSENANG-SENANG DAN EKSPLORASI!",
+    ],
+    en: [
+      "WELCOME TO 17ᵗʰ MBI BIG FAIR!",
+      "JOIN THE EPIC CHALLENGES!",
+      "HAVE FUN AND EXPLORE!",
+    ],
+  };
 
-  const typingSpeed = 25;
+  const translations = {
+    id: {
+      glow: "Acara terbesar di",
+      highlight: "Madrasah Bertaraf Internasional",
+      "zoom-text1": "LOGO & MASKOT",
+      "zoom-text2": "RESMI KAMI",
+      text: "LOGO MBF",
+      left: "LUKY",
+      mid: "LOGO MBF 17",
+      right: "LUCY",
+      mbf: "APA ITU MBF?",
+      mbft: `MBI Big Fair (MBF) adalah acara tahunan dari MBI Amanatul Ummah
+              yang berlokasi di Pacet, Mojokerto. Selama hampir 16 tahun
+              terakhir, MBI Big Fair selalu berhasil menyuguhkan berbagai lomba
+              dan acara spektakuler setiap tahunnya. Acara ini juga diramaikan
+              oleh kreasi para santri MBI yang memukau dan luar biasa.`,
+      galcer: "APA ITU GALANG CERIA?",
+      galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) merupakan acara tahunan berupa lomba pramuka yang diselenggarakan oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang Ceria selalu berhasil menyuguhkan berbagai pengalaman menarik bagi pesertanya.`,
+      pamflet: "Pamflet Utama",
+      guidebook: "Buku Panduan",
+      daftar: `PENDAFTAR MBI BIG FAIR XVI`,
+      dibuka: `pendaftaran dibuka`,
+      ditutup: `pendaftaran di tutup`,
+      meeting: `pertemuan teknis`,
+      acara1: `pembukaan acara`,
+      acara2: `penutupan acara`,
+      timeline: `garis waktu `,
+      compe: `kompetisi`,
+      pr: `kumpulan hadiah`,
+      compe: `kategori lomba`,
+      upto: `HINGGA`,
+      olim: `OLIMPIADE`,
+      eng: `INGGRIS`,
+      arab: `ARAB`,
+      sp: `SPESIAL`,
+      media: `MEDIA PARTNER`,
+      transfoot: `MBI BIG FAIR 17`,
+      mbf2025: `© MBF 17 2025 · MBI Amanatul Ummah`,
+      created: `Dibuat oleh Tim IT MBF 17 · Hak cipta dilindungi`,
+      contact: `Kontak Kami`,
+      email: `Email Kami`,
+    },
+    en: {
+      glow: "The biggest events in",
+      highlight: "Madrasah Bertaraf International",
+      "zoom-text1": "OUR OFFICIAL",
+      "zoom-text2": "LOGO & MASCOT",
+      text: "MBF LOGO",
+      left: "LUKY",
+      mid: "MBF 17 LOGO",
+      right: "LUCY",
+      mbf: "WHAT IS MBF?",
+      mbft: `The MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, located in Pacet, Mojokerto. For nearly 16 years, the MBI Big Fair has consistently presented a variety of spectacular competitions and events. The event is also enlivened by the stunning and extraordinary creations of MBI students.`,
+      galcer: "WHAT IS GALANG CERIA",
+      galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) is an annual Scouting competition organized by the Nurul Ummah Scout Movement (Ambalan Nurul Ummah) in Pacet, Mojokerto. Over the past 16 years, Galang Ceria has consistently provided a variety of engaging experiences for its participants.`,
+      pamflet: "Main Pamphlet",
+      guidebook: "Guidebook",
+      daftar: `MBI BIG FAIR XVI REGISTRATION`,
+      dibuka: `registration is open`,
+      ditutup: `registration is close`,
+      meeting: `technical meeting`,
+      acara1: `opening event`,
+      acara2: `closing event`,
+      timeline: `timeline`,
+      compe: `competition category`,
+      pr: `prizepool`,
+      upto: `UP TO:`,
+      olim: `OLYMPIC`,
+      eng: `ENGLISH`,
+      arab: `ARABIC`,
+      sp: `SPECIAL`,
+      media: `OUR MEDIA PARTNER`,
+      transfoot: `17th MBI BIG FAIR`,
+      mbf2025: `© 2025 MBF 17 · MBI Amanatul Ummah`,
+      created: `Created by IT Team of MBF 17 · All rights reserved`,
+      contact: `Contact Us`,
+      email: `Email Us`,
+    },
+  };
+
+  const typingTextElement = document.getElementById("typing-text");
+  const cursorElement = document.querySelector(".cursor");
+  const typingSpeed = 40;
   const erasingSpeed = 25;
   const delayBetweenTexts = 1000;
 
   let textIndex = 0;
   let charIndex = 0;
+  let typingTimeout;
+  let lang = localStorage.getItem("lang") || "id";
+  let texts = textSets[lang];
 
-  const typingTextElement = document.getElementById("typing-text");
-
+  // ==== ANIMASI KETIK ====
   function type() {
+    cursorElement.classList.add("active");
     if (charIndex < texts[textIndex].length) {
       typingTextElement.textContent += texts[textIndex].charAt(charIndex);
       charIndex++;
-      setTimeout(type, typingSpeed);
+      typingTimeout = setTimeout(type, typingSpeed);
     } else {
-      setTimeout(erase, delayBetweenTexts);
+      cursorElement.classList.remove("active");
+      typingTimeout = setTimeout(erase, delayBetweenTexts);
     }
   }
 
   function erase() {
+    cursorElement.classList.add("active");
     if (charIndex > 0) {
       typingTextElement.textContent = texts[textIndex].substring(
         0,
         charIndex - 1
       );
       charIndex--;
-      setTimeout(erase, erasingSpeed);
+      typingTimeout = setTimeout(erase, erasingSpeed);
     } else {
+      cursorElement.classList.remove("active");
       textIndex = (textIndex + 1) % texts.length;
-      setTimeout(type, typingSpeed);
+      typingTimeout = setTimeout(type, typingSpeed);
     }
   }
 
+  function restartTypingAnimation(newLang) {
+    clearTimeout(typingTimeout);
+    texts = textSets[newLang];
+    textIndex = 0;
+    charIndex = 0;
+    typingTextElement.textContent = "";
+    type();
+  }
+
+  // ==== GANTI BAHASA ====
+  window.setLanguage = function (newLang) {
+    localStorage.setItem("lang", newLang);
+    lang = newLang;
+
+    // update tombol aktif
+    document
+      .getElementById("id-btn")
+      .classList.toggle("active", newLang === "id");
+    document
+      .getElementById("en-btn")
+      .classList.toggle("active", newLang === "en");
+
+    // update teks lain (pakai data-lang)
+    document.querySelectorAll("[data-lang]").forEach((el) => {
+      const key = el.getAttribute("data-lang");
+      el.textContent = translations[newLang][key] || el.textContent;
+    });
+
+    // restart animasi ketik langsung
+    restartTypingAnimation(newLang);
+  };
+
+  // ==== Inisialisasi saat pertama buka ====
+  document.getElementById("id-btn").classList.toggle("active", lang === "id");
+  document.getElementById("en-btn").classList.toggle("active", lang === "en");
   setTimeout(type, delayBetweenTexts);
 });
 /*animasi event*/
@@ -171,37 +384,70 @@ const overlay = document.getElementById("cardOverlay");
 const cardTitle = document.getElementById("cardTitle");
 const cardImage = document.getElementById("cardImage");
 const cardDesc = document.getElementById("cardDesc");
-const closeBtn = document.querySelector("#cardOverlay .close-btn"); // lebih spesifik
+const closeBtn = document.querySelector("#cardOverlay .close-btn");
 
-const cardInfo = {
-  left: { title: "maskot PA", desc: "deskripsi maskot PA." },
-  middle: { title: "logo MBF 17", desc: "deskripsi logo MBF 17." },
-  right: { title: "maskot PI", desc: "deskripsi maskot PI." },
-};
+let currentLang = localStorage.getItem("lang") || "id";
 
+// === Fungsi Buka Card ===
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    let type = "middle";
-    if (card.classList.contains("left")) type = "left";
-    if (card.classList.contains("right")) type = "right";
-
     const imgSrc = card.querySelector("img").src;
-    cardTitle.textContent = cardInfo[type].title;
+    const title = card.getAttribute(`data-title-${currentLang}`);
+    const desc = card.getAttribute(`data-desc-${currentLang}`);
+
+    cardTitle.textContent = title;
     cardImage.src = imgSrc;
-    cardDesc.textContent = cardInfo[type].desc;
+    cardDesc.textContent = desc;
+
+    overlay.dataset.cardType = card.classList.contains("left")
+      ? "left"
+      : card.classList.contains("right")
+      ? "right"
+      : "middle";
 
     overlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
   });
 });
 
+// === Fungsi Tutup Card ===
 closeBtn.addEventListener("click", () => {
   overlay.classList.add("hidden");
   document.body.style.overflow = "auto";
 });
 
+// === Fungsi Ganti Bahasa ===
+window.setLanguage = function (lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+
+  document.getElementById("id-btn").classList.toggle("active", lang === "id");
+  document.getElementById("en-btn").classList.toggle("active", lang === "en");
+
+  // Jika overlay sedang terbuka, update teksnya
+  const openCardType = overlay.dataset.cardType;
+  if (!overlay.classList.contains("hidden") && openCardType) {
+    const card = document.querySelector(`.card.${openCardType}`);
+    if (card) {
+      cardTitle.textContent = card.getAttribute(`data-title-${lang}`);
+      cardDesc.textContent = card.getAttribute(`data-desc-${lang}`);
+    }
+  }
+
+  if (window.restartTypingAnimation) restartTypingAnimation(lang);
+};
+// === Atur Tombol Aktif Saat Load Awal ===
+window.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("id-btn")
+    .classList.toggle("active", currentLang === "id");
+  document
+    .getElementById("en-btn")
+    .classList.toggle("active", currentLang === "en");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-*/><=";
+  const letters = "0123456789";
 
   function hackerEffect(element) {
     const originalText = element.innerText;

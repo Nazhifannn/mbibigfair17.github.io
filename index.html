@@ -10,15 +10,79 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap"
     />
   </head>
+
   <body>
+    <!-- ASAP FANTASY TEBAL (30 PARTIKEL) -->
+    <div class="smoke-screen">
+      <div class="intro-container">
+        <div class="mirror-line"></div>
+
+        <!-- Maskot kiri -->
+        <img
+          src="assets/maskot_pa-removebg-preview.png"
+          alt="Maskot Kiri"
+          class="maskot maskot-left"
+        />
+
+        <!-- Maskot kanan -->
+        <img
+          src="assets/maskot_pi-removebg-preview.png"
+          alt="Maskot Kanan"
+          class="maskot maskot-right"
+        />
+
+        <!-- Logo di tengah -->
+        <div class="logo">
+          <img src="assets/mbf17.png" alt="Logo Official" />
+        </div>
+        <!-- Teks -->
+        <h1 class="intro-text">Welcome to Our Official Page</h1>
+      </div>
+      <!-- 30 partikel asap -->
+      <!-- (kamu bisa generate otomatis di JS, tapi tetap dibiarkan manual sesuai permintaan) -->
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+    </div>
+
     <!-- Popup -->
     <div id="promo-popup" class="popup-overlay">
-      <img src="assets/BBBN.png" alt="gambar 1" />
+      <img src="assets/baruuuuuuu.png" alt="gambar 1" />
       <div class="popup-box">
-        <!-- tombol close promo (ubah id biar tidak bentrok) -->
         <button id="close-promo" class="close-btn">&times;</button>
       </div>
     </div>
@@ -26,9 +90,8 @@
     <div class="section black">
       <!-- ===== Navbar ===== -->
       <div class="navbar">
-        <!-- Box Merah Tengah -->
         <div class="menu-box">
-          <div class="logo">
+          <div class="logo1">
             <img src="assets/mbf17.png" alt="Logo MBF" />
           </div>
           <span>17ᵗʰ MBF</span>
@@ -37,6 +100,7 @@
           <a href="event.html">Events</a>
           <a href="https://galangceria.events/id">Galang Ceria</a>
         </div>
+
         <div class="lang-switch">
           <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
             <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
@@ -48,36 +112,87 @@
           </button>
         </div>
       </div>
+
+      <!-- ===== Video Section ===== -->
       <section class="video-section">
         <video class="hero-video" autoplay muted loop playsinline>
-          <source src="assets/opsi 2_5.mp4" type="video/mp4" />
+          <source src="assets/TEASER MBF 17.mp4" type="video/mp4" />
         </video>
       </section>
-      <div class="hero-text">
-        <h1 class="zoom-text">The biggest events in</h1>
-        <h1 class="zoom-text">Madrasah Bertaraf Internasional</h1>
-      </div>
 
-      <div class="container1">
-        <div class="box kiri">
-          <img src="assets/mbf17.png" alt="mbf-removebg-preview.png" />
+      <!-- ===== About Section ===== -->
+      <section class="about-fantasy-unique">
+        <div class="floating-lights"></div>
+
+        <!-- Hero Title -->
+        <section class="hero-title reveal">
+          <h1 class="main-title">
+            <span class="glow" data-lang="glow">The Biggest Event in</span>
+            <span class="highlight" data-lang="highlight"
+              >MBI Amanatul Ummah</span
+            >
+          </h1>
+        </section>
+
+        <!-- Box 1: MBF -->
+        <div class="about-card reveal left">
+          <div class="logo-container">
+            <img src="assets/mbf17.png" alt="Logo MBF" class="logo" />
+          </div>
+          <div class="text">
+            <h2 data-lang="mbf">Apa Itu MBF?</h2>
+            <p data-lang="mbft">
+              MBI Big Fair (MBF) adalah acara tahunan dari MBI Amanatul Ummah
+              yang berlokasi di Pacet, Mojokerto. Selama hampir 16 tahun
+              terakhir, MBI Big Fair selalu berhasil menyuguhkan berbagai lomba
+              dan acara spektakuler setiap tahunnya. Acara ini juga diramaikan
+              oleh kreasi para santri MBI yang memukau dan luar biasa.
+            </p>
+          </div>
         </div>
 
-        <div class="box kanan">
-          <img src="foto/_MG_0354.JPG" alt="LM100225.JPG" />
+        <!-- Foto dokumentasi acak MBF -->
+        <div class="floating-gallery reveal">
+          <img src="_MG_0343.JPG" alt="doc1" class="float-img reveal" />
+          <img src="IMG_0020.JPG" alt="doc2" class="float-img reveal" />
+          <img src="LM100093.JPG" alt="doc3" class="float-img reveal" />
+          <img src="LM109532.JPG" alt="doc4" class="float-img reveal" />
+          <img src="LM100152.JPG" alt="doc5" class="float-img reveal" />
         </div>
-      </div>
-      <div class="container3">
-        <div class="box1 kiri1">
-          <img src="FOTO DESKRIPSI GALCER16" alt="FOTO DESKRIPSI GALCER16" />
+
+        <!-- Box 2: Galang Ceria -->
+        <div class="about-card reveal right">
+          <div class="logo-container">
+            <img src="galcer.png" alt="Logo Galang Ceria" class="logo" />
+          </div>
+          <div class="text">
+            <h2 data-lang="galcer">Apa Itu Galang Ceria?</h2>
+            <p data-lang="galcert">
+              Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif)
+              merupakan acara tahunan berupa lomba pramuka yang diselenggarakan
+              oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang
+              berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang
+              Ceria selalu berhasil menyuguhkan berbagai pengalaman menarik bagi
+              pesertanya.
+            </p>
+          </div>
         </div>
-        <div class="box1 kanan1">
-          <img src="assets/gacerfixt-removebg-preview.png" alt="LOGO GALCER" />
+
+        <!-- Foto dokumentasi acak Galang Ceria -->
+        <div class="floating-gallery-gc reveal">
+          <img src="_MG_0343.JPG" alt="doc1" class="float-img-gc reveal" />
+          <img src="LM100093.JPG" alt="doc2" class="float-img-gc reveal" />
+          <img src="foto/_MG_0338.JPG" alt="doc3" class="float-img-gc reveal" />
+          <img src="foto/_MG_0350.JPG" alt="doc4" class="float-img-gc reveal" />
+          <img src="foto/_MG_0354.JPG" alt="doc5" class="float-img-gc reveal" />
         </div>
-      </div>
+      </section>
+
       <section class="write-text">
         <h1 id="typing-text"></h1>
+        <span class="cursor"></span>
       </section>
+
       <div class="container">
         <div class="slider">
           <div class="item">
@@ -92,13 +207,11 @@
         </div>
       </div>
     </div>
+
     <div class="section white">
       <div class="marquee-container">
         <div class="marquee">
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
+          <!-- Bisa disingkat pakai loop CSS, tapi struktur dibiarkan -->
           <span>tagline &nbsp;&nbsp;&nbsp;</span>
           <span>tagline &nbsp;&nbsp;&nbsp;</span>
           <span>tagline &nbsp;&nbsp;&nbsp;</span>
@@ -121,90 +234,165 @@
           <span>tagline &nbsp;&nbsp;&nbsp;</span>
         </div>
       </div>
-      <section class="hero-text1">
-        <h1 class="zoom-text">OUR OFFICIAL</h1>
-        <h1 class="zoom-text">LOGO & MASCOT</h1>
-      </section>
 
+      <section class="hero-text1">
+        <h1 class="zoom-text1 reveal" data-lang="zoom-text1">OUR OFFICIAL</h1>
+        <h1 class="zoom-text2 reveal" data-lang="zoom-text2">LOGO & MASCOT</h1>
+      </section>
       <div class="cards">
-        <div class="card left">
-          <h1 class="text">maskot PA</h1>
-          <img src="assets/mas kot lanang rev.png" alt="gambar 1" />
+        <div
+          class="card left"
+          data-title-id="LUKY"
+          data-desc-id="Deskripsi maskot putra (PA)."
+          data-title-en="LUKY"
+          data-desc-en="Description of the male mascot."
+        >
+          <h1 class="text" data-lang="left">MASKOT PA</h1>
+          <img src="assets/maskot_pa-removebg-preview.png" alt="gambar 1" />
         </div>
-        <div class="card middle">
-          <h1 class="text">LOGO MBF 17</h1>
+
+        <div
+          class="card middle"
+          data-title-id="LOGO MBF 17"
+          data-desc-id="Deskripsi logo MBI Big Fair ke-17."
+          data-title-en="MBF 17 LOGO"
+          data-desc-en="Description of the 17ᵗʰ MBI Big Fair logo."
+        >
+          <h1 class="text" data-lang="mid">LOGO MBF 17</h1>
           <img src="assets/mbf17.png" alt="gambar 2" />
         </div>
-        <div class="card right">
-          <h1 class="text">maskot PI</h1>
-          <img src="assets/masskott CW rev.png" alt="gambar 3" />
-        </div>
-        <div id="cardOverlay" class="overlay hidden">
-          <div class="overlay-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="cardTitle"></h2>
-            <img id="cardImage" src="" alt="Card Image" />
-            <p id="cardDesc"></p>
-          </div>
+
+        <div
+          class="card right"
+          data-title-id="LUCY"
+          data-desc-id="Deskripsi maskot putri (PI)."
+          data-title-en="LUCY"
+          data-desc-en="Description of the female mascot."
+        >
+          <h1 class="text" data-lang="right">MASKOT PI</h1>
+          <img src="assets/maskot_pi-removebg-preview.png" alt="gambar 3" />
         </div>
       </div>
+
+      <!-- === Overlay Detail === -->
       <div id="cardOverlay" class="overlay hidden">
         <div class="overlay-content">
           <button id="close-card" class="close-btn" aria-label="Close overlay">
             &times;
           </button>
-          <h2 id="cardTitle"></h2>
+
+          <!-- Di sini kita simpan dua versi bahasa -->
+          <h2
+            id="cardTitle"
+            data-title-id=""
+            data-title-en=""
+            data-lang="overlay-title"
+          ></h2>
           <img id="cardImage" src="" alt="Card Detail" />
-          <p id="cardDesc"></p>
+          <p
+            id="cardDesc"
+            data-desc-id=""
+            data-desc-en=""
+            data-lang="overlay-desc"
+          ></p>
         </div>
       </div>
       <div class="toggle-wrapper">
         <div class="toggle-container">
-          <a href="gambar-pamflet.jpg" target="_blank" class="toggle-btn active"
-            >Main Pamflet</a
+          <a
+            href="gambar-pamflet.jpg"
+            target="_blank"
+            class="toggle-btn active"
+            data-lang="pamflet"
           >
+            Main Pamflet
+          </a>
           <a
             href="https://drive.google.com/teknisi-lomba-link"
             target="_blank"
             class="toggle-btn"
-            >Guidebook</a
+            data-lang="guidebook"
           >
+            Guidebook
+          </a>
         </div>
       </div>
+
       <div class="wrapper">
-        <h2>PENDAFTAR MBI BIG FAIR XVI</h2>
+        <h2 data-lang="daftar">PENDAFTAR MBI BIG FAIR XVI</h2>
         <div class="container2">
           <div class="box">
             <h3>+2,000</h3>
           </div>
         </div>
       </div>
+
       <p class="te">.</p>
     </div>
+
     <div class="section black">
-      <div class="text3">
-        <h1>PRIZE POOL</h1>
+      <h1 class="text0" data-lang="timeline">Timeline</h1>
+
+      <div class="timeline">
+        <div class="event">
+          <div class="date">1 November 2024</div>
+          <div class="circle">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="label" data-lang="dibuka">Pendaftaran Dibuka</div>
+        </div>
+
+        <div class="event">
+          <div class="date">24 Januari 2025</div>
+          <div class="circle">
+            <i class="fa-solid fa-calendar-xmark"></i>
+          </div>
+          <div class="label" data-lang="ditutup">Pendaftaran Ditutup</div>
+        </div>
+
+        <div class="event">
+          <div class="date">25 Januari 2025</div>
+          <div class="circle">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <div class="label" data-lang="meeting">Technical Meeting</div>
+        </div>
+
+        <div class="event">
+          <div class="date">6 Februari 2025</div>
+          <div class="circle">
+            <i class="fa-solid fa-map-pin"></i>
+          </div>
+          <div class="label" data-lang="acara1">Pembukaan Acara</div>
+        </div>
+
+        <div class="event">
+          <div class="date">11 Februari 2025</div>
+          <div class="circle">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <div class="label" data-lang="acara2">Penutupan Acara</div>
+        </div>
       </div>
+      <div class="text3">
+        <h1 data-lang="pr">PRIZE POOL</h1>
+      </div>
+
       <div class="main-container">
         <div class="header">
           <i class="fas fa-trophy trophy-icon"></i>
-          <h1 class="event-title">COMPETITIONS</h1>
+          <h1 class="event-title" data-lang="compe">COMPETITIONS</h1>
         </div>
 
         <div class="prizepools-carousel-container">
           <div id="prizepools-wrapper" class="prizepools-wrapper">
             <div class="prizepool-container" id="event-0">
-              <h2 class="category-title">OLYMPIC</h2>
+              <h2 class="category-title" data-lang="olim">OLYMPIC</h2>
               <div class="prize-card">
-                <img
-                  src="my-custom-ribbon.png"
-                  alt="Custom Ribbon"
-                  class="ribbon-icon-custom"
-                />
+                <i class="fas fa-ribbon ribbon-icon"></i>
                 <p id="rank-text-0" class="rank-text">Memuat...</p>
-                <p class="up-to-text">UP TO:</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
                 <p id="prize-amount-0" class="prize-amount">Memuat...</p>
-
                 <div class="navigation-arrows">
                   <button class="nav-btn prev-btn" data-event-id="0">
                     <i class="fas fa-chevron-left"></i>
@@ -217,13 +405,12 @@
             </div>
 
             <div class="prizepool-container" id="event-1">
-              <h2 class="category-title">ENGLISH</h2>
+              <h2 class="category-title" data-lang="eng">ENGLISH</h2>
               <div class="prize-card">
                 <i class="fas fa-ribbon ribbon-icon"></i>
                 <p id="rank-text-1" class="rank-text">Memuat...</p>
-                <p class="up-to-text">UP TO:</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
                 <p id="prize-amount-1" class="prize-amount">Memuat...</p>
-
                 <div class="navigation-arrows">
                   <button class="nav-btn prev-btn" data-event-id="1">
                     <i class="fas fa-chevron-left"></i>
@@ -236,13 +423,12 @@
             </div>
 
             <div class="prizepool-container" id="event-2">
-              <h2 class="category-title">ARABIC</h2>
+              <h2 class="category-title" data-lang="arab">ARABIC</h2>
               <div class="prize-card">
                 <i class="fas fa-ribbon ribbon-icon"></i>
                 <p id="rank-text-2" class="rank-text">Memuat...</p>
-                <p class="up-to-text">UP TO:</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
                 <p id="prize-amount-2" class="prize-amount">Memuat...</p>
-
                 <div class="navigation-arrows">
                   <button class="nav-btn prev-btn" data-event-id="2">
                     <i class="fas fa-chevron-left"></i>
@@ -255,13 +441,12 @@
             </div>
 
             <div class="prizepool-container" id="event-3">
-              <h2 class="category-title">SPECIAL</h2>
+              <h2 class="category-title" data-lang="sp">SPECIAL</h2>
               <div class="prize-card">
                 <i class="fas fa-ribbon ribbon-icon"></i>
                 <p id="rank-text-3" class="rank-text">Memuat...</p>
-                <p class="up-to-text">UP TO:</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
                 <p id="prize-amount-3" class="prize-amount">Memuat...</p>
-
                 <div class="navigation-arrows">
                   <button class="nav-btn prev-btn" data-event-id="3">
                     <i class="fas fa-chevron-left"></i>
@@ -275,63 +460,88 @@
           </div>
         </div>
       </div>
-      <h1 class="text0">The Timeline</h1>
-      <div class="timeline">
-        <div class="event">
-          <div class="date">1 November 2024</div>
-          <div class="circle"><i class="fa-solid fa-calendar-check"></i></div>
-          <div class="label">Pendaftaran Dibuka</div>
-        </div>
-        <div class="event">
-          <div class="date">24 Januari 2025</div>
-          <div class="circle"><i class="fa-solid fa-calendar-xmark"></i></div>
-          <div class="label">Pendaftaran Ditutup</div>
-        </div>
-        <div class="event">
-          <div class="date">25 Januari 2025</div>
-          <div class="circle"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div class="label">Technical Meeting</div>
-        </div>
-        <div class="event">
-          <div class="date">6 Februari 2025</div>
-          <div class="circle"><i class="fa-solid fa-map-pin"></i></div>
-          <div class="label">Pembukaan Acara</div>
-        </div>
-        <div class="event">
-          <div class="date">11 Februari 2025</div>
-          <div class="circle"><i class="fa-solid fa-flag-checkered"></i></div>
-          <div class="label">Penutupan Acara</div>
-        </div>
-      </div>
+
       <section class="hero-text2">
-        <h1 class="zoom-text1">Our Media Partners</h1>
+        <h1 class="zoom-text1" data-lang="media">Our Media Partners</h1>
       </section>
     </div>
-  </body>
-  <script src="animation.js"></script>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-left">
-      <h2>17<sup>th</sup> MBI BIG FAIR</h2>
-      <h3>© 2025 MBF XVI · MBI Amanatul Ummah</h3>
-      <span>Created by IT Team of MBF XVI · All rights reserved</span>
-    </div>
 
-    <div class="footer-center">
-      <div class="divider"></div>
-      <div class="contact">
-        <p>Contact Us</p>
-        <a href="#"
-          ><i class="fa-brands fa-whatsapp"><span> :</span></i></a
-        >
-        <a href="#"
-          ><i class="fa-brands fa-whatsapp"><span> :</span></i></a
+    <script src="animation.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="footer-logo-title">
+          <img
+            src="assets/mbi-removebg-preview.png"
+            alt="Logo Sekolah"
+            class="footer-logo"
+          />
+          <h2 data-lang="transfoot">17th MBI BIG FAIR</h2>
+        </div>
+        <h3 data-lang="mbf2025">© 2025 MBF 17 · MBI Amanatul Ummah</h3>
+        <span data-lang="created"
+          >Created by IT Team of MBF 17 · All rights reserved</span
         >
       </div>
-    </div>
 
-    <div class="footer-right">
-      <p>Email Us</p>
-    </div>
-  </footer>
+      <div class="footer-center">
+        <!-- 🔹 Ikon di sebelah kiri garis -->
+        <div class="social-icons-vertical">
+          <a
+            href="https://www.instagram.com/mbibigfair_/"
+            target="_blank"
+            class="icon ig"
+            title="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@MBIBigFair"
+            target="_blank"
+            class="icon yt"
+            title="YouTube"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a
+            href="https://mbi-amanatulummah.sch.id/"
+            class="icon school"
+            title="Website Sekolah"
+          >
+            <img
+              src="assets/mbi-removebg-preview.png"
+              alt="Logo Sekolah"
+              class="school-logo"
+            />
+          </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="contact">
+          <p data-lang="contact">Contact Us</p>
+          <a
+            href="https://api.whatsapp.com/send/?phone=6282141619032&text&type=phone_number&app_absent=0"
+            class="wa-link"
+            ><i class="fa-brands fa-whatsapp"></i
+            ><span> :+62 821-4161-9032 (luky)</span></a
+          >
+          <a href="#"
+            ><i class="fa-brands fa-whatsapp" class="wa-link"></i
+            ><span> :</span></a
+          >
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p data-lang="email">Email Us:</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

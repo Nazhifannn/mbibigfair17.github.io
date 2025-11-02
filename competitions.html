@@ -26,23 +26,35 @@
           <a href="event.html">Events</a>
           <a href="https://galangceria.events/id">Galang Ceria</a>
         </div>
+
+        <div class="lang-switch">
+          <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
+            <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
+            <span>ID</span>
+          </button>
+          <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
+            <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
+            <span>EN</span>
+          </button>
+        </div>
       </div>
       <section class="img-section">
         <img class="hero-img" src="foto/LM100027.JPG" alt="Hero Image" />
       </section>
       <div class="hero-text0">
-        <h1>This Our Competitions</h1>
+        <h1 data-lang="our">This is Our Competitions</h1>
       </div>
+
       <div class="hero-text">
-        <h1>17<sup>th</sup> MBF</h1>
-        <h3>Competition Category</h3>
+        <h1 data-lang="thmbf">17th MBF</h1>
+        <h3 data-lang="kategori">Competition Category</h3>
       </div>
       <div class="title-container">
         <div class="title-main">
-          <h1>Olympic</h1>
+          <h1 data-lang="olim">Olympic</h1>
           <div class="title-sub">
-            <h2>Competition</h2>
-            <p>17<sup>th</sup> MBF BIG FAIR</p>
+            <h2 data-lang="kompetisi">Competition</h2>
+            <p data-lang="mbfth">17th MBF BIG FAIR</p>
           </div>
         </div>
       </div>
@@ -58,15 +70,16 @@
             <div class="card-title1">
               <h1>OCIANS</h1>
               <h2>Olimpiad of Social & Science</h2>
-              <p>Olimpiad of Social & Science</p>
+              <p data-lang="ocians">Olimpiad of Social & Science</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdBJc-UBgNd_g9T0zQHNjnyX0669mAjd73Rj9zwYrzf4Cpp8Q/closedform"
                 class="btn disabled"
+                data-lang="regis"
                 >Register Now</a
               >
-              <a href="ocians.html" class="btn">More Info</a>
+              <a href="ocians.html" class="btn" data-lang="more">More Info</a>
             </div>
             <div class="card-back"></div>
           </div>
@@ -81,16 +94,19 @@
             <div class="door right1-door"></div>
             <div class="card-title2">
               <h1>IRHAMNA</h1>
-              <h2>Islamic Olympiad</h2>
-              <p>Imathotul Ma’rifah Al-Islamiyah bi Nuril Ummah</p>
+              <h2>Imathotul Ma’rifah Al-Islamiyah bi Nuril Ummah</h2>
+              <p data-lang="irhamna">Islamic Olympiad</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeyGUYnfGrrxzUwK1vidCMmTJrLW__Lb092A4V7avy6xMnbEg/closedform"
                 class="btn disabled"
+                data-lang="regis1"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more1"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -105,16 +121,19 @@
             <div class="door right2-door"></div>
             <div class="card-title2">
               <h1>ERUDITE</h1>
-              <h2>English Olympiad</h2>
-              <p>English Tournament Day In Mojokerto</p>
+              <h2>English Tournament Day In Mojokerto</h2>
+              <p data-lang="erudite">English Olympiad</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSebb6zBNfQklc88XeTxb9Ja7Esfsd-nJOyvej5xAJnn67eAZA/closedform"
                 class="btn disabled"
+                data-lang="regis2"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more2"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -122,10 +141,10 @@
       </div>
       <div class="title-container">
         <div class="title-main">
-          <h1>English</h1>
+          <h1 data-lang="eng">English</h1>
           <div class="title-sub">
-            <h2>Competition</h2>
-            <p>17<sup>th</sup> MBF BIG FAIR</p>
+            <h2 data-lang="kompetisi1">Competition</h2>
+            <p data-lang="mbf">17th MBF BIG FAIR</p>
           </div>
           <div class="card-buttons">
             <a href="https://example.com/register" class="btn">Register Now</a>
@@ -143,16 +162,19 @@
             <div class="door right3-door"></div>
             <div class="card-title3">
               <h1>STORM</h1>
-              <h2>Story Telling</h2>
-              <p>Story Telling Competition on Nurul Ummah</p>
+              <h2>Story Telling Competition on Nurul Ummah</h2>
+              <p data-lang="storm">Story Telling</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdKxXzYj8FaFGZh3l5D15AZYenRyGg03JgxCT2hoS-_rtb-2g/closedform"
                 class="btn disabled"
+                data-lang="regis3"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more3"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -167,27 +189,31 @@
             <div class="door right4-door"></div>
             <div class="card-title2">
               <h1>ESCIMO</h1>
-              <h2>English Speech</h2>
-              <p>English Speech Competition In Mojokerto</p>
+              <h2>English Speech Competition In Mojokerto</h2>
+              <p data-lang="escimo">English Speech</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfzKKYlg1e6VXMllmtfGYyp87g27QrENXTzSWSNED-Q-Xk1Ew/closedform"
                 class="btn disabled"
+                data-lang="regis4"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more4"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
         </div>
       </div>
+
       <div class="title-container">
-        <div class="title-main">
-          <h1>Arabic</h1>
-          <div class="title-sub">
-            <h2>Competition</h2>
-            <p>17<sup>th</sup> MBF BIG FAIR</p>
+        <div class="title-main1">
+          <h1 data-lang="arab">Arabic</h1>
+          <div class="title-sub1">
+            <h2 data-lang="kompetisi2">Competition</h2>
+            <p data-lang="tmbfh">17th MBF BIG FAIR</p>
           </div>
           <div class="card-buttons">
             <a href="https://example.com/register" class="btn">Register Now</a>
@@ -195,24 +221,30 @@
           </div>
         </div>
       </div>
+
       <div class="cards-row">
         <div class="card-stack">
           <div class="card-image5">
             <img src="assets/akrimna.png" alt="OCIANS logo" />
           </div>
           <div class="card-inner">
-            <div class="door left5-door"></div>
-            <div class="door right5-door"></div>
-            <div class="card-title2">
+            <div class="door1 left5-door"></div>
+            <div class="door1 right5-door"></div>
+            <div class="card-title6">
               <h1>AKRIMNA</h1>
-              <h2>Arabic Speech</h2>
-              <p>Al-Khitobah Al-Mimbariyah bi Nuril Ummah</p>
+              <h2>Al-Khitobah Al-Mimbariyah bi Nuril Ummah</h2>
+              <p data-lang="akrimna">Arabic Speech</p>
             </div>
             <div class="card-buttons">
-              <a href="https://example.com/register" class="btn disabled"
+              <a
+                href="https://example.com/register"
+                class="btn disabled"
+                data-lang="regis5"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more5"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -223,20 +255,23 @@
             <img src="assets/qolbuna.png" alt="OCIANS logo" />
           </div>
           <div class="card-inner">
-            <div class="door left6-door"></div>
-            <div class="door right6-door"></div>
+            <div class="door1 left6-door"></div>
+            <div class="door1 right6-door"></div>
             <div class="card-title5">
               <h1>MUTTAQINA</h1>
-              <h2>read Arabic news</h2>
-              <p>Qiro’atul Akhbar fii Nuril Ummah</p>
+              <h2>Qiro’atul Akhbar fii Nuril Ummah</h2>
+              <p data-lang="muttaqina">Read Arabic News</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSduaXrHv8Wpl5gd-NuuZvJoLV3XWWg047M_nIKVOHolWlqUvg/closedform"
                 class="btn disabled"
+                data-lang="regis6"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more6"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -246,31 +281,34 @@
             <img src="assets/barikna.png" alt="OCIANS logo" />
           </div>
           <div class="card-inner">
-            <div class="door left7-door"></div>
-            <div class="door right7-door"></div>
-            <div class="card-title2">
+            <div class="door1 left7-door"></div>
+            <div class="door1 right7-door"></div>
+            <div class="card-title6">
               <h1>BARIKNA</h1>
-              <h2>read the yellow book</h2>
-              <p>Musabaqoh Qiroatil Kutub bi Nuril Ummah</p>
+              <h2>Musabaqoh Qiroatil Kutub bi Nuril Ummah</h2>
+              <p data-lang="barikna">Read The Yellow Book</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSecf5HFpyWwuaXAd3bNBp8jWPL3q6r6Uy0DYa325hwiH7dEgw/closedform"
                 class="btn disabled"
+                data-lang="regis7"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more7"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
         </div>
       </div>
       <div class="title-container">
-        <div class="title-main">
-          <h1>specials</h1>
-          <div class="title-sub">
-            <h2>Competition</h2>
-            <p>17<sup>th</sup> MBF BIG FAIR</p>
+        <div class="title-main1">
+          <h1 data-lang="spes">specials</h1>
+          <div class="title-sub1">
+            <h2 data-lang="kompetisi3">Competition</h2>
+            <p data-lang="ththmbf">17th MBF BIG FAIR</p>
           </div>
         </div>
       </div>
@@ -280,20 +318,23 @@
             <img src="assets/qabilna.png" alt="OCIANS logo" />
           </div>
           <div class="card-inner">
-            <div class="door left8-door"></div>
-            <div class="door right8-door"></div>
-            <div class="card-title2">
+            <div class="door1 left8-door"></div>
+            <div class="door1 right8-door"></div>
+            <div class="card-title6">
               <h1>QORONA</h1>
-              <h2>Calligraphy Creation Competition</h2>
-              <p>Musabaqoh Khattil Araby bi Nuril Ummah</p>
+              <h2>Musabaqoh Khattil Araby bi Nuril Ummah</h2>
+              <p data-lang="qorona">Calligraphy Creation Competition</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfgx1Tsj5TIka0fhKGwztDWcf5yftDz4g0EZ9zsRUYcxby6KQ/closedform"
                 class="btn disabled"
+                data-lang="regis9"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more8"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
@@ -304,20 +345,23 @@
             <img src="assets/fesban.png" alt="OCIANS logo" />
           </div>
           <div class="card-inner">
-            <div class="door left9-door"></div>
-            <div class="door right9-door"></div>
+            <div class="door1 left9-door"></div>
+            <div class="door1 right9-door"></div>
             <div class="card-title4">
               <h1>FESBAN</h1>
-              <h2>banjari competition</h2>
-              <p>Festival Al-Banjari</p>
+              <h2>Festival Al-Banjari</h2>
+              <p>Banjari Competition</p>
             </div>
             <div class="card-buttons">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScfc0j5_bzRoD1yNn3WfNXOUV2o8yHyf05Mko9J2rD9lNZvwg/closedform"
                 class="btn disabled"
+                data-lang="regis9"
                 >Register Now</a
               >
-              <a href="https://example.com/info" class="btn">More Info</a>
+              <a href="https://example.com/info" class="btn" data-lang="more9"
+                >More Info</a
+              >
             </div>
             <div class="card-back"></div>
           </div>
