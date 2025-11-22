@@ -239,6 +239,8 @@ window.setLanguage = function (lang) {
   document.getElementById("id-btn").classList.toggle("active", lang === "id");
   document.getElementById("en-btn").classList.toggle("active", lang === "en");
 
+  updateLanguage(lang);
+
   // Jika overlay sedang terbuka, update teksnya
   const openCardType = overlay.dataset.cardType;
   if (!overlay.classList.contains("hidden") && openCardType) {
