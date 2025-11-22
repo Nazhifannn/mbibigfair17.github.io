@@ -157,3 +157,50 @@ document.querySelectorAll(".card-stack").forEach((card) => {
     card.classList.remove("open");
   });
 });
+
+const stack = document.getElementById("cardStack");
+const cardA = stack.querySelector(".card-a");
+const cardB = stack.querySelector(".card-b");
+
+let swapped = false;
+
+stack.addEventListener("mouseenter", () => {
+  if (swapped) return;
+  swapped = true;
+
+  // Tahap 1: kartu menyebar, A ke kanan, B ke kiri (tidak terlalu dalam)
+  cardA.style.transform =
+    "translateX(240px) translateY(-10px) translateZ(-60px) rotateY(12deg) scale(0.95)";
+  cardB.style.transform =
+    "translateX(-240px) translateY(10px) translateZ(40px) rotateY(-12deg) scale(1.05)";
+
+  // Tahap 2: mereka kembali ke tengah dan tukar posisi
+  setTimeout(() => {
+    cardA.style.transform =
+      "translateX(0) translateZ(-110px) rotateY(0) scale(0.9)";
+    cardA.style.zIndex = "1";
+
+    cardB.style.transform = "translateX(0) translateZ(0) rotateY(0) scale(1)";
+    cardB.style.zIndex = "2";
+  }, 900);
+});
+
+stack.addEventListener("mouseleave", () => {
+  if (!swapped) return;
+  swapped = false;
+
+  // Tahap 1: menyebar kembali, arah berlawanan
+  cardA.style.transform =
+    "translateX(-240px) translateY(10px) translateZ(-60px) rotateY(-12deg) scale(0.95)";
+  cardB.style.transform =
+    "translateX(240px) translateY(-10px) translateZ(40px) rotateY(12deg) scale(1.05)";
+
+  // Tahap 2: kembali ke posisi awal
+  setTimeout(() => {
+    cardA.style.transform = "translateZ(0) scale(1)";
+    cardA.style.zIndex = "2";
+
+    cardB.style.transform = "translateZ(-100px) scale(0.9)";
+    cardB.style.zIndex = "1";
+  }, 900);
+});
