@@ -141,57 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/*animasi event*/
-const slider = document.querySelector(".slider");
-const items = document.querySelectorAll(".item");
-const totalItems = items.length;
-
-const itemStyle = getComputedStyle(items[0]);
-const itemWidth =
-  items[0].offsetWidth +
-  parseInt(itemStyle.marginLeft) +
-  parseInt(itemStyle.marginRight);
-
-let currentIndex = 0;
-
-// Gandakan item untuk efek infinite
-items.forEach((item) => {
-  const clone = item.cloneNode(true);
-  slider.appendChild(clone);
-});
-
-slider.style.transition = "transform 0.5s ease-in-out";
-
-function updateActiveItem() {
-  // Reset semua dulu
-  items.forEach((el) => el.classList.remove("active"));
-
-  // Tentukan index aktif (hanya di item asli)
-  let activeIndex = currentIndex % totalItems;
-  items[activeIndex].classList.add("active");
-}
-
-function slide() {
-  currentIndex++;
-  slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-
-  updateActiveItem();
-
-  if (currentIndex >= totalItems) {
-    setTimeout(() => {
-      slider.style.transition = "none";
-      currentIndex = 0;
-      slider.style.transform = `translateX(0px)`;
-      updateActiveItem();
-
-      setTimeout(() => {
-        slider.style.transition = "transform 0.5s ease-in-out";
-      }, 20);
-    }, 500);
-  }
-}
-
-setInterval(slide, 3000);
 /*animasi set 1 */
 // Set awal
 const cards = document.querySelectorAll(".card");
