@@ -1,9 +1,52 @@
+None selected 
+
+Skip to content
+Using Gmail with screen readers
+Conversations
+iki gawe en folder dewe tapi iki onk maneh
+Inbox
+
+Ghufronul Akmal
+Attachments
+8:34 PM (1 hour ago)
+to me
+
+mbf17.png
+ 542107076_791060083340745_2330176695318598271_n.jpg
+ _abilna - Copy.png
+ _abilna.png
+ _arikna - Copy.png
+ _arikna.png
+ _cians - Copy.png
+ _cians.png
+ _esban - Copy.png
+ _esban.png
+ _eva - Copy.png
+ _eva.png
+ _krimna - Copy.png
+ _krimna.png
+ _MG_0081.JPG
+ _MG_0343.JPG
+ _MG_0593.JPG
+ AKRIMNA(coloring) - Copy.png
+ akrimna.png
+ animation1.js
+ animation.js
+ Apple.otf
+ AppleGaramond-Bold.ttf
+ BARIKNA(koloring).png
+colored korona.pngbarikna.pngBILNA-logo (color).png
+
+ 38 Attachments
+  •  Scanned by Gmail
+/* === WRAPPER SETIAP TUMPUKAN KARTU === */
 .card-stack {
   position: relative;
   width: 220px;
   height: 320px;
   perspective: 1200px;
   cursor: pointer;
+  margin: 40px;
 }
 
 /* === KARTU DASAR === */
@@ -24,7 +67,7 @@
   padding: 20px;
 }
 
-/* === KONTEN KARTU === */
+/* === KONTEN DALAM KARTU === */
 .logo {
   width: 60px;
   height: 60px;
@@ -33,28 +76,139 @@
 }
 
 .title {
-  font-size: 1.4rem;
-  margin: 8px 0 5px;
+  color: hsl(0, 0%, 0%);
+  font-size: 3rem;
+  margin-bottom: 270px;
+
 }
 
 .subtitle {
-  font-size: 0.9rem;
+  color: #000;
+  font-size: 1.2rem;
   opacity: 0.8;
 }
 
 /* === WARNA KARTU === */
 .card-a {
-  background: linear-gradient(145deg, #ff7675, #ff5252);
+  background: white;
   z-index: 2;
   transform: translateZ(0) scale(1);
 }
+.card-a img{
+  width: 300px;
+  height: 300px;
+  margin-left: -20px;
+}
 
 .card-b {
-  background: linear-gradient(145deg, #74b9ff, #0984e3);
+  background: #c8a4ff;
   z-index: 1;
   transform: translateZ(-100px) scale(0.9);
 }
+.card-b h2{
+  font-size: 20px;
+  transform: translateY(10px);
+}
+.card-b img{
+  width: 200px;
+  height: 300px;
+  margin-left: 30px;
+}
+/* === KELOMPOK KATEGORI === */
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
 
+.category-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+/* === TOMBOL DASAR === */
+.btn-register,
+.btn-more {
+  padding: 10px 2px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
+}
+
+/* === REGISTER NOW (nonaktif tapi elegan) === */
+.btn-register {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transform: translateY(-40px);
+  padding: 10px 10px 10px;
+}
+
+/* === MORE INFO (aktif, glowing) === */
+.btn-more {
+  background: linear-gradient(135deg, #ffffff, #dfe6e9);
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: translateY(-30px);
+  padding: 10px 10px 25px;
+}
+
+/* Efek hover glowing */
+.btn-more::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+
+.btn-more:hover::before {
+  left: 100%;
+}
+
+.btn-more:hover {
+  color: white;
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  box-shadow: 0 0 25px rgba(255, 145, 77, 0.8), 0 0 10px rgba(255, 200, 150, 0.5);
+}
+.card-a,
+.card-b {
+  transform: translateZ(0) rotateY(0) scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+@font-face {
+  font-family: "fantasy1";
+  src: url("Fantasy Script.otf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -65,10 +219,7 @@
     src: url("Apple.otf") format("truetype");
   }
 }
-@font-face {
-  font-family: "fantasy1";
-  src: url("Fantasy Script.otf") format("truetype");
-}
+
 
 body,
 html {
@@ -108,14 +259,14 @@ html {
 
 .logo img {
   align-items: center;
-  height: 75px;
+  height: 60px;
   width: auto;
   border-radius: 10px;
 }
 
 /* Menu box tengah */
 .menu-box {
-  background: #2e294e;
+  background: #ffffff;
   padding: 15px 30px;
   border-radius: 25px;
   display: flex;
@@ -130,7 +281,7 @@ html {
 
 .menu-box span {
   margin-left: 50px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   font-size: 20px;
   font-family: "Poppins";
@@ -138,9 +289,11 @@ html {
 
 .menu-box a {
   font-family: "Poppins";
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
 }
 .lang-switch {
   display: flex;
@@ -194,11 +347,10 @@ html {
 }
 .hero-text0 {
   position: absolute;
-  top: 85%;
-  left: 29%;
-  transform: translate(50%, 50%);
+  top: 50%;
+  left: 25%;
   color: white;
-  text-align: left; /* atau left jika ingin rata kiri */
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .hero-text0 h1 {
@@ -1248,53 +1400,118 @@ html {
   font-weight: 400;
   color: #5f3a80;
 }
+/* FOOTER */
 .footer {
+  background: #ffffff;
+  color: #000000;
+  padding: 50px 20px 30px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  gap: 40px;
 }
 
-.footer-left h3 {
-  font-size: 20px;
-  font-weight: bold;
+/* Logo */
+.footer-logo img {
+  width: 120px;
+  filter: brightness(1);
 }
 
-.footer-center {
+.footer-logo p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Section */
+.footer-section h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
-.divider {
-  width: 1px;
-  height: 80px;
-  background: #ccc;
-}
-
-.contact {
+.footer-section a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+  transition: .3s;
+}
+
+.footer-section a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Icon style */
+.footer-section svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Bottom */
+.footer-bottom {
   text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: .6;
 }
 
-.contact p {
-  margin: 0 0 5px;
-  font-weight: bold;
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-section ul li,
+  .footer-section a {
+    justify-content: center;
+  }
+}
+.footer-logo {
+  flex: 1 1 250px;
 }
 
-.contact a {
-  font-size: 20px;
-  color: black;
+.footer-copy {
+  margin-top: 10px;
 }
 
-.footer-right {
-  font-weight: bold;
+.footer-copy p {
+  font-size: 13px;
+  color: #000000;
+  margin: 2px 0;
+  opacity: 0.85;
 }
+@media (max-width: 768px) {
+  .footer-copy p {
+    font-size: 12px;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .lang-switch {
     display: flex;
@@ -1429,7 +1646,7 @@ html {
   .divider {
     width: 1px;
     height: 100px;
-    background: #120a2a;
+    background: #000000;
   }
 
   .contact {
@@ -1457,3 +1674,5 @@ html {
     font-weight: bold;
   }
 }
+style1.css
+Displaying competitions.html.

@@ -1,5 +1,22 @@
 window.addEventListener("scroll", reveal);
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang-btn");
+      setLanguage(lang);
 
+      document
+        .querySelectorAll(".lang-btn")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  const activeLang = localStorage.getItem("lang") || "id";
+  document
+    .querySelector(`[data-lang-btn="${activeLang}"]`)
+    ?.classList.add("active");
+});
 function reveal() {
   const reveals = document.querySelectorAll(".reveal");
   for (let i = 0; i < reveals.length; i++) {
@@ -14,10 +31,12 @@ function reveal() {
     }
   }
 }
+
 const translations = {
   id: {
+    intro: "Selamat Datang di MBF 17",
     glow: "Acara terbesar di",
-    highlight: "Madrasah Bertaraf Internasional",
+    highlight: "Madrasah Bertaraf International",
     "zoom-text1": "LOGO & MASKOT",
     "zoom-text2": "RESMI KAMI",
     text: "LOGO MBF",
@@ -40,11 +59,11 @@ const translations = {
     meeting: `pertemuan teknis`,
     acara1: `pembukaan acara`,
     acara2: `penutupan acara`,
-    timeline: `garis waktu `,
+    timeline: `GARIS WAKTUGARIS WAKTU`,
     compe: `kompetisi`,
-    pr: `kumpulan hadiah`,
-    compe: `kategori lomba`,
-    upto: `HINGGA`,
+    pr: `KUMPULAN HADIAH`,
+    compe: `KATEGORI LOMBA`,
+    upto: `HINGGA:`,
     olim: `OLIMPIADE`,
     eng: `INGGRIS`,
     arab: `ARAB`,
@@ -57,6 +76,7 @@ const translations = {
     email: `Email Kami`,
   },
   en: {
+    intro: "Welcome to MBF 17",
     glow: "The biggest events in",
     highlight: "Madrasah Bertaraf International",
     "zoom-text1": "OUR OFFICIAL",
@@ -77,9 +97,9 @@ const translations = {
     meeting: `technical meeting`,
     acara1: `opening event`,
     acara2: `closing event`,
-    timeline: `timeline`,
-    compe: `competition category`,
-    pr: `prizepool`,
+    timeline: `TIMELINE`,
+    compe: `COMPETITION CATEGORIES`,
+    pr: `PRIZEPOOL`,
     upto: `UP TO:`,
     olim: `OLYMPIC`,
     eng: `ENGLISH`,
@@ -94,6 +114,30 @@ const translations = {
   },
 };
 
+// Set bahasa default
+const savedLang = localStorage.getItem("lang") || "id";
+updateLanguage(savedLang);
+
+// Event listener untuk lang button
+document.addEventListener("DOMContentLoaded", function () {
+  const idBtn = document.querySelector(".lang-btn-left");
+  const enBtn = document.querySelector(".lang-btn-right");
+
+  // Click event untuk ID button
+  if (idBtn) {
+    idBtn.addEventListener("click", function () {
+      setLanguage("id");
+    });
+  }
+
+  // Click event untuk EN button
+  if (enBtn) {
+    enBtn.addEventListener("click", function () {
+      setLanguage("en");
+    });
+  }
+});
+
 function setLanguage(lang) {
   localStorage.setItem("lang", lang);
   updateLanguage(lang);
@@ -105,13 +149,21 @@ function updateLanguage(lang) {
     el.textContent = translations[lang][key];
   });
 
-  document.getElementById("id-btn").classList.toggle("active", lang === "id");
-  document.getElementById("en-btn").classList.toggle("active", lang === "en");
+  // Update active class di lang button
+  const idBtn = document.querySelector(".lang-btn-left");
+  const enBtn = document.querySelector(".lang-btn-right");
+
+  if (idBtn && enBtn) {
+    if (lang === "id") {
+      idBtn.classList.add("active");
+      enBtn.classList.remove("active");
+    } else if (lang === "en") {
+      enBtn.classList.add("active");
+      idBtn.classList.remove("active");
+    }
+  }
 }
 
-// Set bahasa default
-const savedLang = localStorage.getItem("lang") || "id";
-updateLanguage(savedLang);
 /*animasi zoom in*/
 document.addEventListener("DOMContentLoaded", () => {
   const zoomTexts = document.querySelectorAll(".zoom-text");

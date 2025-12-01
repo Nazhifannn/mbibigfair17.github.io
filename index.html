@@ -45,7 +45,7 @@
           <img src="assets/mbf17.png" alt="Logo Official" />
         </div>
         <!-- Teks -->
-        <h1 class="intro-text">Welcome to MBF 17</h1>
+        <h1 data-lang="intro" class="intro-text">Welcome to MBF 17</h1>
       </div>
       <!-- 30 partikel asap -->
       <!-- (kamu bisa generate otomatis di JS, tapi tetap dibiarkan manual sesuai permintaan) -->
@@ -91,6 +91,12 @@
     <div class="section black">
       <!-- ===== Navbar ===== -->
       <div class="navbar">
+        <!-- Lang Button Kiri -->
+        <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
+          <span class="flag">🇮🇩</span>
+        </button>
+
+        <!-- Menu Box Tengah -->
         <div class="menu-box">
           <div class="logo1">
             <img src="assets/mbf17.png" alt="Logo MBF" />
@@ -102,16 +108,10 @@
           <a href="https://galangceria.events/id">Galang Ceria</a>
         </div>
 
-        <div class="lang-switch">
-          <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
-            <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
-            <span>ID</span>
-          </button>
-          <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
-            <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
-            <span>EN</span>
-          </button>
-        </div>
+        <!-- Lang Button Kanan -->
+        <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
+          <span class="flag">🇬🇧</span>
+        </button>
       </div>
 
       <!-- ===== Video Section ===== -->
@@ -120,20 +120,18 @@
           <source src="video mbf.mp4" type="video/mp4" />
         </video>
       </section>
-
+      <!-- Hero Title -->
+      <section class="hero-title reveal">
+        <h1 class="main-title">
+          <span class="glow" data-lang="glow">The Biggest Event in</span>
+          <span class="highlight" data-lang="highlight"
+            >MBI Amanatul Ummah</span
+          >
+        </h1>
+      </section>
       <!-- ===== About Section ===== -->
       <section class="about-fantasy-unique">
         <div class="floating-lights"></div>
-
-        <!-- Hero Title -->
-        <section class="hero-title reveal">
-          <h1 class="main-title">
-            <span class="glow" data-lang="glow">The Biggest Event in</span>
-            <span class="highlight" data-lang="highlight"
-              >MBI Amanatul Ummah</span
-            >
-          </h1>
-        </section>
 
         <!-- Box 1: MBF -->
         <div class="about-card reveal left">
@@ -150,15 +148,6 @@
               oleh kreasi para santri MBI yang memukau dan luar biasa.
             </p>
           </div>
-        </div>
-
-        <!-- Foto dokumentasi acak MBF -->
-        <div class="floating-gallery reveal">
-          <img src="_MG_0343.JPG" alt="doc1" class="float-img reveal" />
-          <img src="IMG_0020.JPG" alt="doc2" class="float-img reveal" />
-          <img src="LM100093.JPG" alt="doc3" class="float-img reveal" />
-          <img src="LM109532.JPG" alt="doc4" class="float-img reveal" />
-          <img src="LM100152.JPG" alt="doc5" class="float-img reveal" />
         </div>
 
         <!-- Box 2: Galang Ceria -->
@@ -178,15 +167,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Foto dokumentasi acak Galang Ceria -->
-        <div class="floating-gallery-gc reveal">
-          <img src="_MG_0343.JPG" alt="doc1" class="float-img-gc reveal" />
-          <img src="LM100093.JPG" alt="doc2" class="float-img-gc reveal" />
-          <img src="_MG_0338.JPG" alt="doc3" class="float-img-gc reveal" />
-          <img src="_MG_0350.JPG" alt="doc4" class="float-img-gc reveal" />
-          <img src="_MG_0354.JPG" alt="doc5" class="float-img-gc reveal" />
-        </div>
       </section>
 
       <div class="container">
@@ -198,26 +178,26 @@
       <div class="marquee-container">
         <div class="marquee">
           <!-- Bisa disingkat pakai loop CSS, tapi struktur dibiarkan -->
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
-          <span>tagline &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKO NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
         </div>
       </div>
 
@@ -451,83 +431,76 @@
         <h1 class="zoom-text1" data-lang="media">Our Media Partners</h1>
       </section>
     </div>
+  </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="footer-logo-title">
+        <img
+          src="assets/mbi-removebg-preview.png"
+          alt="Logo Sekolah"
+          class="footer-logo"
+        />
+        <h2 data-lang="transfoot">17th MBI BIG FAIR</h2>
+      </div>
+      <h3 data-lang="mbf2025">© 2025 MBF 17 · MBI Amanatul Ummah</h3>
+      <span data-lang="created"
+        >Created by IT Team of MBF 17 · All rights reserved</span
+      >
+    </div>
 
-    <script src="animation.js"></script>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-left">
-        <div class="footer-logo-title">
+    <div class="footer-center">
+      <!-- 🔹 Ikon di sebelah kiri garis -->
+      <div class="social-icons-vertical">
+        <a
+          href="https://www.instagram.com/mbibigfair_/"
+          target="_blank"
+          class="icon ig"
+          title="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@MBIBigFair"
+          target="_blank"
+          class="icon yt"
+          title="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          href="https://mbi-amanatulummah.sch.id/"
+          class="icon school"
+          title="Website Sekolah"
+        >
           <img
             src="assets/mbi-removebg-preview.png"
             alt="Logo Sekolah"
-            class="footer-logo"
+            class="school-logo"
           />
-          <h2 data-lang="transfoot">17th MBI BIG FAIR</h2>
-        </div>
-        <h3 data-lang="mbf2025">© 2025 MBF 17 · MBI Amanatul Ummah</h3>
-        <span data-lang="created"
-          >Created by IT Team of MBF 17 · All rights reserved</span
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="contact">
+        <p data-lang="contact">Contact Us</p>
+        <a
+          href="https://api.whatsapp.com/send/?phone=6282141619032&text&type=phone_number&app_absent=0"
+          class="wa-link"
+          ><i class="fa-brands fa-whatsapp"></i
+          ><span> :+62 821-4161-9032 (luky)</span></a
+        >
+        <a href="" class="wa-link"
+          ><i class="fa-brands fa-whatsapp"></i
+          ><span> :+62 821-4161-9032 (lucy)</span></a
         >
       </div>
+    </div>
 
-      <div class="footer-center">
-        <!-- 🔹 Ikon di sebelah kiri garis -->
-        <div class="social-icons-vertical">
-          <a
-            href="https://www.instagram.com/mbibigfair_/"
-            target="_blank"
-            class="icon ig"
-            title="Instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/@MBIBigFair"
-            target="_blank"
-            class="icon yt"
-            title="YouTube"
-          >
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a
-            href="https://mbi-amanatulummah.sch.id/"
-            class="icon school"
-            title="Website Sekolah"
-          >
-            <img
-              src="assets/mbi-removebg-preview.png"
-              alt="Logo Sekolah"
-              class="school-logo"
-            />
-          </a>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="contact">
-          <p data-lang="contact">Contact Us</p>
-          <a
-            href="https://api.whatsapp.com/send/?phone=6282141619032&text&type=phone_number&app_absent=0"
-            class="wa-link"
-            ><i class="fa-brands fa-whatsapp"></i
-            ><span> :+62 821-4161-9032 (luky)</span></a
-          >
-          <a href="#"
-            ><i class="fa-brands fa-whatsapp" class="wa-link"></i
-            ><span> :</span></a
-          >
-        </div>
-      </div>
-
-      <div class="footer-right">
-        <p data-lang="email">Email Us:</p>
-      </div>
-    </footer>
-
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <div class="footer-right">
+      <p data-lang="email">Email Us:</p>
+    </div>
+  </footer>
+  <script src="animation.js"></script>
 </html>
