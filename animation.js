@@ -59,7 +59,7 @@ const translations = {
     meeting: `pertemuan teknis`,
     acara1: `pembukaan acara`,
     acara2: `penutupan acara`,
-    timeline: `GARIS WAKTUGARIS WAKTU`,
+    timeline: `GARIS WAKTU`,
     compe: `kompetisi`,
     pr: `KUMPULAN HADIAH`,
     compe: `KATEGORI LOMBA`,
@@ -445,3 +445,4 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   document.head.appendChild(style);
 });
+
