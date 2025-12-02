@@ -149,7 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOutSmoke 0s ease 0s forwards; /* hilang setelah 6 detik */
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
 }
 
 /* ===== ASAP PUTIH KEABU ===== */
@@ -2042,3 +2042,4 @@ html {
   text-decoration: none;
   font-size: 1.1rem;
 }
+
