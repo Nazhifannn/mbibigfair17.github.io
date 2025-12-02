@@ -178,3 +178,12 @@ stacks.forEach((stack) => {
     inner.addEventListener("blur", () => stack.classList.remove("flipped"));
   }
 });
+
+
+
+
+
+
+
+
+
