@@ -111,14 +111,13 @@
 
 /* === REGISTER NOW (nonaktif tapi elegan) === */
 .btn-register {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: not-allowed;
-  backdrop-filter: blur(5px);
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
-  transform: translateY(-40px);
-  padding: 10px 10px 10px;
+  background: linear-gradient(135deg, #ffffff, #dfe6e9);
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: translateY(-30px);
+  padding: 10px 10px 25px;
 }
 
 /* === MORE INFO (aktif, glowing) === */
@@ -154,6 +153,28 @@
   background: linear-gradient(135deg, #ff9f43, #ff6b6b);
   box-shadow: 0 0 25px rgba(255, 145, 77, 0.8),
     0 0 10px rgba(255, 200, 150, 0.5);
+}
+/* Styling untuk tombol Register Now */
+
+.btn-register:hover {
+  color: white;
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  box-shadow: 0 0 25px rgba(255, 145, 77, 0.8),
+    0 0 10px rgba(255, 200, 150, 0.5);
+}
+.btn-register::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+.btn-register:hover::before {
+  left: 70%;
 }
 .card-a,
 .card-b {
@@ -411,26 +432,6 @@ html {
   letter-spacing: 1px;
   color: #120a2a;
 }
-.card-buttons .btn.disabled {
-  position: relative;
-  color: gray;
-  border-color: gray;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Lapisan tak terlihat di atas tombol agar kursor bisa mendeteksi hover */
-.card-buttons .btn.disabled::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: not-allowed; /* munculkan 🚫 */
-  background: transparent;
-  z-index: 2;
-}
 .cards-row {
   margin-bottom: 10px;
   margin-top: 20px;
@@ -447,12 +448,13 @@ html {
   perspective: 1000px;
 }
 
+/* Jika ada .card-buttons, ini untuk tombol lain (tidak memengaruhi btn-register) */
 .card-buttons {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: none; /* disembunyikan dulu */
+  display: none; /* Tetap disembunyikan jika tidak diperlukan */
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -478,6 +480,27 @@ html {
   color: white;
   transform: scale(1.05);
   z-index: 1;
+}
+
+/* Hapus atau abaikan aturan disabled jika tidak diperlukan */
+.card-buttons .btn.disabled {
+  position: relative;
+  color: gray;
+  border-color: gray;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card-buttons .btn.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed;
+  background: transparent;
+  z-index: 2;
 }
 .card-image {
   position: absolute;
