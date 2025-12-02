@@ -29,7 +29,7 @@ html {
 }
 
 .white {
-  background: linear-gradient(to top, #402c5c, #886eaf);
+   background: linear-gradient(to top, #402c5c, #886eaf);
 }
 
 /* ===== Navbar ===== */
@@ -161,7 +161,7 @@ html {
 /* ========================== */
 
 .top-bar {
-  /* ungu atas */
+        /* ungu atas */
   height: 90px;
   color: white;
   text-align: center;
@@ -179,42 +179,43 @@ html {
 }
 
 .container {
-  display: flex;
-  gap: 100px;
-  justify-content: center;
-  padding: 40px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 40px;
 }
 
 .card {
-  width: 300px;
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: 0.4s ease; /* transisi halu */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+    width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s ease; /* transisi halu */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
+
 .card img {
-  width: 100%;
-  display: block;
-  transition: 0.4s ease;
+    width: 100%;
+    display: block;
+    transition: 0.4s ease;
 }
 
 .card p {
-  padding: 15px;
-  font-size: 16px;
-  text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* naik halus */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* naik halus */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 .card:hover img {
-  transform: scale(1.05); /* zoom halus */
-  opacity: 0.9;
+    transform: scale(1.05); /* zoom halus */
+    opacity: 0.9;
 }
 
 /* STYLE UTAMA */
@@ -230,7 +231,7 @@ html {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
 .hero-text {
@@ -262,7 +263,7 @@ html {
   text-decoration: none;
   font-weight: 600;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .btn-line:hover {
@@ -282,6 +283,8 @@ html {
 .ilc {
   background-image: url("_MG_0343.JPG"); /* ganti gambar */
 }
+
+
 
 /* ===== FOOTER STYLE ===== */
 .footer {
@@ -337,7 +340,7 @@ html {
   width: 2px;
   height: 160px;
   background: #00000033;
-  margin-left: 200px;
+  margin-left: 200px   ;
 }
 
 .social-vertical {
@@ -367,7 +370,7 @@ html {
   margin-left: -5px;
   margin-top: 50px;
 }
-.footer-right .email {
+.footer-right .email{
   transform: translateX(250px);
   margin-top: -75px;
 }
