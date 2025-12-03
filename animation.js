@@ -164,6 +164,23 @@ function updateLanguage(lang) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Cek apakah intro sudah pernah ditampilkan
+  if (sessionStorage.getItem("introShown") === "true") {
+    // Jika sudah pernah, langsung sembunyikan smoke-screen
+    const smokeScreen = document.querySelector('.smoke-screen');
+    if (smokeScreen) {
+      smokeScreen.style.display = 'none';
+    }
+    return; // keluar, tidak jalankan animasi
+  }
+
+  // Tandai bahwa intro sudah ditampilkan (setelah animasi selesai)
+  setTimeout(() => {
+    sessionStorage.setItem("introShown", "true");
+  }, 7000); // sesuaikan dengan durasi total animasimu (sekarang ~6-7 detik)
+});
+
 /*animasi zoom in*/
 document.addEventListener("DOMContentLoaded", () => {
   const zoomTexts = document.querySelectorAll(".zoom-text");
@@ -445,4 +462,5 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   document.head.appendChild(style);
 });
+
 
