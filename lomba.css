@@ -138,7 +138,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f5f6fa;
   color: #222;
 }
@@ -147,7 +147,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('LM109532.JPG') center/cover no-repeat;
+  background: url("LM109532.JPG") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,7 +204,7 @@ body {
   padding: 80px 10%;
   background: linear-gradient(to top, #402c5c, #886eaf);
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .champion-prize h2 {
@@ -227,17 +227,17 @@ body {
   border-radius: 20px;
   width: 250px;
   padding: 25px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .prize-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .prize-card h3 {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: "Cinzel Decorative", serif;
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #000000;
@@ -263,13 +263,11 @@ body {
   color: #000000;
 }
 
-
-
 /* ===== BASE ===== */
 .info-section {
   padding: 80px 40px;
   color: #000000;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   text-align: center;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -283,8 +281,6 @@ body {
   letter-spacing: 1px;
   margin-top: 100px;
 }
-
-
 
 /* ===== INFORMATION GRID ===== */
 .info-grid {
@@ -310,7 +306,7 @@ body {
 }
 
 .info-box h3 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 22px;
   color: #000000;
   margin-bottom: 12px;
@@ -325,7 +321,7 @@ body {
 
 .info-btn {
   display: inline-block;
-  background: #886EAF;
+  background: #886eaf;
   color: #ffffff;
   padding: 10px 18px;
   border-radius: 8px;
@@ -337,7 +333,6 @@ body {
 .info-btn:hover {
   background: #22a36e;
 }
-
 
 .info-box-contact {
   background: white;
@@ -355,7 +350,7 @@ body {
 }
 
 .info-box-contact h3 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 22px;
   color: #000000;
   margin-bottom: 12px;
@@ -370,7 +365,7 @@ body {
 
 .info-btn-contact {
   display: inline-block;
-  background: #886EAF;
+  background: #886eaf;
   color: #ffffff;
   padding: 10px 18px;
   border-radius: 8px;
@@ -407,7 +402,7 @@ body {
 }
 
 .facility-box h3 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 24px;
   margin-bottom: 20px;
   color: #000000;
@@ -428,7 +423,7 @@ body {
 
 .facility-box .date {
   font-size: 20px;
-  color: #886EAF;
+  color: #886eaf;
   margin-bottom: 10px;
 }
 
@@ -438,11 +433,10 @@ body {
   color: #000000;
 }
 
-
 /* === LOCATION === */
 .location {
   position: relative;
-  background: url('_MG_0081.JPG') center/cover no-repeat;
+  background: url("_MG_0081.JPG") center/cover no-repeat;
   color: white;
   padding: 120px 20px;
   text-align: center;
@@ -468,7 +462,7 @@ body {
   display: inline-block;
   margin-top: 100px;
   padding: 12px 30px;
-  background: #886EAF;
+  background: #886eaf;
   color: white;
   border-radius: 30px;
   text-decoration: none;
@@ -533,7 +527,7 @@ body {
   width: 2px;
   height: 160px;
   background: #00000033;
-  margin-left: 200px   ;
+  margin-left: 200px;
 }
 
 .social-vertical {
@@ -563,7 +557,7 @@ body {
   margin-left: -5px;
   margin-top: 50px;
 }
-.footer-right .email{
+.footer-right .email {
   transform: translateX(250px);
   margin-top: -75px;
 }
