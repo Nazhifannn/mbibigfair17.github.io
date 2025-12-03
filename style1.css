@@ -1,0 +1,1635 @@
+/* === WRAPPER SETIAP TUMPUKAN KARTU === */
+.card-stack {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  perspective: 1200px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+/* === KARTU DASAR === */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: transform 1.5s cubic-bezier(0.55, 0.03, 0.39, 0.95), z-index 1.5s;
+  transform-origin: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* === KONTEN DALAM KARTU === */
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+}
+
+.title {
+  color: hsl(0, 0%, 0%);
+  font-size: 3rem;
+  margin-bottom: 270px;
+
+}
+
+.subtitle {
+  color: #000;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* === WARNA KARTU === */
+.card-a {
+  background: white;
+  z-index: 2;
+  transform: translateZ(0) scale(1);
+}
+.card-a img{
+  width: 300px;
+  height: 300px;
+  margin-left: -20px;
+}
+
+.card-b {
+  background: #c8a4ff;
+  z-index: 1;
+  transform: translateZ(-100px) scale(0.9);
+}
+.card-b h2{
+  font-size: 20px;
+  transform: translateY(10px);
+}
+.card-b img{
+  width: 200px;
+  height: 300px;
+  margin-left: 30px;
+}
+/* === KELOMPOK KATEGORI === */
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.category-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+/* === TOMBOL DASAR === */
+.btn-register,
+.btn-more {
+  padding: 10px 2px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+  border: none;
+  outline: none;
+}
+
+/* === REGISTER NOW (nonaktif tapi elegan) === */
+.btn-register {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transform: translateY(-40px);
+  padding: 10px 10px 10px;
+}
+
+/* === MORE INFO (aktif, glowing) === */
+.btn-more {
+  background: linear-gradient(135deg, #ffffff, #dfe6e9);
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: translateY(-30px);
+  padding: 10px 10px 25px;
+}
+
+/* Efek hover glowing */
+.btn-more::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+
+.btn-more:hover::before {
+  left: 100%;
+}
+
+.btn-more:hover {
+  color: white;
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  box-shadow: 0 0 25px rgba(255, 145, 77, 0.8), 0 0 10px rgba(255, 200, 150, 0.5);
+}
+.card-a,
+.card-b {
+  transform: translateZ(0) rotateY(0) scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+@font-face {
+  font-family: "fantasy1";
+  src: url("Fantasy Script.otf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  @font-face {
+    font-family: "apple";
+    src: url("Apple.otf") format("truetype");
+  }
+}
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.section {
+  min-height: 80 vh; /* tiap section setidaknya setinggi layar */
+  width: 100%;
+}
+
+.white {
+  background: linear-gradient(to top, #402c5c, #886eaf);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
+
+.logo img {
+  align-items: center;
+  height: 60px;
+  width: auto;
+  border-radius: 10px;
+}
+
+/* Menu box tengah */
+.menu-box {
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+}
+
+.menu-box span {
+  margin-left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.menu-box a {
+  font-family: "Poppins";
+  color: #000000;
+  font-size: 14px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.lang-btn {
+  background-color: #4a0d23;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.lang-btn img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.lang-btn:hover {
+  background-color: #630d2f;
+  transform: scale(1.05);
+}
+
+.lang-btn.active {
+  box-shadow: 0 0 5px #fff;
+  background-color: #8c1a40;
+}
+
+.content {
+  background: white;
+  width: 60%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.hero-text0 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero-text0 h1 {
+  font-size: 60px;
+  margin: 0;
+}
+.hero-text {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Times New Roman", Times, serif;
+  color: #e6e6fa;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.hero-text h1 sup {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.hero-text h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+
+.title-main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.title-main h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #e6e6fa;
+}
+.title-main1 {
+  display: flex;
+  align-items: flex-start;
+}
+.title-main1 h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #120a2a;
+}
+.title-sub {
+  margin-left: 10px;
+}
+
+.title-sub h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+  line-height: 1;
+  color: #e6e6fa;
+}
+
+.title-sub p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #e6e6fa;
+}
+.title-sub1 {
+  margin-left: 10px;
+}
+
+.title-sub1 h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+  line-height: 1;
+  color: #120a2a;
+}
+
+.title-sub1 p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #120a2a;
+}
+.card-buttons .btn.disabled {
+  position: relative;
+  color: gray;
+  border-color: gray;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Lapisan tak terlihat di atas tombol agar kursor bisa mendeteksi hover */
+.card-buttons .btn.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed; /* munculkan 🚫 */
+  background: transparent;
+  z-index: 2;
+}
+.cards-row {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.card-stack {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* disembunyikan dulu */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+
+.card-buttons .btn {
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  transition: 0.3s ease;
+  border: 1px solid black;
+}
+
+.card-buttons .btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+  z-index: 1;
+}
+.card-image {
+  position: absolute;
+  top: 43%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image img {
+  width: 350px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image img {
+  opacity: 1;
+}
+
+/* Saat kartu terbuka, tampilkan tombol */
+.card-stack.open .card-buttons {
+  display: flex;
+}
+.back-static {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+.door {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #e6e6fa;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.8s ease;
+  transform-origin: center left;
+}
+.door1 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #120a2a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.8s ease;
+  transform-origin: center left;
+}
+.right-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/ocians\ colored.png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left-door {
+  background-image: url("assets/ocians\ colored.png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+
+/* Belakang kartu */
+.back {
+  background: #2c2c2c;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Efek pintu membuka */
+.card-stack:hover .left-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right-door {
+  transform: rotateY(120deg);
+}
+/*irhamna*/
+.card-image1 {
+  position: absolute;
+  top: 43%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image1 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image1 img {
+  opacity: 1;
+}
+.right1-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right1-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/IRHAMNA\(coloring\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left1-door {
+  background-image: url("assets/IRHAMNA\(coloring\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left1-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right1-door {
+  transform: rotateY(120deg);
+}
+/*irhamna*/
+/*erudite*/
+.card-image2 {
+  position: absolute;
+  top: 50%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image2 img {
+  width: 330px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image2 img {
+  opacity: 1;
+}
+.right2-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right2-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/ERUDITE\(coloring\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left2-door {
+  background-image: url("assets/ERUDITE\(coloring\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left2-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right2-door {
+  transform: rotateY(120deg);
+}
+/*erudite*/
+/*storm*/
+.card-image3 {
+  position: absolute;
+  top: 55%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image3 img {
+  width: 370px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image3 img {
+  opacity: 1;
+}
+.right3-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right3-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/STORM-logo\ \(color\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left3-door {
+  background-image: url("assets/STORM-logo\ \(color\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left3-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right3-door {
+  transform: rotateY(120deg);
+}
+/*storm*/
+/*escimo*/
+.card-image4 {
+  position: absolute;
+  top: 45%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image4 img {
+  width: 370px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image4 img {
+  opacity: 1;
+}
+.right4-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right4-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/ESCIMO\(coloring\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left4-door {
+  background-image: url("assets/ESCIMO\(coloring\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left4-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right4-door {
+  transform: rotateY(120deg);
+}
+/*escimo*/
+/*akrimna*/
+.card-image5 {
+  position: absolute;
+  top: 50%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image5 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image5 img {
+  opacity: 1;
+}
+.right5-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right5-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/AKRIMNA\(coloring\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left5-door {
+  background-image: url("assets/AKRIMNA\(coloring\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left5-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right5-door {
+  transform: rotateY(120deg);
+}
+/*akrimna*/
+/*qolbuna*/
+.card-image6 {
+  position: absolute;
+  top: 40%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image6 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image6 img {
+  opacity: 1;
+}
+.right6-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right6-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/mutaqina\ colored.png.png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left6-door {
+  background-image: url("assets/mutaqina\ colored.png.png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left6-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right6-door {
+  transform: rotateY(120deg);
+}
+/*qolbuna*/
+/*barikna*/
+.card-image7 {
+  position: absolute;
+  top: 40%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image7 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image7 img {
+  opacity: 1;
+}
+.right7-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right7-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/BARIKNA\(koloring\).png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left7-door {
+  background-image: url("assets/BARIKNA\(koloring\).png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+/* Efek pintu membuka */
+.card-stack:hover .left7-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right7-door {
+  transform: rotateY(120deg);
+}
+/*barikna*/
+/*qabibilna*/
+.card-image8 {
+  position: absolute;
+  top: 40%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image8 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image8 img {
+  opacity: 1;
+}
+.right8-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right8-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/colored\ korona.png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left8-door {
+  background-image: url("assets/colored\ korona.png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+
+/* Efek pintu membuka */
+.card-stack:hover .left8-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right8-door {
+  transform: rotateY(120deg);
+}
+/*qabilna*/
+/*fesban*/
+.card-image9 {
+  position: absolute;
+  top: 40%; /* atur agar tepat di tengah bawah tulisan */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-image9 img {
+  width: 300px; /* atur sesuai ukuran yang kamu mau */
+  height: auto;
+  opacity: 0; /* awalnya tersembunyi */
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* saat kartu terbuka */
+.card-stack.open .card-image9 img {
+  opacity: 1;
+}
+.right9-door h1 {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+.right9-door {
+  right: 0;
+  transform-origin: center right;
+  background-image: url("assets/FESBAN-\ COLOR.png");
+  background-size: 200% 68%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+.left9-door {
+  background-image: url("assets/FESBAN-\ COLOR.png");
+  background-size: 200% 68%; /* agar satu gambar terbagi dua */
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+}
+
+/* Efek pintu membuka */
+.card-stack:hover .left9-door {
+  transform: rotateY(-120deg);
+}
+
+.card-stack:hover .right9-door {
+  transform: rotateY(120deg);
+}
+/*fesban*/
+.card-title1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.card-title1 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6a4a87;
+  position: relative;
+}
+.card-title1 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #6a4a87;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title1 p {
+  margin-top: 275px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6a4a87;
+}
+.card-title2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.card-title2 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6a4a87;
+  position: relative;
+}
+.card-title2 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #6a4a87;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title2 p {
+  margin-top: 290px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6a4a87;
+}
+.card-title3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.card-title3 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6a4a87;
+  position: relative;
+}
+.card-title3 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #6a4a87;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title3 p {
+  margin-top: 275px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6a4a87;
+}
+.card-title4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.card-title4 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5f3a80;
+  position: relative;
+}
+.card-title4 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #5f3a80;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title4 p {
+  margin-top: 310px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5f3a80;
+}
+.card-title5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.card-title5 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5f3a80;
+  position: relative;
+}
+.card-title5 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #5f3a80;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title5 p {
+  margin-top: 310px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5f3a80;
+}
+.card-title6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.card-title6 h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5f3a80;
+  position: relative;
+}
+.card-title6 h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #5f3a80;
+  position: relative;
+  margin-top: -10px;
+}
+.card-title6 p {
+  margin-top: 290px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5f3a80;
+}
+/* FOOTER */
+.footer {
+  background: #ffffff;
+  color: #000000;
+  padding: 50px 20px 30px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 120px;
+  filter: brightness(1);
+}
+
+.footer-logo p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Section */
+.footer-section h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: .3s;
+}
+
+.footer-section a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Icon style */
+.footer-section svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: .6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-section ul li,
+  .footer-section a {
+    justify-content: center;
+  }
+}
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-copy {
+  margin-top: 10px;
+}
+
+.footer-copy p {
+  font-size: 13px;
+  color: #000000;
+  margin: 2px 0;
+  opacity: 0.85;
+}
+@media (max-width: 768px) {
+  .footer-copy p {
+    font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 550px;
+    margin-bottom: 30px;
+  }
+  .cards-row {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    flex-direction: column;
+    width: 90%;
+  }
+  .hero-text0 {
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    transform: translate(50%, 50%);
+    color: white;
+    text-align: left; /* atau left jika ingin rata kiri */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  .hero-text0 h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Logo kiri */
+  .logo {
+    position: absolute;
+    left: 20px; /* sejajarkan sesuai padding navbar */
+    flex: 1;
+  }
+
+  .logo img {
+    align-items: center;
+    height: 75px;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  /* Menu box tengah */
+  .menu-box {
+    background: #2e294e;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 46%;
+    transform: translateX(-50%);
+    z-index: 2; /* biar tidak ketumpuk logo */
+  }
+
+  .menu-box span {
+    margin-left: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+
+  .menu-box a {
+    font-family: "Poppins";
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .hero-img {
+    width: 768px;
+    height: 400px; /* full tinggi layar */
+    object-fit: cover; /* biar gak gepeng */
+  }
+  .cards-row {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e6e6fa;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .footer-left h2 {
+    color: #120a2a;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .footer-left h3 {
+    color: #120a2a;
+    font-size: q0px;
+    font-weight: bold;
+  }
+  .footer-left span {
+    color: #120a2a;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .footer-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 100px;
+    background: #000000;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: #120a2a;
+  }
+
+  .contact p {
+    color: #120a2a;
+    margin: 0 0 1px;
+    font-weight: bold;
+  }
+
+  .contact a {
+    margin-right: 20px;
+    font-size: 15px;
+    color: #120a2a;
+  }
+
+  .footer-right {
+    color: #120a2a;
+    font-weight: bold;
+  }
+}
