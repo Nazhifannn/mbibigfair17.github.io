@@ -1,9 +1,9 @@
 // === TRANSLATION SYSTEM ===
 const translations = {
   en: {
-    our: `This is Our Competitions`,
+    our: `
+Join this competition and prove your skills among other participants`,
     thmbf: `17th MBF`,
-    kategori: `Competition Category`,
     olim: `Olympic`,
     kompetisi: `Competition`,
     mbfth: `17th MBI BIG FAIR`,
@@ -47,9 +47,8 @@ const translations = {
     qorona: `Calligraphy Creation Competition`,
   },
   id: {
-    our: `Ini Kompetisi-kompetisi Kita`,
-    thmbf: `MBF 17`,
-    kategori: `Kategori Kompetisi`,
+    our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
+    thmbf: `!! Pilih cabang kompetisi yang sesuai dengan bakat dan minatmu !!`,
     olim: `Kompetisi`,
     kompetisi: `Olimpiade`,
     mbfth: `MBI BIG FAIR 17`,
@@ -178,12 +177,3 @@ stacks.forEach((stack) => {
     inner.addEventListener("blur", () => stack.classList.remove("flipped"));
   }
 });
-
-
-
-
-
-
-
-
-
