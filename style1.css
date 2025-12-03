@@ -55,7 +55,7 @@
   width: 300px;
   height: 300px;
   margin-left: -20px;
-  filter: drop-shadow(0px 0px 10px black);
+  filter: drop-shadow(4px 4px 0px hsla(0, 0%, 36%, 0.4));
 }
 
 .card-b {
@@ -71,6 +71,7 @@
   width: 200px;
   height: 300px;
   margin-left: 30px;
+  filter: drop-shadow(8px 8px 0px hsla(0, 0%, 36%, 0.658));
 }
 /* === KELOMPOK KATEGORI === */
 .categories {
@@ -1683,3 +1684,4 @@ html {
     font-weight: bold;
   }
 }
+
