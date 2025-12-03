@@ -2,7 +2,7 @@
 const translations = {
   en: {
     our: `This is Our Competitions`,
-    thmbf: `Choose the competition category that suits your talents and interests.`,
+    thmbf: `!! Choose the competition category that suits your talents and interests !!`,
     kategori: `Competition Category`,
     olim: `Olympiad`,
     olim1: `English`,
