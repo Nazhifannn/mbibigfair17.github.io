@@ -12,6 +12,11 @@
   font-family: "fantasy1";
   src: url("Fantasy Script.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "cinzeldecorative";
+  src: url("CinzelDecorative-Bold.ttf") format("truetype");
+}
 .intro-container {
   position: relative;
   width: 100%;
@@ -149,7 +154,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  animation: fadeOutSmoke 0s ease 0s forwards; /* hilang setelah 6 detik */
 }
 
 /* ===== ASAP PUTIH KEABU ===== */
@@ -563,21 +568,21 @@ html {
   color: #ff00f2;
   font-weight: bold;
   font-size: 22px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Cinzel', serif;
   white-space: nowrap;
   text-align: center;
 }
 
 .menu-box a {
-  font-family: "Poppins", sans-serif;
   color: #ff00f2;
   font-size: 14px;
   transition: 0.3s;
   text-decoration: none;
   white-space: nowrap;
   text-align: center;
+   font-family: 'Uncial Antiqua', serif;
+  font-weight: 1000;
 }
-
 .menu-box a:hover {
   opacity: 0.8;
 }
@@ -741,113 +746,36 @@ html {
     font-size: 8px;
   }
 }
-
-/* ===== HERO TITLE SECTION ===== */
-.hero-title {
+.about-title {
   text-align: center;
-  margin-top: 30px;
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
-.main-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  position: relative;
-  animation: fadeInText 2s ease forwards;
+.title-hero {
+  font-size: 48px;
+  font-weight: 700;
+  opacity: 0;
+  filter: blur(10px);
+  animation: fadeUp 1.2s ease forwards;
+  font-family: 'Cinzel', serif;
+  color: #e6e6fa  ;
 }
 
-.glow {
-  display: inline-block;
-  background: linear-gradient(90deg, #ffffff, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 25px rgba(255, 0, 255, 0.8));
-  animation: floatGlow 4s ease-in-out infinite alternate;
-}
-
-.highlight {
-  display: inline-block;
-  background: linear-gradient(90deg, #ffffff, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.9));
-  animation: waveText 6s ease-in-out infinite;
-}
-
-/* ===== Animasi Teks ===== */
-@keyframes fadeInText {
+@keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(50px) scale(0.9);
-    filter: blur(8px);
+    transform: translateY(20px);
+    filter: blur(10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     filter: blur(0);
   }
 }
 
-@keyframes floatGlow {
-  0% {
-    transform: translateY(0) scale(1);
-    filter: drop-shadow(0 0 25px #ff66ff);
-  }
-  100% {
-    transform: translateY(-10px) scale(1.05);
-    filter: drop-shadow(0 0 40px #ffffff);
-  }
-}
 
-@keyframes waveText {
-  0%,
-  100% {
-    letter-spacing: 2px;
-    transform: scale(1);
-  }
-  50% {
-    letter-spacing: 6px;
-    transform: scale(1.05);
-  }
-}
-
-/* ===== Tambah efek cahaya kabut di belakang ===== */
-.hero-title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 300px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 0, 255, 0.1),
-    transparent 70%
-  );
-  filter: blur(120px);
-  z-index: -1;
-  animation: glowPulse 6s infinite alternate ease-in-out;
-}
-
-@keyframes glowPulse {
-  0% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0.9;
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-}
 
 .about-fantasy-unique {
   position: relative;
@@ -1153,7 +1081,7 @@ html {
   font-size: 30px;
   width: 100%;
   overflow: hidden;
-  background-color: #120a2a;
+  background-color: #ffffff;
   padding: 10px 0;
   transform: translateZ(10px);
 }
@@ -1167,6 +1095,7 @@ html {
 .marquee span {
   white-space: nowrap;
   color: #d93acd;
+  font-weight: 700;
 }
 
 /* Animasi keyframes */
@@ -1190,7 +1119,7 @@ html {
   font-size: 3rem;
   font-weight: 1000;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #e6e6fa;
   font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
 }
 
@@ -1238,6 +1167,8 @@ html {
 .middle {
   margin-top: -20px;
 }
+
+
 .right {
   margin-left: -30px;
   transform: rotate(8deg); /* ⭐ rotasi kanan */
@@ -1321,25 +1252,33 @@ html {
   display: none;
 }
 
+
 .overlay-content {
-  background: #120a2a;
+  background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
-  max-width: 600px;
+  padding: 20px 50px 20px;
+  max-width: 850px; 
   text-align: center;
   position: relative;
   animation: zoomIn 0.5s ease;
+  margin-top: 80px;
 }
 .overlay-content h2 {
-  color: #d93acd;
+  color: #000000;
+  transform: translateY(10px);
 }
 .overlay-content p {
-  color: #d93acd;
+  color: #000000;
+  font-size: 15px;
 }
 .overlay-content img {
-  width: 200px;
-  margin: 20px 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
 }
+
+
 .close-btn:hover {
   color: red;
 }
@@ -1359,7 +1298,7 @@ html {
   left: 8px;
   right: 8px;
   bottom: 8px;
-  border: 2px solid #f6e7c1;
+  border: 2px solid #D62684;
   border-radius: 10px;
   pointer-events: none;
   box-sizing: border-box;
@@ -1462,7 +1401,7 @@ html {
 }
 
 .text0 {
-  color: #ffffff;
+  color: #e6e6fa;
   font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
   margin-bottom: 50px; /* jarak ke bawah */
   font-size: 3rem;
@@ -1508,11 +1447,11 @@ html {
 
 .trophy-icon {
   font-size: 80px;
-  color: #d93acd;
+  color: #886eaf;
 }
 
 .event-title {
-  color: #120a2a;
+  color: #886eaf;
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -1542,7 +1481,7 @@ html {
 }
 
 .prizepool-container {
-  background-color: #120a2a;
+  background: linear-gradient(to top, #402c5c, #886eaf);
   border-radius: 20px;
   padding: 20px 20px 50px 20px; /* Padding bawah lebih besar untuk navigasi */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -1575,7 +1514,7 @@ html {
 .ribbon-icon {
   font-size: 20px;
   font-size: clamp(1rem, 3vw, 1.5rem); /* ⭐ responsive */
-  color: #d93acd;
+  color: #e6e6fa;
   margin-bottom: 5px;
 }
 
@@ -1773,7 +1712,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: 0 auto 10px;
-  color: #d93acd;
+  color: #886eaf;
   font-size: 20px;
   transform: scale(0);
   transition: transform 0.5s ease;
@@ -1859,275 +1798,171 @@ html {
   color: var(--muted);
   margin-bottom: 10px; /* jarak antara teks dan kartu */
 }
-/* FOOTER */
 .footer {
-  background: #ffffff;
-  color: #000000;
-  padding: 50px 20px 30px;
-  margin-top: 60px;
+  background: #fff;
+  padding: 60px 20px 30px;
+  border-top: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Logo */
-.footer-logo img {
-  width: 120px;
-  filter: brightness(1);
+/* BRAND */
+.footer-brand {
+  max-width: 350px;
+  text-align: center;
+  transform: translateX(-100px);
 }
 
-.footer-logo p {
+.footer-logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  margin-top: 15px;
   font-size: 14px;
-  opacity: 0.8;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* KONTAK */
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+}
+.icon-imgemail {
+  width: 24px;
+  height: 24px;
+}
+
+/* SOSIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 14px;
   margin-top: 10px;
 }
 
-/* Section */
-.footer-section h3 {
-  color: rgb(0, 0, 0);
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.footer-section ul {
-  padding: 0;
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 12px;
+.social-btn {
+  width: 48px;
+  height: 48px;
+  background: #f4f4f4;
+  border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: 0.25s;
 }
 
-.footer-section a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 15px;
+.social-img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.social-btn:active {
+  transform: scale(0.88);
+  box-shadow: none;
+}
+
+.social-btnyt {
+  width: 48px;
+  height: 48px;
+  background: #f4f4f4;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: 0.3s;
+  justify-content: center;
+  transition: 0.25s;
 }
 
-.footer-section a:hover {
-  color: rgb(0, 0, 0);
+.social-imgyt {
+  width: 50px;
+  height: 50px;
 }
 
-/* Icon style */
-.footer-section svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+.social-btnyt:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Bottom */
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #000000;
-  padding-top: 15px;
-  font-size: 14px;
-  opacity: 0.6;
+.social-btnyt:active {
+  transform: scale(0.88);
+  box-shadow: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.social-btnmbi {
+  width: 48px;
+  height: 48px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.social-imgmbi {
+  width: 60px;
+  height: 30px;
+}
+
+.social-btnmbi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.social-btnmbi:active {
+  transform: scale(0.88);
+  box-shadow: none;
+}
+
+
+
+/* RESPONSIVE */
+@media(max-width: 850px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
-  .footer-section ul li,
-  .footer-section a {
+  .social-icons {
     justify-content: center;
   }
 }
-.footer-logo {
-  flex: 1 1 250px;
-}
 
-.footer-copy {
-  margin-top: 10px;
-}
-
-.footer-copy p {
-  font-size: 13px;
-  color: #000000;
-  margin: 2px 0;
-  opacity: 0.85;
-}
-@media (max-width: 768px) {
-  .footer-copy p {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .lang-switch {
-    display: flex;
-    justify-content: center;
-    gap: 550px;
-    margin-bottom: 30px;
-  }
-  .cards-row {
-    margin-bottom: 10px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    flex-direction: column;
-    width: 90%;
-  }
-  .hero-text0 {
-    position: absolute;
-    top: 38%;
-    left: 30%;
-    transform: translate(50%, 50%);
-    color: white;
-    text-align: left; /* atau left jika ingin rata kiri */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  }
-  .hero-text0 h1 {
-    font-size: 30px;
-    margin: 0;
-  }
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  /* Logo kiri */
-  .logo {
-    position: absolute;
-    left: 20px; /* sejajarkan sesuai padding navbar */
-    flex: 1;
-  }
-
-  .logo img {
-    align-items: center;
-    height: 75px;
-    width: auto;
-    border-radius: 10px;
-  }
-
-  /* Menu box tengah */
-  .menu-box {
-    background: #2e294e;
-    padding: 15px 30px;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    left: 46%;
-    transform: translateX(-50%);
-    z-index: 2; /* biar tidak ketumpuk logo */
-  }
-
-  .menu-box span {
-    margin-left: 50px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: "Poppins";
-  }
-
-  .menu-box a {
-    font-family: "Poppins";
-    color: #ffffff;
-    font-size: 14px;
-    transition: 0.3s;
-  }
-  .hero-img {
-    width: 768px;
-    height: 400px; /* full tinggi layar */
-    object-fit: cover; /* biar gak gepeng */
-  }
-  .cards-row {
-    margin-bottom: 10px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #e6e6fa;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .footer-left h2 {
-    color: #120a2a;
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  .footer-left h3 {
-    color: #120a2a;
-    font-size: q0px;
-    font-weight: bold;
-  }
-  .footer-left span {
-    color: #120a2a;
-    font-size: 10px;
-    font-weight: bold;
-  }
-
-  .footer-center {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .divider {
-    width: 1px;
-    height: 100px;
-    background: #000000;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    color: #120a2a;
-  }
-
-  .contact p {
-    color: #120a2a;
-    margin: 0 0 1px;
-    font-weight: bold;
-  }
-
-  .contact a {
-    margin-right: 20px;
-    font-size: 15px;
-    color: #120a2a;
-  }
-
-  .footer-right {
-    color: #120a2a;
-    font-weight: bold;
-  }
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
 }
