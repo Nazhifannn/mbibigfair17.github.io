@@ -284,107 +284,161 @@ html {
 }
 
 /* ===== FOOTER STYLE ===== */
+/* FOOTER */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   background: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 40px 60px;
-  font-family: "Poppins", sans-serif;
+  color: #000000;
+  padding: 50px 20px 30px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
   flex-wrap: wrap;
-  position: relative;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.footer-left {
-  flex: 1;
-  text-align: left;
+/* Logo */
+.footer-logo img {
+  width: 120px;
+  filter: brightness(1);
 }
 
-.footer-logo {
-  width: 90px;
-  margin-bottom: 10px;
+.footer-logo p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
-.footer-left h2 {
-  margin: 5px 0;
-  font-size: 1.5rem;
-  transform: translateX(100px);
-  margin-top: -70px;
-  margin-bottom: 50px;
+/* Section */
+.footer-section h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-.footer-left h3 {
-  font-weight: 400;
-  color: #000000;
-  margin: 5px 0;
+.footer-section ul {
+  padding: 0;
+  list-style: none;
 }
 
-.footer-left span {
-  font-size: 0.85rem;
-  color: #000000;
-}
-
-.footer-center {
-  position: relative;
+.footer-section ul li {
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 10px 20px;
 }
 
-.divider {
-  width: 2px;
-  height: 160px;
-  background: #00000033;
-  margin-left: 200px;
-}
-
-.social-vertical {
+.footer-section a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
   display: flex;
-  flex-direction: column;
-  gap: 18px;
-  transform: translateX(-50px);
-}
-
-.social-vertical i {
-  font-size: 22px;
-  color: rgb(0, 0, 0);
+  align-items: center;
+  gap: 8px;
   transition: 0.3s;
 }
 
-.social-vertical i:hover {
-  color: #00ff33;
-  transform: scale(1.15);
-}
-
-.footer-right {
-  flex: 1;
-  text-align: left;
-}
-
-.footer-right .contact {
-  margin-left: -5px;
-  margin-top: 50px;
-}
-.footer-right .email {
-  transform: translateX(250px);
-  margin-top: -75px;
-}
-
-.footer-right p {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.footer-right a {
+.footer-section a:hover {
   color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: inline-block;
-  margin-bottom: 4px;
 }
 
-.footer-right a:hover {
-  color: #00aaff;
+/* Icon style */
+.footer-section svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-copy {
+  margin-top: 10px;
+}
+
+.footer-copy p {
+  font-size: 13px;
+  color: #000000;
+  margin: 2px 0;
+  opacity: 0.85;
+}
+@media (max-width: 500px) {
+  .navbar {
+    flex-wrap: wrap; /* Wajib */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Logo kiri */
+  .logo {
+    position: absolute;
+    left: 20px; /* sejajarkan sesuai padding navbar */
+    flex: 1;
+  }
+
+  .logo img {
+    margin-top: 7px;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  /* Menu box tengah */
+  .menu-box {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* biar tidak ketumpuk logo */
+  }
+
+  .menu-box span {
+    margin-left: 50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+
+  .menu-box a {
+    font-family: "Poppins";
+    color: #000000;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
