@@ -599,241 +599,160 @@ body {
 }
 
 .footer {
-  background: #fff;
-  padding: 60px 20px 30px;
-  border-top: 1px solid #ccc;
-  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #000000;
+  padding: 50px 20px 30px;
+  margin-top: 60px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* BRAND */
-.footer-brand {
-  max-width: 350px;
-  text-align: center;
-  transform: translateX(-100px);
+/* Logo */
+.footer-logo img {
+  width: 120px;
+  filter: brightness(1);
 }
 
-.footer-logo {
-  width: 90px;
-  margin-bottom: 10px;
-}
-
-.footer-text {
-  margin-top: 15px;
+.footer-logo p {
   font-size: 14px;
-  color: #444;
-  line-height: 1.5;
-}
-
-/* KONTAK */
-.footer-section h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.footer-contact {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #111;
-  margin: 8px 0;
-  font-size: 16px;
-}
-
-.icon-img {
-  width: 24px;
-  height: 24px;
-}
-.icon-imgemail {
-  width: 24px;
-  height: 24px;
-}
-
-/* SOSIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 14px;
+  opacity: 0.8;
   margin-top: 10px;
 }
 
-.social-btn {
-  width: 48px;
-  height: 48px;
-  background: #f4f4f4;
-  border-radius: 12px;
+/* Section */
+.footer-section h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: 0.25s;
 }
 
-.social-img {
-  width: 40px;
-  height: 40px;
-}
-
-.social-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.social-btn:active {
-  transform: scale(0.88);
-  box-shadow: none;
-}
-
-.social-btnyt {
-  width: 48px;
-  height: 48px;
-  background: #f4f4f4;
-  border-radius: 12px;
+.footer-section a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: 0.25s;
+  gap: 8px;
+  transition: 0.3s;
 }
 
-.social-imgyt {
-  width: 50px;
-  height: 50px;
+.footer-section a:hover {
+  color: rgb(0, 0, 0);
 }
 
-.social-btnyt:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+/* Icon style */
+.footer-section svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
-.social-btnyt:active {
-  transform: scale(0.88);
-  box-shadow: none;
-}
-
-.social-btnmbi {
-  width: 48px;
-  height: 48px;
-  background: #f4f4f4;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.25s;
-}
-
-.social-imgmbi {
-  width: 60px;
-  height: 30px;
-}
-
-.social-btnmbi:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.social-btnmbi:active {
-  transform: scale(0.88);
-  box-shadow: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 850px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-
+/* Bottom */
 .footer-bottom {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #555;
   text-align: center;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: 0.6;
 }
-@media (max-width: 800px) {
-  .hero-text0 {
-    position: flex;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* ini yang bikin selalu pas di tengah */
-    width: 90%; /* biar tidak terlalu lebar di layar kecil */
-    max-width: 800px; /* batas maksimal lebar di layar besar */
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  }
 
-  .hero-text0 h1 {
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0;
-    padding: 0 20px; /* agar tidak nempel ke pinggir di hp */
-  }
+/* Responsive */
 
-  .top-bar {
-    /* ungu atas */
-    height: 120px;
-    color: white;
-    text-align: center;
-    padding-top: 20px;
-  }
+.footer-logo {
+  flex: 1 1 250px;
+}
 
-  .top-bar h1 {
-    margin: 0;
-    font-size: 24px;
-    line-height: 1;
-    margin-bottom: 50px;
-  }
-  .card {
-    width: 300px;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.4s ease; /* transisi halu */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
+.footer-copy {
+  margin-top: 10px;
+}
 
-  .card img {
-    width: 100%;
-    display: block;
-    transition: 0.4s ease;
-  }
-
-  .card p {
-    padding: 15px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .card:hover {
-    transform: translateY(-10px); /* naik halus */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
-
-  .card:hover img {
-    transform: scale(1.05); /* zoom halus */
-    opacity: 0.9;
-  }
-  .container {
+.footer-copy p {
+  font-size: 13px;
+  color: #000000;
+  margin: 2px 0;
+  opacity: 0.85;
+}
+@media (max-width: 500px) {
+  .navbar {
+    flex-wrap: wrap; /* Wajib */
     display: flex;
-    gap: 50px;
-    justify-content: center;
-    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Logo kiri */
+  .logo {
+    position: absolute;
+    left: 20px; /* sejajarkan sesuai padding navbar */
+    flex: 1;
+  }
+
+  .logo img {
+    margin-top: 7px;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  /* Menu box tengah */
+  .menu-box {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* biar tidak ketumpuk logo */
+  }
+
+  .menu-box span {
+    margin-left: 50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+
+  .menu-box a {
+    font-family: "Poppins";
+    color: #000000;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
   }
 }
+
+
