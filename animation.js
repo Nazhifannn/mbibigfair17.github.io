@@ -464,3 +464,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    const overlay = document.getElementById("cardOverlay");
+    const img = document.getElementById("cardImage");
+
+    const overlayImg = card.getAttribute("data-overlay-img");
+    if (overlayImg) {
+      img.src = overlayImg; 
+      img.style.display = "block";
+    } else {
+      img.style.display = "none"; 
+    }
+
+    overlay.classList.remove("hidden");
+  });
+});
+
+document.getElementById("close-card").addEventListener("click", () => {
+  document.getElementById("cardOverlay").classList.add("hidden");
+});
+
