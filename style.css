@@ -154,7 +154,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOutSmoke 6s ease 3s forwards; /* hilang setelah 6 detik */
+  animation: fadeOutSmoke 0s ease 0s forwards; /* hilang setelah 6 detik */
 }
 
 /* ===== ASAP PUTIH KEABU ===== */
@@ -587,6 +587,7 @@ html {
   opacity: 0.8;
 }
 
+
 /* Tablet - 768px ke bawah */
 @media (max-width: 1024px) {
   .navbar {
@@ -760,6 +761,7 @@ html {
   animation: fadeUp 1.2s ease forwards;
   font-family: 'Cinzel', serif;
   color: #e6e6fa  ;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
 }
 
 @keyframes fadeUp {
@@ -1120,7 +1122,8 @@ html {
   font-weight: 1000;
   margin-bottom: 0.5rem;
   color: #e6e6fa;
-  font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+  font-family: 'Cinzel', serif;
 }
 
 .hero-text1 p {
@@ -1402,7 +1405,7 @@ html {
 
 .text0 {
   color: #e6e6fa;
-  font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
+  font-family: 'Cinzel', serif;
   margin-bottom: 50px; /* jarak ke bawah */
   font-size: 3rem;
   text-align: center;
@@ -1410,6 +1413,7 @@ html {
   padding-bottom: 2rem; /* tetap ada ruang ke bawah */
   padding-left: 1rem;
   padding-right: 1rem;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
 }
 .text3 {
   text-align: center;
@@ -1417,13 +1421,15 @@ html {
   padding-bottom: 2rem; /* tetap ada ruang ke bawah */
   padding-left: 1rem;
   padding-right: 1rem;
+  transform: translateY(50px);
 }
 .text3 h1 {
-  font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
+  font-family: 'Cinzel', serif;
   font-size: 3rem;
   font-weight: 1000;
   margin-bottom: 0.5rem;
   color: #e6e6fa;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
 }
 .main-container {
   gap: 40px;
@@ -1438,6 +1444,7 @@ html {
   background-color: #e6e6fa;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(50px);
 }
 
 /* Styling Header dan Piala */
@@ -1777,27 +1784,72 @@ html {
 .timeline.active .event:nth-child(5) .circle {
   transition-delay: 2.7s;
 }
-.hero-text2 {
+
+.media-partners {
+  width: 100%;
+  padding: 30px 0;
   text-align: center;
-  padding-top: 10rem; /* lebih dekat ke video */
-  padding-bottom: 2rem; /* tetap ada ruang ke bawah */
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
-.hero-text2 h1 {
-  font-family: "https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap";
+.media-title {
   font-size: 3rem;
   font-weight: 1000;
   margin-bottom: 0.5rem;
   color: #e6e6fa;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+  font-family: 'Cinzel', serif;
+  margin-top: 100px;
 }
+
+/* NON-FORMAL FLEX WRAP */
+.media-random {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+}
+
+/* LOGO BESAR DAN JELAS */
+.media-random img {
+  width: 150px;   /* BESAR */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
 
 .hero-text2 p {
   font-size: rem;
   color: var(--muted);
   margin-bottom: 10px; /* jarak antara teks dan kartu */
 }
+.text3 {
+  text-align: center;
+  padding-top: 20px; /* lebih dekat ke video */
+  padding-bottom: 2rem; /* tetap ada ruang ke bawah */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transform: translateY(20px);
+}
+.main-container {
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  width: 95%; /* Lebar wadah utama */
+  max-width: 1500px;
+  height: 80%;
+  padding: 20px;
+  background-color: #e6e6fa;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(50px);
+  transform: translateX(-25px);
+}
+
 .footer {
   background: #fff;
   padding: 60px 20px 30px;
@@ -1818,7 +1870,6 @@ html {
 .footer-brand {
   max-width: 350px;
   text-align: center;
-  transform: translateX(-100px);
 }
 
 .footer-logo {
@@ -1965,5 +2016,4 @@ html {
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 20px;
-
 }

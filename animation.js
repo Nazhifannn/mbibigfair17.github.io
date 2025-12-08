@@ -40,8 +40,8 @@ const translations = {
     "zoom-text1": "LOGO & MASKOT",
     "zoom-text2": "RESMI KAMI",
     text: "LOGO MBF",
-    left: "LUKY",
-    mid: "LOGO MBF 17",
+    left: "LUCKY",
+    mid: "LOGO",
     right: "LUCY",
     mbf: "APA ITU MBF?",
     mbft: `MBI Big Fair (MBF) adalah acara tahunan dari MBI Amanatul Ummah
@@ -83,7 +83,7 @@ const translations = {
     "zoom-text2": "LOGO & MASCOT",
     text: "MBF LOGO",
     left: "LUKY",
-    mid: "MBF 17 LOGO",
+    mid: "LOGO",
     right: "LUCY",
     mbf: "WHAT IS MBF?",
     mbft: `The MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, located in Pacet, Mojokerto. For nearly 16 years, the MBI Big Fair has consistently presented a variety of spectacular competitions and events. The event is also enlivened by the stunning and extraordinary creations of MBI students.`,
@@ -164,23 +164,6 @@ function updateLanguage(lang) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Cek apakah intro sudah pernah ditampilkan
-  if (sessionStorage.getItem("introShown") === "true") {
-    // Jika sudah pernah, langsung sembunyikan smoke-screen
-    const smokeScreen = document.querySelector('.smoke-screen');
-    if (smokeScreen) {
-      smokeScreen.style.display = 'none';
-    }
-    return; // keluar, tidak jalankan animasi
-  }
-
-  // Tandai bahwa intro sudah ditampilkan (setelah animasi selesai)
-  setTimeout(() => {
-    sessionStorage.setItem("introShown", "true");
-  }, 7000); // sesuaikan dengan durasi total animasimu (sekarang ~6-7 detik)
-});
-
 /*animasi zoom in*/
 document.addEventListener("DOMContentLoaded", () => {
   const zoomTexts = document.querySelectorAll(".zoom-text");
@@ -224,12 +207,15 @@ let currentLang = localStorage.getItem("lang") || "id";
 // === Fungsi Buka Card ===
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    const imgSrc = card.querySelector("img").src;
+
+    // Gambar overlay → ambil data-overlay-img jika ada
+    const imgSrc = card.dataset.overlayImg || card.querySelector("img").src;
+
     const title = card.getAttribute(`data-title-${currentLang}`);
     const desc = card.getAttribute(`data-desc-${currentLang}`);
 
     cardTitle.textContent = title;
-    cardImage.src = imgSrc;
+    cardImage.src = imgSrc; 
     cardDesc.textContent = desc;
 
     overlay.dataset.cardType = card.classList.contains("left")
@@ -242,6 +228,7 @@ cards.forEach((card) => {
     document.body.style.overflow = "hidden";
   });
 });
+
 
 // === Fungsi Tutup Card ===
 closeBtn.addEventListener("click", () => {
@@ -462,26 +449,3 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   document.head.appendChild(style);
 });
-
-
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    const overlay = document.getElementById("cardOverlay");
-    const img = document.getElementById("cardImage");
-
-    const overlayImg = card.getAttribute("data-overlay-img");
-    if (overlayImg) {
-      img.src = overlayImg; 
-      img.style.display = "block";
-    } else {
-      img.style.display = "none"; 
-    }
-
-    overlay.classList.remove("hidden");
-  });
-});
-
-document.getElementById("close-card").addEventListener("click", () => {
-  document.getElementById("cardOverlay").classList.add("hidden");
-});
-
