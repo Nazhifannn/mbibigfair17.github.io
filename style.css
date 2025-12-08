@@ -154,7 +154,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOutSmoke 0s ease 0s forwards; /* hilang setelah 6 detik */
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
 }
 
 /* ===== ASAP PUTIH KEABU ===== */
@@ -2016,4 +2016,5 @@ html {
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 20px;
+
 }
