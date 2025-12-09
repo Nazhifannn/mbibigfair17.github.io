@@ -203,6 +203,7 @@ html {
 
 /* ===== Navbar ===== */
 .navbar {
+  flex-wrap: wrap; /* Wajib */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -223,14 +224,16 @@ html {
 }
 
 .logo img {
+  margin-top: 7px;
   align-items: center;
-  height: 60px;
+  height: 50px;
   width: auto;
   border-radius: 10px;
 }
 
 /* Menu box tengah */
 .menu-box {
+  margin-top: 50px;
   background: #ffffff;
   padding: 15px 30px;
   border-radius: 25px;
@@ -260,41 +263,390 @@ html {
   text-decoration: none;
   font-weight: bold;
 }
-
-.lang-switch {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
 }
 
-.lang-btn {
-  background-color: #4a0d23;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 8px 16px;
+.lang-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  background: #4a0d23;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.lang-btn img {
-  width: 20px;
-  height: 20px;
+.lang-toggle:hover {
+  background: #630d2f;
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.lang-btn:hover {
-  background-color: #630d2f;
-  transform: scale(1.05);
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.lang-btn.active {
-  box-shadow: 0 0 5px #fff;
-  background-color: #8c1a40;
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: #4a0d23;
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
+@media (max-width: 800px) {
+  /* Logo kiri */
+  .logo {
+    position: absolute;
+    left: 10px; /* sejajarkan sesuai padding navbar */
+    flex: 1;
+  }
+
+  .logo img {
+    margin-top: 7px;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+  }
+  .menu-box {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 5px 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* biar tidak ketumpuk logo */
+  }
+
+  .menu-box span {
+    margin-left: 50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+
+  .menu-box a {
+    font-family: "Poppins";
+    color: #000000;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+  .lang-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #4a0d23;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+
+  .lang-toggle:hover {
+    background: #630d2f;
+    transform: translateY(-2px);
+  }
+  .lang-toggle span .lang-toggle img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .lang-text {
+    font-weight: 600px;
+    letter-spacing: 1px;
+  }
+
+  .arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+  }
+
+  /* Dropdown */
+  .lang-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: #4a0d23;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+  }
+
+  .lang-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Rotate arrow when open */
+  .lang-selector.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .lang-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .lang-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .lang-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Logo kiri */
+  .logo {
+    position: absolute;
+    left: 15px; /* sejajarkan sesuai padding navbar */
+    flex: 1;
+  }
+
+  .logo img {
+    margin-top: 12px;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    border-radius: 10px;
+  }
+  .menu-box {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* biar tidak ketumpuk logo */
+  }
+
+  .menu-box span {
+    margin-left: 50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Poppins";
+  }
+
+  .menu-box a {
+    font-family: "Poppins";
+    color: #000000;
+    font-size: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+  .lang-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .lang-toggle {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #4a0d23;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+
+  .lang-toggle:hover {
+    background: #630d2f;
+    transform: translateY(-2px);
+  }
+  .lang-toggle img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .lang-text {
+    font-weight: 600px;
+    letter-spacing: 1px;
+  }
+
+  .arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    font-size: 5px;
+  }
+
+  /* Dropdown */
+  .lang-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: #4a0d23;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+  }
+
+  .lang-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Rotate arrow when open */
+  .lang-selector.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .lang-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .lang-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .lang-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    flex-shrink: 0;
+  }
 }
 
 .content {
@@ -1866,3 +2218,4 @@ html {
   box-shadow: none;
 }
 }
+
