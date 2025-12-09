@@ -20,11 +20,11 @@
   <body>
     <div class="section white">
      <!-- ===== Navbar ===== -->
-    <div class="navbar">
+      <div class="navbar">
       <!-- Box Merah Tengah -->
       <div class="menu-box">
         <div class="logo">
-          <img src="assets/mbf17.png" alt="Logo MBF" />
+          <img src="mbf17.png" alt="Logo MBF" />
         </div>
         <span>17ᵗʰ MBF</span>
         <a href="index.html">Home</a>
@@ -32,16 +32,27 @@
         <a href="event.html">Events</a>
         <a href="https://galangceria.events/id">Galang Ceria</a>
       </div>
-        <div class="lang-switch">
-          <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
-            <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
-            <span>ID</span>
-          </button>
-          <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
-            <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
-            <span>EN</span>
-          </button>
-        </div>
+ <!-- ==== LANGUAGE SWITCHER BARU (PASTI JALAN) ==== -->
+<div class="lang-selector">
+  <div class="lang-toggle" id="langToggle">
+    <img id="flagIcon" src="https://flagcdn.com/w40/us.png" alt="Flag">
+    <span id="langText">EN</span>
+    <svg class="arrow" width="12" height="8" viewBox="0 0 12 8">
+      <path fill="#fff" d="M0 0l6 8 6-8z"/>
+    </svg>
+  </div>
+
+  <div class="lang-options" id="langOptions">
+    <div class="lang-item" data-lang="en">
+      <img src="https://flagcdn.com/w40/us.png" alt="English">
+      <span>English</span>
+    </div>
+    <div class="lang-item" data-lang="id">
+      <img src="https://flagcdn.com/w40/id.png" alt="Indonesia">
+      <span>Indonesia</span>
+    </div>
+  </div>
+</div>
       </div>
       <section class="img-section">
         <img class="hero-img" src="LM100027.JPG" alt="Hero Image" />
@@ -317,4 +328,5 @@ MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pa
 
 
 </html>
+
 
