@@ -1,12 +1,70 @@
+// ========= LANGUAGE SWITCHER YANG 100% BERHASIL =========
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("langToggle");
+  const options = document.getElementById("langOptions");
+  const flagIcon = document.getElementById("flagIcon");
+  const langText = document.getElementById("langText");
+  const arrow = document.querySelector(".arrow");
+
+  // Buka/tutup dropdown
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    options.classList.toggle("show");
+    arrow.style.transform = options.classList.contains("show")
+      ? "rotate(180deg)"
+      : "rotate(0deg)";
+  });
+
+  // Pilih bahasa
+  document.querySelectorAll(".lang-item").forEach((item) => {
+    item.addEventListener("click", function () {
+      const lang = this.getAttribute("data-lang");
+      const img = this.querySelector("img").src;
+      const text = this.querySelector("span").textContent;
+
+      // Update tombol utama
+      flagIcon.src = img;
+      langText.textContent = lang.toUpperCase();
+
+      // Ganti bahasa di seluruh halaman
+      setLanguage(lang);
+      localStorage.setItem("lang", lang);
+
+      // Tutup dropdown
+      options.classList.remove("show");
+      arrow.style.transform = "rotate(0deg)";
+    });
+  });
+
+  // Tutup kalau klik di luar
+  document.addEventListener("click", function () {
+    options.classList.remove("show");
+    arrow.style.transform = "rotate(0deg)";
+  });
+
+  // Muat bahasa terakhir saat halaman dibuka
+  const saved = localStorage.getItem("lang") || "en";
+  setLanguage(saved);
+
+  // Update tampilan tombol sesuai bahasa yang tersimpan
+  const flagUrl =
+    saved === "id"
+      ? "https://flagcdn.com/w40/id.png"
+      : "https://flagcdn.com/w40/us.png";
+  flagIcon.src = flagUrl;
+  langText.textContent = saved.toUpperCase();
+});
+
 // === TRANSLATION SYSTEM ===
 const translations = {
   en: {
     our: `
 Join this competition and prove your skills among other participants`,
-    thmbf: `17th MBF`,
-    olim: `Olympic`,
-    kompetisi: `Competition`,
-    mbfth: `17th MBI BIG FAIR`,
+    mbfth: `!! Choose the competition branch that suits your talents and interests !!`,
+    olim: `OLYMPIC`,
+    inggris: "ENGLISH",
+    arab: "Arabic",
+    kompetisi: `COMPETITION`,
     regis: `Register Now`,
     ocians: `Olimpiad of Social & Science`,
     regis1: `Register Now`,
@@ -28,12 +86,12 @@ Join this competition and prove your skills among other participants`,
     more7: `More Info`,
     more8: `More Info`,
     more9: `More Info`,
-    eng: `English`,
-    kompetisi1: `Competition`,
-    arab: `Arabic`,
-    kompetisi2: `Competition`,
-    spes: `Specials`,
-    kompetisi3: `Competition`,
+    eng: `ENGLISH`,
+    kompetisi1: `COMPETITION`,
+    arab: `ARABIC`,
+    kompetisi2: `COMPETITION`,
+    spes: `SPECIALS`,
+    kompetisi3: `COMPETITION`,
     mbf: `17th MBI BIG FAIR`,
     tmbfh: `17th MBI BIG FAIR`,
     ththmbf: `17th MBI BIG FAIR`,
@@ -45,13 +103,28 @@ Join this competition and prove your skills among other participants`,
     muttaqina: `Read Arabic News`,
     barikna: `Read The Yellow Book`,
     qorona: `Calligraphy Creation Competition`,
+    ocians: "Social And Science Olympiad",
+    ocians2: "Olimpiad Of Social And Science",
+    register: "Register Now",
+    info: "More Info",
+    islam: "Islamic Olimpiad",
+    english: "English Olimpiad",
+    storytel: "Story Telling",
+    qobilna: "Calligraphy Creation",
+    ket: "© 2025 MBF XVII · MBI Amanatul Ummah Created by IT Team of MBF XVII · All rights reserved",
+    kontak: "contact",
+    sosmed: "Social Media",
+    olimislam: "ISLAMIC OLYMPIAD",
+    mbf: "MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently presented a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
   },
   id: {
     our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
-    thmbf: `!! Pilih cabang kompetisi yang sesuai dengan bakat dan minatmu !!`,
-    olim: `Kompetisi`,
-    kompetisi: `Olimpiade`,
-    mbfth: `MBI BIG FAIR 17`,
+    mbfth: `!! Pilih cabang kompetisi yang sesuai dengan bakat dan minatmu !!`,
+    olim: `KOMPETISI`,
+    inggris: "KOMPETISI",
+    arab: "Kompetisi",
+    kompetisi: `OLIMPIADE`,
+    thmbf: "!! Pilih cabang kompetisi yang sesuai dengan bakat dan minatmu !!",
     regis: `Daftar Sekarang`,
     ocians: `Olimpiade Sosial & Sains`,
     regis1: `Daftar Sekarang`,
@@ -73,12 +146,12 @@ Join this competition and prove your skills among other participants`,
     more7: `Info Lebih`,
     more8: `Info Lebih`,
     more9: `Info Lebih`,
-    eng: `Kompetisi`,
-    kompetisi1: `Bahasa Inggris`,
-    arab: `Kompetisi`,
-    kompetisi2: `Bahasa Arab`,
-    spes: `kompetisi`,
-    kompetisi3: `Spesial`,
+    eng: `KOMPETISI`,
+    kompetisi1: `BAHASA INGGRIS`,
+    arab: `KOMPETISI`,
+    kompetisi2: `BAHASA ARAB`,
+    spes: `KOMPETISI`,
+    kompetisi3: `SPESIAL`,
     mbf: `MBI BIG FAIR 17`,
     tmbfh: `MBI BIG FAIR 17`,
     ththmbf: `MBI BIG FAIR 17`,
@@ -90,6 +163,19 @@ Join this competition and prove your skills among other participants`,
     muttaqina: `Membaca Berita Berbahasa Arab`,
     barikna: `Membaca Kitab Kuning`,
     qorona: `Kompetisi Kreasi Kaligrafi`,
+    ocians: "Olimpiade Sosial Dan Sains",
+    ocians2: "Olimpiade Sosial Dan Sains",
+    register: "Daftar Sekarang",
+    info: "Info Lebih Banyak",
+    islam: "Olimpiade Islam",
+    english: "Olimpiade Bahasa Inggris",
+    storytel: "Bercerita Bahasa Inggris",
+    qobilna: "Kreasi kaligrafi",
+    ket: "© 2025 MBF XVII · MBI Amanatul Ummah Dibuat Oleh Tim IT MBF XVII · All rights reserved",
+    kontak: "Kontak",
+    sosmed: "Sosial Media",
+    olimislam: "OLIMPIADE ISLAM",
+    mbf: "MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently presented a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
   },
 };
 
