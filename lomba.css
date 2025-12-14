@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@
   font-family: "fantasy1";
   src: url("Fantasy Script.otf") format("truetype");
 }
+
 
 body,
 html {
@@ -144,6 +146,224 @@ body {
 }
 
 /* === HERO === */
+.hero-ilc {
+  position: relative;
+  height: 100vh;
+  background: url('DSC09659.JPG') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.hero-ilc::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* atur gelap di sini */
+  z-index: 1;
+}
+/* Section */
+.guest-wow {
+  padding: 100px 20px;
+
+  background: linear-gradient(to top, #886eaf, #927cb2);
+}
+
+/* Title */
+.wow-title {
+  text-align: center;
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 70px;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main Guest Grid */
+.guest-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: -10px;
+}
+
+/* Card */
+.guest-card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  transition: 0.6s ease;
+  width: 400px;
+  transform: translateX(50px);
+}
+
+.guest-card img {
+  width: 125%;
+  height: 420px;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(110%);
+  transition: 0.6s ease;
+}
+
+/* Info */
+.guest-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+
+.guest-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.guest-info p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  color: white;
+}
+
+
+.guest-card-alexa {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  transition: 0.6s ease;
+  transform: translateX(150px);
+}
+
+.guest-card-alexa img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(110%);
+  transition: 0.6s ease;
+}
+
+/* Info */
+.guest-info-alexa {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+
+.guest-info-alexa h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.guest-info-alexa p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.guest-row-alexa {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Card tetap */
+.guest-card-alexa {
+  width: 370px;
+  height: 400px;
+}
+
+.guest-desc-alexa {
+  max-width: 750px;
+  transform: translateX(200px);
+  
+  /* BOX */
+  background: white;
+  backdrop-filter: blur(10px);
+  padding: 30px 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateX(150px);
+}
+
+/* Judul */
+.guest-desc-alexa h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+}
+
+/* Deskripsi */
+.guest-desc-alexa p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+/* Next Guest */
+.next-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 100px 0 40px;
+  letter-spacing: 3px;
+  opacity: 0.9;
+  color: white;
+}
+
+.next-guest-wow {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+.hero .overlay-ilc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content-ilc {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo-ilc {
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+.hero-title-ilc {
+  margin-top: -90px;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  filter: brightness(100%);
+}
+
+.hero-subtitle-ilc {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
 .hero {
   position: relative;
   height: 100vh;
