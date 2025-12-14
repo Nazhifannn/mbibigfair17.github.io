@@ -34,7 +34,7 @@ html {
 }
 
 .white {
-   background: linear-gradient(to top, #402c5c, #886eaf);
+  background: linear-gradient(to top, #402c5c, #886eaf);
 }
 
 /* ===== Navbar ===== */
@@ -173,14 +173,12 @@ html {
 /* ========================== */
 
 .top-bar {
-        /* ungu atas */
+  /* ungu atas */
   height: 100px;
   color: white;
   text-align: center;
   padding-top: 20px;
 }
-
-
 
 .top-bar span {
   font-size: 16px;
@@ -188,147 +186,155 @@ html {
 
 /* SECTION BACKGROUND FANTASY */
 .speakers-section.fantasy {
-    padding: 70px 40px;
-    text-align: center;
-    background: linear-gradient(to top, #402c5c, #886eaf);
-    position: relative;
-    overflow: hidden;
+  padding: 70px 40px;
+  text-align: center;
+  background: linear-gradient(to top, #402c5c, #886eaf);
+  position: relative;
+  overflow: hidden;
 }
 
 /* AURORA / LIGHT SWIRLS */
 .speakers-section.fantasy::before,
 .speakers-section.fantasy::after {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 70%);
-    filter: blur(70px);
-    animation: float 8s infinite linear alternate;
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3),
+    transparent 70%
+  );
+  filter: blur(70px);
+  animation: float 8s infinite linear alternate;
 }
 
 .speakers-section.fantasy::before {
-    top: -150px;
-    left: -150px;
+  top: -150px;
+  left: -150px;
 }
 
 .speakers-section.fantasy::after {
-    bottom: -150px;
-    right: -150px;
+  bottom: -150px;
+  right: -150px;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(40px) rotate(30deg); }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(40px) rotate(30deg);
+  }
 }
 
 /* TITLE */
 .speakers-section .title {
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 800;
-    max-width: 900px;
-    margin: 0 auto 45px;
-    text-shadow: 0 0 12px rgba(255,255,255,0.5);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  max-width: 900px;
+  margin: 0 auto 45px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 /* CONTAINER */
 .speakers-container {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* FANTASY CARD */
 .fantasy-card {
-    background: rgba(255, 255, 255, 0.12);
-    width: 300px;
-    border-radius: 25px;
-    padding: 22px;
-    backdrop-filter: blur(15px);
-    border: 1.5px solid rgba(255,255,255,0.35);
-    box-shadow: 0 0 25px rgba(255,255,255,0.25);
-    transition: 0.4s ease;
-    position: relative;
-    overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  width: 300px;
+  border-radius: 25px;
+  padding: 22px;
+  backdrop-filter: blur(15px);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 /* ORNAMENTAL GLOW */
 .fantasy-card::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    top: -40px;
-    right: -40px;
-    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
-    filter: blur(40px);
-    opacity: 0.4;
-    transition: 0.4s ease;
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -40px;
+  right: -40px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  filter: blur(40px);
+  opacity: 0.4;
+  transition: 0.4s ease;
 }
 
 .fantasy-card:hover::after {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* CARD HOVER */
 .fantasy-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 0 35px rgba(255,255,255,0.4);
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
 }
 
 /* IMAGE */
 .speaker-img {
-    width: 100%;
-    height: 360px;
-    overflow: hidden;
-    border-radius: 18px;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 18px;
 }
 
 .speaker-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
 }
 
 .fantasy-card:hover .speaker-img img {
-    transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 /* NAME */
 .speaker-name {
-    margin-top: 18px;
-    font-size: 22px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 0 8px rgba(255,255,255,0.6);
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 /* DESCRIPTION */
 .speaker-desc {
-    font-size: 14px;
-    margin-top: 12px;
-    color: #e8dfff;
-    line-height: 1.6;
-  }
-  /* Judul kecil di atas foto */
+  font-size: 14px;
+  margin-top: 12px;
+  color: #e8dfff;
+  line-height: 1.6;
+}
+/* Judul kecil di atas foto */
 .speaker-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: 0 0 6px rgba(215, 207, 255, 0.8);
-    margin-bottom: 12px;
-    letter-spacing: 1.1px;
-    text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(215, 207, 255, 0.8);
+  margin-bottom: 12px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
 }
 
 .hero-description {
   max-width: 800px;
   margin: 20px auto 0 auto;
   text-align: center;
-  font-size: 1.40rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
   padding: 0 20px;
@@ -341,7 +347,7 @@ body {
 }
 
 .wrapper {
-  width: 100%;      /* FULL LAYAR */
+  width: 100%; /* FULL LAYAR */
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -353,7 +359,7 @@ body {
   color: white;
   text-align: center;
   padding: 18px 0;
-  position: relative;     /* WAJIB biar anaknya bisa numpuk */
+  position: relative; /* WAJIB biar anaknya bisa numpuk */
 }
 
 .band h2 {
@@ -363,17 +369,16 @@ body {
 }
 
 .italic-text {
-  position: absolute;     /* BIAR NIMPAI TULISAN UTAMA */
-  top: 28px;              /* ATUR POSISI VERTICAL */
-  left: 50%;              /* TENGAH */
+  position: absolute; /* BIAR NIMPAI TULISAN UTAMA */
+  top: 28px; /* ATUR POSISI VERTICAL */
+  left: 50%; /* TENGAH */
   transform: translateX(-50%);
   font-style: italic;
   font-size: 18px;
-  color: #ffd94a;         /* KUNING */
+  color: #ffd94a; /* KUNING */
   font-weight: 700;
   pointer-events: none;
 }
-
 
 /* Kotak konten putih (FULL LEBAR JUGA) */
 .content-block {
@@ -381,8 +386,6 @@ body {
   height: 250px;
   background: white;
 }
-
-
 
 /* === CINEMATIC EVENT SECTION === */
 .event-cinematic {
@@ -409,13 +412,12 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.55),
-      rgba(30,10,60,0.65),
-      rgba(0,0,0,0.85)
-    );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(30, 10, 60, 0.65),
+    rgba(0, 0, 0, 0.85)
+  );
   z-index: 1;
 }
 
@@ -448,7 +450,7 @@ body {
   font-size: clamp(42px, 6vw, 88px);
   font-weight: 800;
   margin-top: -30px;
-  text-shadow: 0 0 30px rgba(255,255,255,0.5);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 /* DESCRIPTION */
@@ -457,7 +459,7 @@ body {
   margin-top: 20px;
   font-size: clamp(15px, 2vw, 19px);
   line-height: 1.8;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* BUTTON */
@@ -470,36 +472,43 @@ body {
   text-decoration: none;
   border-radius: 50px;
   background: linear-gradient(135deg, #ffffff, #dfe6e9);
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.4),
-    0 0 60px rgba(255,255,255,0.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4),
+    0 0 60px rgba(255, 255, 255, 0.2);
   transition: all 0.4s ease;
 }
 
 .event-btn:hover {
   background: linear-gradient(135deg, #a4ffb8, #1c8e4d);
   color: white;
-  box-shadow:
-    0 0 40px rgba(77,255,145,0.8),
-    0 0 80px rgba(150,255,173,0.6);
+  box-shadow: 0 0 40px rgba(77, 255, 145, 0.8),
+    0 0 80px rgba(150, 255, 173, 0.6);
   transform: translateY(-6px);
 }
 
 /* ANIMATIONS */
 @keyframes slowZoom {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.15); }
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1.15);
+  }
 }
 
 @keyframes glowPulse {
-  0%,100% { opacity: 0.6; }
-  50%     { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* === LOCATION === */
 .location {
   position: relative;
-  background: url('LM100093.JPG') center/cover no-repeat;
+  background: url("LM100093.JPG") center/cover no-repeat;
   color: white;
   padding: 120px 20px;
   text-align: center;
@@ -525,7 +534,7 @@ body {
   display: inline-block;
   margin-top: 100px;
   padding: 12px 30px;
-  background: #886EAF;
+  background: #886eaf;
   color: white;
   border-radius: 30px;
   text-decoration: none;
@@ -536,8 +545,6 @@ body {
 .btn-location:hover {
   background: #22a36e;
 }
-
-
 
 .footer {
   background: #fff;
@@ -624,7 +631,7 @@ body {
 
 .social-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .social-btn:active {
@@ -650,7 +657,7 @@ body {
 
 .social-btnyt:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .social-btnyt:active {
@@ -676,7 +683,7 @@ body {
 
 .social-btnmbi:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .social-btnmbi:active {
@@ -684,10 +691,8 @@ body {
   box-shadow: none;
 }
 
-
-
 /* RESPONSIVE */
-@media(max-width: 850px) {
+@media (max-width: 850px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -706,4 +711,4 @@ body {
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 20px;
-  }
+}
