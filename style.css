@@ -17,6 +17,32 @@
   font-family: "cinzeldecorative";
   src: url("CinzelDecorative-Bold.ttf") format("truetype");
 }
+.btn-gambar {
+  width: 200px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: .2s;
+  top: 500px;
+}
+
+.btn-gambar:hover {
+  transform: scale(1);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .intro-container {
   position: relative;
   width: 100%;
@@ -2003,4 +2029,5 @@ html {
   padding-top: 20px;
 
 }
+
 
