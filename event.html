@@ -20,28 +20,28 @@
   <body>
     <section class="section white">
        <!-- ===== Navbar ===== -->
- <div class="navbar">
-        <!-- Lang Button Kiri -->
-        <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
-          <span class="flag">🇮🇩</span>
-        </button>
-
-        <!-- Menu Box Tengah -->
-        <div class="menu-box">
-          <div class="logo1">
-            <img src="assets/mbf17.png" alt="Logo MBF" />
-          </div>
-          <span>17ᵗʰ MBF</span>
-          <a href="index.html">Home</a>
-          <a href="competitions.html">Competitions</a>
-          <a href="event.html">Events</a>
-          <a href="https://galangceria.events/id">Galang Ceria</a>
+    <div class="navbar">
+      <!-- Box Merah Tengah -->
+      <div class="menu-box">
+        <div class="logo">
+          <img src="assets/mbf17.png" alt="Logo MBF" />
         </div>
-
-        <!-- Lang Button Kanan -->
-        <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
-          <span class="flag">🇬🇧</span>
-        </button>
+        <span>17ᵗʰ MBF</span>
+        <a href="index.html">Home</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="event.html">Events</a>
+        <a href="https://galangceria.events/id">Galang Ceria</a>
+      </div>
+     <div class="lang-switch">
+          <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
+            <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
+            <span>ID</span>
+          </button>
+          <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
+            <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
+            <span>EN</span>
+          </button>
+        </div>
       </div>
        <section class="img-section">
         <img class="hero-img" src="LM100225.JPG" alt="Hero Image" />
@@ -103,49 +103,51 @@
 
   <div class="wrapper">
 
-<section class="event-section">
-  <img src="0593.JPG" class="event-img">
+<section class="event-cinematic">
+  <img src="_MG_0593.JPG" class="event-bg" />
 
-  <div class="event-overlay">
-    <div class="title-wrapper">
-      <span class="title-yellow">IPNAS</span>
-      <h3 class="title-main">Inspirasi Nasional</h3>
-    </div>
+  <div class="event-layer">
+    <span class="event-script">IPNAS</span>
+    <h2 class="event-title">Inspirasi Nasional</h2>
 
-    <a href="#" class="btn-more">More Info</a>
+    <p class="event-desc">
+      Now back at MBF XVII, a sub event that presents inspiring public figures
+      whose life stories shape the golden generation of Indonesia 2045.
+    </p>
+
+    <a href="ipnas.html" class="event-btn">Explore Event</a>
+  </div>
+</section>
+<section class="event-cinematic">
+  <img src="LM100225.JPG" class="event-bg" />
+
+  <div class="event-layer">
+    <span class="event-script">BEDBUK</span>
+    <h2 class="event-title">Bedah Buku</h2>
+
+    <p class="event-desc">
+      Now back at MBF XVII, a sub event that presents inspiring public figures
+      whose life stories shape the golden generation of Indonesia 2045.
+    </p>
+
+    <a href="#" class="event-btn">Explore Event</a>
+  </div>
+</section>
+<section class="event-cinematic">
+  <img src="DSC09653.JPG" class="event-bg" />
+
+  <div class="event-layer">
+    <span class="event-script">PART OF ILC</span>
+    <h2 class="event-title">Seminar Kepemimpinan</h2>
+
+    <p class="event-desc">
+     Kegiatan Seminar yang Diperuntukkan Pada Para Pelajar dengan Tujuan Melatih Leadership dan Kecakapan dalam Berorganisasi.
+    </p>
+
+    <a href="ilcevent.html" class="event-btn">Explore Event</a>
   </div>
 </section>
 
-
-
-<section class="event-section">
-  <img src="LM100225.JPG" class="event-img">
-
-  <div class="event-overlay">
-    <div class="title-wrapper">
-      <span class="title-yellow">BedBuk</span>
-      <h3 class="title-main">Bedah Buku</h3>
-    </div>
-
-    <a href="#" class="btn-more">More Info</a>
-  </div>
-</section>
-
-
-
-<section class="event-section">
-  <img src="DSC09653.JPG" class="event-img">
-
-  <div class="event-overlay">
-    <div class="title-wrapper">
-      <span class="title-yellow-ilc">ILC</span>
-      <h3 class="title-main-ilc">Indonesia Leadership</h3>
-      <h4 class="title-main-ilc1">Conference</h4>
-    </div>
-
-    <a href="#" class="btn-more">More Info</a>
-  </div>
-</section>
   </div>
 <!-- ===== LOCATION SECTION ===== -->
   <section class="location">
@@ -221,5 +223,4 @@ MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pa
   </div>
 </footer>
 </html>
-
 
