@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MBI BIG FAIR XVII</title>
+    <title>MBI BIG FAIR</title>
     <meta
       name="description"
       content="MBI BIG FAIR XVII – The biggest SMP-level competition across Java–Bali. Find competitions, events, and galleries here."
@@ -18,9 +18,14 @@
   <body>
     <!-- ===== Navbar ===== -->
     <div class="navbar">
-      <!-- Box Merah Tengah -->
+      <!-- Lang Button Kiri -->
+      <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
+        <span class="flag">🇮🇩</span>
+      </button>
+
+      <!-- Menu Box Tengah -->
       <div class="menu-box">
-        <div class="logo">
+        <div class="logo1">
           <img src="assets/mbf17.png" alt="Logo MBF" />
         </div>
         <span>17ᵗʰ MBF</span>
@@ -29,234 +34,278 @@
         <a href="event.html">Events</a>
         <a href="https://galangceria.events/id">Galang Ceria</a>
       </div>
-      <div class="lang-switch">
-        <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
-          <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
-          <span>ID</span>
-        </button>
-        <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
-          <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
-          <span>EN</span>
-        </button>
-      </div>
+
+      <!-- Lang Button Kanan -->
+      <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
+        <span class="flag">🇬🇧</span>
+      </button>
     </div>
     <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="FESBAN- COLOR.png" alt="Logo Lomba" class="hero-logo" />
-      <h1 class="hero-title" data-lang="fesban">BANJARI FESTIVAL</h1>
-      <p class="hero-subtitle" data-lang="part">Part of MBI BIG FAIR XVII</p>
-    </div>
-  </section>
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <img src="FESBAN- COLOR.png" alt="Logo Lomba" class="hero-logo" />
+        <h1 class="hero-title" data-lang="fesbant">BANJARI FESTIVAL</h1>
+        <p class="hero-subtitle" data-lang="part">Part of MBI BIG FAIR XVII</p>
+      </div>
+    </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section class="about">
-    <h2 data-lang="fesbanis">What Is FESBAN ?</h2>
-    <p data-lang="fesban2">
- FESBAN adalah salah satu perlombaan di MBI BIG FAIR XVII. Lomba ini hanya terdiri dari satu babak. FESBAN  menguji kemahiran peserta dalam menyenandungkan sholawat diiringi dengan musik banjari sesuai dengan kriteria penilaian vocal, music banjari, adab dan syair, serta lagu jingle. Mari bergabung bersama MBI BIG FAIR XVII dan jadilah juara!.
-    </p>
-  </section>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about">
+      <h2 data-lang="fesbani">What Is FESBAN ?</h2>
+      <p data-lang="fesban1">
+        FESBAN adalah salah satu perlombaan di MBI BIG FAIR XVII. Lomba ini
+        hanya terdiri dari satu babak. FESBAN menguji kemahiran peserta dalam
+        menyenandungkan sholawat diiringi dengan musik banjari sesuai dengan
+        kriteria penilaian vocal, music banjari, adab dan syair, serta lagu
+        jingle. Mari bergabung bersama MBI BIG FAIR XVII dan jadilah juara!.
+      </p>
+    </section>
 
-<section class="champion-prize">
-  <h2>🏆 Champion Prize</h2>
-  <div class="prize-container">
+    <section class="champion-prize">
+      <h2>🏆 Champion Prize</h2>
+      <div class="prize-container">
+        <div class="prize-card gold">
+          <h3>1<sup>st</sup> Rank</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang01">💵 Uang Pembinaan Rp2.500.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
 
-    <div class="prize-card gold">
-      <h3>1<sup>st</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang01">💵 Uang Pembinaan Rp2.500.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
+        <div class="prize-card silver">
+          <h3>2<sup>nd</sup> Rank</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang0">💵 Uang Pembinaan Rp2.000.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
 
-    <div class="prize-card silver">
-      <h3>2<sup>nd</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang0">💵 Uang Pembinaan Rp2.000.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
-
-    <div class="prize-card bronze">
-      <h3>3<sup>rd</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang1">💵 Uang Pembinaan Rp150.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
-
+        <div class="prize-card bronze">
+          <h3>3<sup>rd</sup> Rank</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang1">💵 Uang Pembinaan Rp150.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
 
         <div class="prize-card maroon">
-      <h3>Best Vocal</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang5">💵 Uang Pembinaan Rp500.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
+          <h3>Best Vocal</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang5">💵 Uang Pembinaan Rp500.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
 
-            <div class="prize-card maroon">
-      <h3>Peserta Ter Favorit</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang5">💵 Uang Pembinaan Rp500.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
+        <div class="prize-card maroon">
+          <h3>Peserta Ter Favorit</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang5">💵 Uang Pembinaan Rp500.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
 
-    <div class="prize-card maroon">
-      <h3>Best Jinggle</h3>
-      <p class="subtitle">You will get:</p>
-      <ul>
-        <li data-lang="y1">🏆 Trophy</li>
-        <li data-lang="yuang6">💵 Uang Pembinaan Rp250.000,00-</li>
-        <li data-lang="y3">🎓 Sertifikat</li>
-        <li data-lang="y4">🎁 Merchandise</li>
-      </ul>
-    </div>
-  </div>
-
-
-
-<!-- ===== INFORMATION & FACILITY SECTION ===== -->
-  <h2 class="section-title" data-lang="allinfo">ALL INFORMATION ABOUT THIS COMPETITION</h2>
-
-  <div class="info-grid">
-    <div class="info-box">
-      <div class="info-icon">📖</div>
-      <h3 data-lang="guideline">Technical Guidelines</h3>
-      <a href="#" class="info-btn-jj" data-lang="guideline2">View Guidelines</a>
-    </div>
-
-    <div class="info-box">
-      <div class="info-icon">🖼️</div>
-      <h3>Twibbon</h3>
-      <a href="https://www.twibbonize.com/sweetseventeenmbibigfair" class="info-btn-tw" gettiwobon data-lang="twibon">Get Twibbon</a>
-    </div>
-
-    <div class="info-box-contact">
-      <div class="info-icon-contact">📞</div>
-      <h3>Contact Person</h3>
-      <p>Ust. Anggara — 0821-4335-2660 </p>
-      <a href="https://wa.me/0821-4335-2660" class="info-btn-contact" data-lang="chat">Chat Now</a>
-    </div>
-  </div>
-
-  <!-- ===== FACILITIES & CLOSE REGISTRATION ===== -->
-  <div class="facility-section">
-    <div class="facility-grid">
-      <div class="facility-box">
-        <h3 data-lang="fasilitas">🎁 Facilities</h3>
-        <ul>
-          <li data-lang="f1">✅ Sertifikat peserta</li>
-          <li data-lang="f2">✅ ID card</li>
-          <li data-lang="f3">✅ Goodie bag</li>
-          <li data-lang="f4">✅ Gantungan kunci</li>
-          <li data-lang="f5">✅ Note book</li>
-          <li data-lang="f6">✅ Stiker</li>
-          <li data-lang="f7">✅ ATK 17th MBF</li>
-          <li data-lang="f8">✅ Snack and beverage</li>
-        </ul>
+        <div class="prize-card maroon">
+          <h3>Best Jinggle</h3>
+          <p class="subtitle">You will get:</p>
+          <ul>
+            <li data-lang="y1">🏆 Trophy</li>
+            <li data-lang="yuang6">💵 Uang Pembinaan Rp250.000,00-</li>
+            <li data-lang="y3">🎓 Sertifikat</li>
+            <li data-lang="y4">🎁 Merchandise</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="facility-box">
-        <h3  data-lang="regis">📅 Open Registration</h3>
-        <p class="date" data-lang="regis2">01 Desember 2025 - 04 April 2026</p>
-        <p class="note" data-lang="regis3">Register immediately, before registration closes  !</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfc0j5_bzRoD1yNn3WfNXOUV2o8yHyf05Mko9J2rD9lNZvwg/viewform" class="info-btn-register" data-lang="regis4">Register Now</a>
+      <!-- ===== INFORMATION & FACILITY SECTION ===== -->
+      <h2 class="section-title" data-lang="allinfo">
+        ALL INFORMATION ABOUT THIS COMPETITION
+      </h2>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="info-icon">📖</div>
+          <h3 data-lang="guideline">Technical Guidelines</h3>
+          <a href="#" class="info-btn-jj" data-lang="guideline2"
+            >View Guidelines</a
+          >
+        </div>
+
+        <div class="info-box">
+          <div class="info-icon">🖼️</div>
+          <h3>Twibbon</h3>
+          <a
+            href="https://www.twibbonize.com/sweetseventeenmbibigfair"
+            class="info-btn-tw"
+            gettiwobon
+            data-lang="twibon"
+            >Get Twibbon</a
+          >
+        </div>
+
+        <div class="info-box-contact">
+          <div class="info-icon-contact">📞</div>
+          <h3>Contact Person</h3>
+          <p>Ust. Anggara — 0821-4335-2660</p>
+          <a
+            href="https://wa.me/0821-4335-2660"
+            class="info-btn-contact"
+            data-lang="chat"
+            >Chat Now</a
+          >
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
+      <!-- ===== FACILITIES & CLOSE REGISTRATION ===== -->
+      <div class="facility-section">
+        <div class="facility-grid">
+          <div class="facility-box">
+            <h3 data-lang="fasilitas">🎁 Facilities</h3>
+            <ul>
+              <li data-lang="f1">✅ Sertifikat peserta</li>
+              <li data-lang="f2">✅ ID card</li>
+              <li data-lang="f3">✅ Goodie bag</li>
+              <li data-lang="f4">✅ Gantungan kunci</li>
+              <li data-lang="f5">✅ Note book</li>
+              <li data-lang="f6">✅ Stiker</li>
+              <li data-lang="f7">✅ ATK 17th MBF</li>
+              <li data-lang="f8">✅ Snack and beverage</li>
+            </ul>
+          </div>
 
+          <div class="facility-box">
+            <h3 data-lang="regis">📅 Open Registration</h3>
+            <p class="date" data-lang="regis2">
+              01 Desember 2025 - 04 April 2026
+            </p>
+            <p class="note" data-lang="regis3">
+              Register immediately, before registration closes !
+            </p>
+            <a
+              href="
+https://docs.google.com/forms/d/e/1FAIpQLScfc0j5_bzRoD1yNn3WfNXOUV2o8yHyf05Mko9J2rD9lNZvwg/viewform?usp=publish-editor"
+              class="info-btn-register"
+              data-lang="regis4"
+              >Register Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ===== LOCATION SECTION ===== -->
-  <section class="location">
-    <div class="overlay"></div>
-    <div class="location-content">
-      <h1>MBI BIG FAIR</h1>
-      <p data-lang="mbf">
-MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently delivered a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.
-      </p>
-      <a href="https://www.google.com/maps/place/MBI+Amanatul+Ummah/@-7.6602401,112.5567761,13z/data=!4m6!3m5!1s0x2e7877101328bf87:0x8b314fdc5bf8f7a8!8m2!3d-7.6532222!4d112.5588682!16s%2Fg%2F11b6y3dpnf?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-location" data-lang="lokasi">
-        📍 Competition Venue
-      </a>
-    </div>
-  </section>
-   <script src="translatelomba.js"></script>
+    <!-- ===== LOCATION SECTION ===== -->
+    <section class="location">
+      <div class="overlay"></div>
+      <div class="location-content">
+        <h1>MBI BIG FAIR</h1>
+        <p data-lang="mbf">
+          MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah
+          located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has
+          consistently delivered a variety of competitions and spectacular
+          events each year. The event is also enlivened by amazing performances
+          and creations from MBI students, which never fail to impress.
+        </p>
+        <a
+          href="https://www.google.com/maps/place/MBI+Amanatul+Ummah/@-7.6602401,112.5567761,13z/data=!4m6!3m5!1s0x2e7877101328bf87:0x8b314fdc5bf8f7a8!8m2!3d-7.6532222!4d112.5588682!16s%2Fg%2F11b6y3dpnf?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          class="btn-location"
+          data-lang="lokasi"
+        >
+          📍 Competition Venue
+        </a>
+      </div>
+    </section>
+    <script src="translatelomba.js"></script>
   </body>
-  <script>translatelomba.js</script>
-<!-- Footer -->
- <footer class="footer">
-  <div class="footer-container">
+  <script>
+    translatelomba.js;
+  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <img src="mbf17.png" alt="Logo MBF" class="footer-logo" />
+        <h2>MBF 17</h2>
 
-    <!-- BRAND -->
-    <div class="footer-brand">
-      <img src="mbf17.png" alt="Logo MBF" class="footer-logo">
-      <h2>MBF 17</h2>
+        <p class="footer-text">
+          © 2025 MBF 17 · MBI Amanatul Ummah <br />
+          Created by IT Team of MBF 17 · All rights reserved
+        </p>
+      </div>
 
-      <p class="footer-text">
-        © 2025 MBF 17 · MBI Amanatul Ummah <br>
-        Created by IT Team of MBF 17 · All rights reserved
-      </p>
-    </div>
+      <!-- KONTAK -->
+      <div class="footer-section">
+        <h3>Kontak</h3>
 
-     <!-- KONTAK -->
-    <div class="footer-section">
-      <h3>Kontak</h3>
-
-      <a href="https://wa.me/6281234567890" class="footer-contact">
-        <img src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png" class="icon-img"> +62 821-4161-9032      (Lucky)
-      </a>
-
-      <a href="https://wa.me/628987654321" class="footer-contact">
-        <img src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png" class="icon-img"> +62 819-1932-7044       (Lucy)      </a>
-
-      
-      <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" class="footer-contact">
-        <img src="Screenshot 2025-11-29 055702.png" class="icon-imgemail">mbibigfair@gmail.com</a>
-
-    </div>
-
-
-    <!-- SOSIAL MEDIA -->
-    <div class="footer-section">
-      <h3 data-lang="sosmed">Sosial Media</h3>
-
-      <div class="social-icons">
-        <a href="#" class="social-btn">
-          <img src="ChatGPT Image Nov 29, 2025, 05_23_23 AM.png" class="social-img">
+        <a href="https://wa.me/6281234567890" class="footer-contact">
+          <img
+            src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png"
+            class="icon-img"
+          />
+          +62 821-4161-9032 (Lucky)
         </a>
 
-        <a href="#" class="social-btnyt">
-          <img src="ChatGPT Image Nov 29, 2025, 05_27_48 AM.png" class="social-imgyt">
+        <a href="https://wa.me/628987654321" class="footer-contact">
+          <img
+            src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png"
+            class="icon-img"
+          />
+          +62 819-1932-7044 (Lucy)
         </a>
 
-        <a href="#" class="social-btnmbi">
-          <img src="91423835715.png" class="social-imgmbi">
-        </a>
+        <a
+          href="https://mail.google.com/mail/u/0/?ogbl#inbox"
+          class="footer-contact"
+        >
+          <img
+            src="Screenshot 2025-11-29 055702.png"
+            class="icon-imgemail"
+          />mbibigfair@gmail.com</a
+        >
+      </div>
+
+      <!-- SOSIAL MEDIA -->
+      <div class="footer-section">
+        <h3 data-lang="sosmed">Sosial Media</h3>
+
+        <div class="social-icons">
+          <a href="#" class="social-btn">
+            <img
+              src="ChatGPT Image Nov 29, 2025, 05_23_23 AM.png"
+              class="social-img"
+            />
+          </a>
+
+          <a href="#" class="social-btnyt">
+            <img
+              src="ChatGPT Image Nov 29, 2025, 05_27_48 AM.png"
+              class="social-imgyt"
+            />
+          </a>
+
+          <a href="#" class="social-btnmbi">
+            <img src="91423835715.png" class="social-imgmbi" />
+          </a>
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 MBF 17. All Rights Reserved.
-  </div>
-</footer>
+    <div class="footer-bottom">© 2025 MBF 17. All Rights Reserved.</div>
+  </footer>
 </html>
