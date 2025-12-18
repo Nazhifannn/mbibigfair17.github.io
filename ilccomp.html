@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MBI BIG FAIR</title>
+    <title>MBI BIG FAIR XVII</title>
     <meta
       name="description"
       content="MBI BIG FAIR XVII – The biggest SMP-level competition across Java–Bali. Find competitions, events, and galleries here."
@@ -19,9 +18,14 @@
   <body>
     <!-- ===== Navbar ===== -->
     <div class="navbar">
-      <!-- Box Merah Tengah -->
+      <!-- Lang Button Kiri -->
+      <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
+        <span class="flag">🇮🇩</span>
+      </button>
+
+      <!-- Menu Box Tengah -->
       <div class="menu-box">
-        <div class="logo">
+        <div class="logo1">
           <img src="assets/mbf17.png" alt="Logo MBF" />
         </div>
         <span>17ᵗʰ MBF</span>
@@ -30,22 +34,17 @@
         <a href="event.html">Events</a>
         <a href="https://galangceria.events/id">Galang Ceria</a>
       </div>
-      <div class="lang-switch">
-        <button class="lang-btn" id="id-btn" onclick="setLanguage('id')">
-          <img src="https://flagcdn.com/w20/id.png" alt="ID Flag" />
-          <span>ID</span>
-        </button>
-        <button class="lang-btn" id="en-btn" onclick="setLanguage('en')">
-          <img src="https://flagcdn.com/w20/us.png" alt="EN Flag" />
-          <span>EN</span>
-        </button>
-      </div>
+
+      <!-- Lang Button Kanan -->
+      <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
+        <span class="flag">🇬🇧</span>
+      </button>
     </div>
     <!-- ===== HERO SECTION ===== -->
   <section class="hero-ilc">
     <div class="overlay-ilc"></div>
     <div class="hero-content-ilc">
-      <img src="organisontol.png" alt="Logo Lomba" class="hero-logo-ilc" />
+      <img src="ilc.png" alt="Logo Lomba" class="hero-logo-ilc" />
       <h1 class="hero-title-ilc" data-lang="fesban">Indonesian Leadership Competition</h1>
       <p class="hero-subtitle-ilc" data-lang="part">Part of MBI BIG FAIR XVII</p>
     </div>
@@ -274,6 +273,3 @@ MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pa
   </div>
 </footer>
 </html>
-
-
-
