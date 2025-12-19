@@ -275,9 +275,9 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #000000;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
   color: white;
-  padding: 10px 10px;
+  padding: 11px 20px;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -286,7 +286,7 @@ html {
 }
 
 .lang-toggle:hover {
-  background: #474747;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
   transform: translateY(-2px);
 }
 
@@ -316,7 +316,7 @@ html {
   top: 100%;
   right: 0;
   margin-top: 10px;
-  background: #000000;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -1655,120 +1655,169 @@ html {
 }
 
 @media (max-width: 300px) {
-  .menu-box {
-    padding: 10px 30px;
-    gap: 20px;
-  }
-  .menu-box span {
-    font-size: 10px;
-    display: none;
-  }
-
-  .menu-box a {
-    font-size: 10px;
-    transform: translateX(25px);
-  }
-
-  .logo img {
-    margin-top: 15px;
-    height: 35px;
-    margin-left: -10px;
-  }
-  .lang-toggle {
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: linear-gradient(145deg, #c63bad, #7e2eb8);
-    color: white;
-    padding: 4px 4px;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    user-select: none;
-  }
-  .lang-toggle:hover {
-    background: linear-gradient(145deg, #c63bad, #7e2eb8);
-    transform: translateY(-2px);
-  }
-
-  .lang-toggle img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  .lang-text {
-    font-weight: 100px;
-    letter-spacing: 1px;
-  }
-
-  .arrow {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-    font-size: 8px;
-  }
-
-  /* Dropdown */
-  .lang-options {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 10px;
-    background: linear-gradient(145deg, #c63bad, #7e2eb8);
-    border-radius: 20px;
-    padding: 5px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    min-width: 50px;
-  }
-
-  .lang-options.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  /* Rotate arrow when open */
-  .lang-selector.open .arrow {
-    transform: rotate(180deg);
-  }
-
-  .lang-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 10px;
-    color: white;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .lang-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-
-  .lang-item img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-    flex-shrink: 0;
-  }
-  .cta-text {
-  text-align: center;
-  color: #f5f5f5;
-  margin-bottom: 40px;
-  margin-top: 100px;
+ /* ===== Navbar ===== */
+.navbar {
+  flex-wrap: wrap; /* Wajib */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
+
+.logo img {
+  margin-top: 15px;
+  align-items: center;
+  height: 40px;
+  width: auto;
+  border-radius: 10px;
+  transform: translateX(-10px);
+}
+
+/* Menu box tengah */
+.menu-box {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+  width: 280px;
+}
+
+.menu-box span {
+  margin-left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: none;
+}
+
+.menu-box a {
+  font-family: "Poppins";
+  color: #000000;
+  font-size: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateX(25px);
+}
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 80px;
+  right: 15px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.lang-toggle:hover {
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 10px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
 .cta-text strong {
   font-size: 2rem;
   font-weight: 700;
