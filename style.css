@@ -1721,6 +1721,21 @@ html {
 }
 /* Tablet - 768px ke bawah */
 @media (max-width: 1024px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
   /* KONTEN popup */
 #promo-content {
   width: 300px;
@@ -1826,6 +1841,21 @@ html {
 
 /* Mobile landscape - 768px */
 @media (max-width: 768px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
   .navbar {
     gap: 10px;
     padding: 10px 10px;
@@ -1865,6 +1895,21 @@ html {
 
 
 @media (max-width: 768px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
   /* Tablet (768px ke bawah) */
   .btn-gambar {
   width: 150px;     /* ukuran gambar tombol */
@@ -2072,6 +2117,21 @@ html {
 
 /* Mobile portrait - 480px */
 @media (max-width: 480px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
     /* Maskot */
   .logo img {
   position: absolute;
@@ -2301,6 +2361,21 @@ html {
 }
 /* Mobile portrait - 400px */
 @media (max-width: 400px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
      /* Maskot */
   .logo img {
   position: absolute;
@@ -2961,6 +3036,21 @@ html {
 }
 /* Extra small - 300px */
 @media (max-width: 300px) {
+  .smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
     .btn-gambar {
   width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
@@ -3372,7 +3462,21 @@ html {
 }
 }
 /* Extra small - 280px */
-@media (max-width: 280px) {
+@media (max-width: 280px) {.smoke-screen {
+  position: fixed;
+  inset: 0;
+  /* Fantasy Mist Background */
+
+  background: black;
+  backdrop-filter: blur(40px);
+  overflow: hidden;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
+  display: none;
+}
       .btn-gambar {
   width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
