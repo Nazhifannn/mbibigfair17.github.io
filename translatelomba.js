@@ -1,4 +1,3 @@
-
 window.addEventListener("scroll", reveal);
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
@@ -47,11 +46,12 @@ const translations = {
     harapan2:'Juara Harapan 2',
     champion:'🏆 Champion Prize',
     yuwilget:'Kamu Akan Mendapatkan:',
+    score:'Skor Terbanyak',
     y0:'🥇 Medali',
-    y1:'🏆 Piala',
+    y1:'🥇 Medali',
     yuang01:'💵 Uang Pembinaan Rp1.000.000,00-',
-    yuang0:'💵 Uang Pembinaan Rp800.000,00-',
-    yuang1:'💵 Uang Pembinaan Rp600.000,00-',
+    yuang0:'💵 Uang Pembinaan Rp750.000,00-',
+    yuang1:'💵 Uang Pembinaan Rp500.000,00-',
     yuang2:'💵 Uang Pembinaan Rp1.250.000,00-',
     yuang3:'💵 Uang Pembinaan Rp1.000.000,00-',
     yuang4:'💵 Uang Pembinaan Rp750.000,00-',
@@ -109,9 +109,6 @@ const translations = {
     qabilna:'LOMBA KALIGRAFI',
     qabilnais:'Apa itu QABILNA ?',
     qabilna2:'QABILNA Salah satu perlombaan berupa kaligrafi kontemporer. Lomba ini hanya terdiri dari satu babak. Qobilna menguji kemahiran peserta dalam menulis indah ayat Al-Qur’an dan kaidah-kaidah seperti kebenaran lafadz, kerapian, keindahan dan kreativitas. Karya lebih fleksibel dibanding jenis kaligrafi yang lain karena peserta dibebaskan berkreasi sesuka hati.',
-    fesbant:'FESTIVAL BANJARI',
-    fesbani:'Apa itu FESTBAN ?',
-    fesban1:'FESBAN adalah salah satu perlombaan di MBI BIG FAIR XVII. Lomba ini hanya terdiri dari satu babak. FESBAN  menguji kemahiran peserta dalam menyenandungkan sholawat diiringi dengan musik banjari sesuai dengan kriteria penilaian vocal, music banjari, adab dan syair, serta lagu jingle. Mari bergabung bersama MBI BIG FAIR XVII dan jadilah juara!.',
   },
   en: {
     ocians:'Social & science olympiad',
@@ -126,11 +123,12 @@ const translations = {
     harapan2:'2nd Runner Up',
     champion:'🏆 Champion Prize',
     yuwilget:'You Will Get:',
+    score:'The Most Scorer',
     y0:'🥇 Trophy',
-    y1:'🏆 Trophy',
+    y1:'🥇 Medals',
     yuang01:'💵 Choaching Money Rp1.000.000,00-',
-    yuang0:'💵 Choaching Money Rp800.000,00-',
-    yuang1:'💵 Choaching Money Rp600.000,00-',
+    yuang0:'💵 Choaching Money Rp750.000,00-',
+    yuang1:'💵 Choaching Money Rp500.000,00-',
     yuang2:'💵 Choaching Money Rp1.250.000,00-',
     yuang3:'💵 Choaching Money Rp1.000.000,00-',
     yuang4:'💵 Choaching Money Rp750.000,00-',
@@ -188,9 +186,6 @@ const translations = {
     qabilna:'CALLIGRAPHY COMPETITION',
     qabilnais:'What Is QABILNA ?',
     qabilna2:'QABILNA is a contemporary calligraphy competition. This competition consists of one round. QABILNA tests the participants\' proficiency in beautifully writing verses from the Quran and rules such as correct pronunciation, neatness, beauty, and creativity. The works are more flexible compared to other types of calligraphy because participants are free to create as they wish.',
-     fesbant:'BANJARI FESTIVAL',
-    fesbani:'What is FESBAN ?',
-    fesban1:'FESBAN is one of the competitions at MBI BIG FAIR XVII. This competition consists of only one round. FESBAN tests participants skills in singing sholawat accompanied by banjari music according to the criteria of vocal, banjari music, manners and poetry, as well as jingle songs. Join MBI BIG FAIR XVII and become a champion!',
   },
 };
 
@@ -525,4 +520,3 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   document.head.appendChild(style);
 });
-
