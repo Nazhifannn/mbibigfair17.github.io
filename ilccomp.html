@@ -16,30 +16,41 @@
     <link rel="stylesheet" href="eventlomba.css" />
   </head>
   <body>
-    <!-- ===== Navbar ===== -->
-    <div class="navbar">
-      <!-- Lang Button Kiri -->
-      <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
-        <span class="flag">🇮🇩</span>
-      </button>
-
-      <!-- Menu Box Tengah -->
+   <div class="navbar">
+      <!-- Box Merah Tengah -->
       <div class="menu-box">
-        <div class="logo1">
+        <div class="logo">
           <img src="assets/mbf17.png" alt="Logo MBF" />
         </div>
         <span>17ᵗʰ MBF</span>
         <a href="index.html">Home</a>
         <a href="competitions.html">Competitions</a>
         <a href="event.html">Events</a>
-        <a href="https://galangceria.events/id">Galang Ceria</a>
+        <a href="https://www.instagram.com/galangceria17/">Galang Ceria</a>
       </div>
+      <div class="lang-selector">
+  <div class="lang-toggle" id="langToggle">
+    <img id="flagIcon" src="https://flagcdn.com/w40/us.png" alt="Flag">
+    <span id="langText"></span>
+    <svg class="arrow" width="12" height="8" viewBox="0 0 12 8">
+      <path fill="#fff" d="M0 0l6 8 6-8z"/>
+    </svg>
+  </div>
 
-      <!-- Lang Button Kanan -->
-      <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
-        <span class="flag">🇬🇧</span>
-      </button>
+  <div class="lang-options" id="langOptions">
+    <div class="lang-item" data-lang="en">
+      <img src="https://flagcdn.com/w40/us.png" alt="English">
+      <span>English</span>
     </div>
+    <div class="lang-item" data-lang="id">
+      <img src="https://flagcdn.com/w40/id.png" alt="Indonesia">
+      <span>Indonesia</span>
+    </div>
+  </div>
+</div>
+
+      </div> 
+      
     <!-- ===== HERO SECTION ===== -->
   <section class="hero-ilc">
     <div class="overlay-ilc"></div>

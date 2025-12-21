@@ -60,7 +60,9 @@ const translations = {
   en: {
     our: `
 Join this competition and prove your skills among other participants`,
-    mbfth: `!! Choose the competition branch that suits your talents and interests !!`,
+    mbfth: `
+Ready to compete? Register now and be part of this challenge.
+Open the competition card to see details and register.!`,
     olim: `OLYMPIC`,
     inggris: "ENGLISH",
     arab: "Arabic",
@@ -100,9 +102,9 @@ Join this competition and prove your skills among other participants`,
     storm: `Story Telling`,
     escimo: `English Speech`,
     akrimna: `Arabic Speech`,
-    muttaqina: `Read Arabic News`,
+    muttaqina: `Recite the holy Qur'an`,
     barikna: `Read The Yellow Book`,
-    qorona: `Calligraphy Creation Competition`,
+    qorona: `Sing in Arabic`,
     ocians: "Social And Science Olympiad",
     ocians2: "Olimpiad Of Social And Science",
     register: "Register Now",
@@ -123,7 +125,8 @@ Join this competition and prove your skills among other participants`,
   },
   id: {
     our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
-    mbfth: `!! Pilih cabang kompetisi yang sesuai dengan bakat dan minatmu !!`,
+    mbfth: `Siap berkompetisi? Daftarkan dirimu sekarang dan jadilah bagian dari tantangan ini.
+Buka kartu kompetisi untuk melihat detail dan mendaftar!`,
     olim: `KOMPETISI`,
     inggris: "KOMPETISI",
     arab: "Kompetisi",
@@ -164,9 +167,9 @@ Join this competition and prove your skills among other participants`,
     storm: `Bercerita`,
     escimo: `Pidato Bahasa Inggris`,
     akrimna: `Pidato Bahasa Arab`,
-    muttaqina: `Membaca Berita Berbahasa Arab`,
+    muttaqina: `Membaca Al Qur'an`,
     barikna: `Membaca Kitab Kuning`,
-    qorona: `Kompetisi Kreasi Kaligrafi`,
+    qorona: `Bernyanyi Bahasa Arab`,
     ocians: "Olimpiade Sosial Dan Sains",
     ocians2: "Olimpiade Sosial Dan Sains",
     register: "Daftar Sekarang",
@@ -271,6 +274,7 @@ stacks.forEach((stack) => {
     inner.addEventListener("blur", () => stack.classList.remove("flipped"));
   }
 });
+
 
 
 

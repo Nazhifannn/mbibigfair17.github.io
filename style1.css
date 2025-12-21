@@ -234,8 +234,8 @@ html {
 .menu-box {
   margin-top: 50px;
   background: #ffffff;
-  padding: 15px 30px;
-  border-radius: 25px;
+  padding: 20px 30px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   gap: 25px;
@@ -248,19 +248,44 @@ html {
 
 .menu-box span {
   margin-left: 50px;
-  color: #000000;
+  color: #ff00f2;
   font-weight: bold;
   font-size: 20px;
   font-family: "Poppins";
 }
 
+/* TEKS MENU */
 .menu-box a {
   font-family: "Poppins";
-  color: #000000;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-decoration: none;
-  font-weight: bold;
+
+  color: #ff00f2;
+  position: relative;
+}
+
+/* GARIS BAWAH HALUS */
+.menu-box a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff00f2;
+  transition: width 0.25s ease;
+}
+
+/* HOVER: cukup underline muncul */
+.menu-box a:hover::after {
+  width: 100%;
+}
+
+/* MENU AKTIF */
+.menu-box a.active::after {
+  width: 100%;
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
@@ -274,7 +299,7 @@ html {
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   background: linear-gradient(145deg, #c63bad, #7e2eb8);
   color: white;
   padding: 11px 20px;
@@ -1679,7 +1704,7 @@ html {
 .logo img {
   margin-top: 15px;
   align-items: center;
-  height: 40px;
+  height: 35px;
   width: auto;
   border-radius: 10px;
   transform: translateX(-10px);
@@ -1693,13 +1718,13 @@ html {
   border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: 50%;
+  left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 380px;
+  width: 310px;
 }
 
 .menu-box span {
@@ -1713,7 +1738,7 @@ html {
 
 .menu-box a {
   font-family: "Poppins";
-  color: #000000;
+  color: #ff00f2;
   font-size: 10px;
   transition: 0.3s;
   text-decoration: none;
@@ -1723,7 +1748,7 @@ html {
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
   position: fixed;
-  top: 60px;
+  top: 15px;
   right: 15px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
@@ -1732,7 +1757,7 @@ html {
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   background: linear-gradient(145deg, #c63bad, #7e2eb8);
   color: white;
   padding: 3px 5px;
@@ -2108,7 +2133,7 @@ html {
 
 
 @media (max-width: 350px) {
-  /* ===== Navbar ===== */
+   /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
   display: flex;
@@ -2118,7 +2143,7 @@ html {
   background: transparent;
   position: fixed;
   top: -15px;
-  left: 0;
+  left: 5px;
   width: 100%;
   z-index: 1000;
 }
@@ -2131,29 +2156,29 @@ html {
 }
 
 .logo img {
-  margin-top: 15px;
+  margin-top: 17px;
   align-items: center;
-  height: 40px;
+  height: 30px;
   width: auto;
   border-radius: 10px;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
 }
 
 /* Menu box tengah */
 .menu-box {
   margin-top: 50px;
   background: #ffffff;
-  padding: 15px 30px;
+  padding: 15px 20px;
   border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: 50%;
+  left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 340px;
+  width: 280px;
 }
 
 .menu-box span {
@@ -2167,18 +2192,18 @@ html {
 
 .menu-box a {
   font-family: "Poppins";
-  color: #000000;
+  color: #ff00f2;
   font-size: 10px;
   transition: 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transform: translateX(25px);
+  transform: translateX(20px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
   position: fixed;
-  top: 60px;
-  right: 15px;
+  top: 15px;
+  right: 6px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
@@ -2186,10 +2211,10 @@ html {
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   background: linear-gradient(145deg, #c63bad, #7e2eb8);
   color: white;
-  padding: 3px 5px;
+  padding: 3px 3px;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -2393,7 +2418,7 @@ html {
     margin: 4px auto 0;
     text-align: center;
   }
-
+     
   /* Bungkus tombol ke bawah */
   .card-b a.btn-more:first-of-type {
     margin-top: auto; /* dorong ke bawah */
@@ -2584,7 +2609,7 @@ html {
 
 
 @media (max-width: 300px) {
- /* ===== Navbar ===== */
+    /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
   display: flex;
@@ -2593,8 +2618,8 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -15px;
+  left: 2.5px;
   width: 100%;
   z-index: 1000;
 }
@@ -2607,29 +2632,29 @@ html {
 }
 
 .logo img {
-  margin-top: 15px;
+  margin-top: 17px;
   align-items: center;
-  height: 40px;
+  height: 30px;
   width: auto;
   border-radius: 10px;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
 }
 
 /* Menu box tengah */
 .menu-box {
   margin-top: 50px;
   background: #ffffff;
-  padding: 15px 30px;
+  padding: 15px 15px;
   border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: 50%;
+  left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 280px;
+  width: 235px;
 }
 
 .menu-box span {
@@ -2643,18 +2668,18 @@ html {
 
 .menu-box a {
   font-family: "Poppins";
-  color: #000000;
-  font-size: 10px;
+  color: #ff00f2;
+  font-size: 8px;
   transition: 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transform: translateX(25px);
+  transform: translateX(20px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
   position: fixed;
-  top: 80px;
-  right: 15px;
+  top: 15px;
+  right: 6px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
@@ -2662,10 +2687,10 @@ html {
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   background: linear-gradient(145deg, #c63bad, #7e2eb8);
   color: white;
-  padding: 3px 5px;
+  padding: 3px 3px;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -2679,8 +2704,8 @@ html {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;

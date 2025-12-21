@@ -63,109 +63,185 @@ html {
 }
 /* ===== Navbar ===== */
 .navbar {
+  flex-wrap: wrap; /* Wajib */
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px 20px;
+  justify-content: space-between;
+  padding: 20px 40px;
   background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-sizing: border-box;
 }
 
-/* Lang Button */
-.lang-btn {
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
+
+.logo img {
+  margin-top: 7px;
   align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.lang-btn.active {
-  background: #ff00f2 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 10px rgba(255, 0, 242, 0.6);
-  transform: scale(1.1);
-}
-
-.lang-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: scale(1.05);
-}
-
-.lang-btn.active:hover {
-  background: #ff00f2;
-}
-
-.flag {
-  font-size: 16px;
-}
-
-/* Menu Box */
-.menu-box {
-  background: #ffffff;
-  padding: 12px 30px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  min-height: 50px;
-  width: auto;
-  flex-shrink: 0;
-}
-
-.logo1 {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo1 img {
   height: 50px;
   width: auto;
   border-radius: 10px;
 }
 
+/* Menu box tengah */
+.menu-box {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+}
+
 .menu-box span {
+  margin-left: 50px;
   color: #ff00f2;
   font-weight: bold;
-  font-size: 22px;
-  font-family: "Cinzel", serif;
-  white-space: nowrap;
-  text-align: center;
+  font-size: 20px;
 }
 
+/* TEKS MENU */
 .menu-box a {
-  color: #ff00f2;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-decoration: none;
-  white-space: nowrap;
-  text-align: center;
-  font-weight: 1000;
-}
-.menu-box a:hover {
-  opacity: 0.8;
+  color: #ff00f2;
+  position: relative;
 }
 
+/* GARIS BAWAH HALUS */
+.menu-box a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff00f2;
+  transition: width 0.25s ease;
+}
+
+/* HOVER: cukup underline muncul */
+.menu-box a:hover::after {
+  width: 100%;
+}
+
+/* MENU AKTIF */
+.menu-box a.active::after {
+  width: 100%;
+}
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: white;
+  padding: 11px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.lang-toggle:hover {
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
 /* ========================== */
 /* TOP BAR (HEADER) */
 /* ========================== */
@@ -234,6 +310,7 @@ html {
   max-width: 900px;
   margin: 0 auto 45px;
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  margin-top: 100px;
 }
 .title-event {
   margin-top: 70px;
@@ -1093,73 +1170,169 @@ body {
   .hero-img {
     height: 60vh;
   }
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    padding: 15px 20px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-  }
-  .menu-box {
-    gap: 6px;
-    padding: 2px 10px;
-  }
+  /* ===== Navbar ===== */
+.navbar {
+  flex-wrap: wrap; /* Wajib */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .menu-box span {
-    font-size: 10px;
-  }
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
 
-  .menu-box a {
-    font-size: 8px;
-  }
-  .logo1 img {
-    height: 30px;
-  }
-  /* Lang Button */
-  .lang-btn {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+.logo img {
+  margin-top: 7px;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  border-radius: 10px;
+  transform: translateX(-10px);
+}
 
-  .lang-btn.active {
-    background: #ff00f2 !important;
-    color: #ffffff !important;
-    box-shadow: 0 0 10px rgba(255, 0, 242, 0.6);
-    transform: scale(1.1);
-  }
+/* Menu box tengah */
+.menu-box {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+  width: 310px;
+}
 
-  .lang-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
-  }
+.menu-box span {
+  margin-left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: none;
+}
 
-  .lang-btn.active:hover {
-    background: #ff00f2;
-  }
+.menu-box a {
+  font-family: "Poppins";
+  color: #ff00f2;
+  font-size: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateX(25px);
+}
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
 
-  .flag {
-    font-size: 10px;
-  }
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.lang-toggle:hover {
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 10px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
   .speakers-section .title {
     color: #ffffff;
     font-size: 20px;
@@ -1217,77 +1390,178 @@ body {
     overflow: hidden;
     margin-bottom: 50px;
   }
+  /* BRAND */
+.footer-brand {
+  max-width: 350px;
+  text-align: center;
+  transform: translateX(0px);
+}
 }
 
 @media (max-width: 350px) {
+   /* ===== Navbar ===== */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    padding: 15px 20px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-  }
-  .menu-box {
-    gap: 6px;
-    padding: 2px 10px;
-  }
+  flex-wrap: wrap; /* Wajib */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: -15px;
+  left: 5px;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .menu-box span {
-    font-size: 10px;
-    display: none;
-  }
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
 
-  .menu-box a {
-    font-size: 8px;
-  }
-  .logo1 img {
-    height: 30px;
-  }
-  /* Lang Button */
-  .lang-btn {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+.logo img {
+  margin-top: 8px;
+  align-items: center;
+  height: 30px;
+  width: auto;
+  border-radius: 10px;
+  transform: translateX(-15px);
+}
 
-  .lang-btn.active {
-    background: #ff00f2 !important;
-    color: #ffffff !important;
-    box-shadow: 0 0 10px rgba(255, 0, 242, 0.6);
-    transform: scale(1.1);
-  }
+/* Menu box tengah */
+.menu-box {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+  width: 280px;
+}
 
-  .lang-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
-  }
+.menu-box span {
+  margin-left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: none;
+}
 
-  .lang-btn.active:hover {
-    background: #ff00f2;
-  }
+.menu-box a {
+  font-family: "Poppins";
+  color: #ff00f2;
+  font-size: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateX(20px);
+}
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 15px;
+  right: 6px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
 
-  .flag {
-    font-size: 10px;
-  }
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: white;
+  padding: 3px 3px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.lang-toggle:hover {
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 10px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
 
 
   .event-script {
@@ -1465,74 +1739,168 @@ body {
 }
 }
 @media (max-width: 300px) {
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    padding: 15px 20px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-  }
-  .menu-box {
-    gap: 6px;
-    padding: 2px 10px;
-  }
+ .navbar {
+  flex-wrap: wrap; /* Wajib */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: transparent;
+  position: fixed;
+  top: -15px;
+  left: 2.5px;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .menu-box span {
-    font-size: 10px;
-    display: none;
-  }
+/* Logo kiri */
+.logo {
+  position: absolute;
+  left: 20px; /* sejajarkan sesuai padding navbar */
+  flex: 1;
+}
 
-  .menu-box a {
-    font-size: 8px;
-  }
-  .logo1 img {
-    height: 30px;
-  }
-  /* Lang Button */
-  .lang-btn {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+.logo img {
+  margin-top: 17px;
+  align-items: center;
+  height: 30px;
+  width: auto;
+  border-radius: 10px;
+  transform: translateX(-15px);
+}
 
-  .lang-btn.active {
-    background: #ff00f2 !important;
-    color: #ffffff !important;
-    box-shadow: 0 0 10px rgba(255, 0, 242, 0.6);
-    transform: scale(1.1);
-  }
+/* Menu box tengah */
+.menu-box {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 15px 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 2; /* biar tidak ketumpuk logo */
+  width: 235px;
+}
 
-  .lang-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
-  }
+.menu-box span {
+  margin-left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: none;
+}
 
-  .lang-btn.active:hover {
-    background: #ff00f2;
-  }
+.menu-box a {
+  font-family: "Poppins";
+  color: #ff00f2;
+  font-size: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateX(20px);
+}
+/* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
+.lang-selector {
+  position: fixed;
+  top: 15px;
+  right: 6px;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
 
-  .flag {
-    font-size: 10px;
-  }
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: white;
+  padding: 3px 3px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.lang-toggle:hover {
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  transform: translateY(-2px);
+}
+
+.lang-toggle img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.lang-text {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 10px;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #c63bad, #7e2eb8);
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.lang-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate arrow when open */
+.lang-selector.open .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
   .event-script {
   font-size: clamp(64px, 10vw, 120px);
   color: #ffeb3b;

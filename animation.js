@@ -34,6 +34,7 @@ function reveal() {
 
 const translations = {
   id: {
+    big:'Acara Terbesar di MBI Amanatul Ummah',
     intro: "Selamat Datang di MBF 17",
     glow: "Acara terbesar di",
     highlight: "Madrasah Bertaraf International",
@@ -76,6 +77,7 @@ const translations = {
     email: `Email Kami`,
   },
   en: {
+    big:'The Biggest Event in MBI Amanatul Ummah',
     intro: "Welcome to MBF 17",
     glow: "The biggest events in",
     highlight: "Madrasah Bertaraf International",
@@ -207,7 +209,6 @@ let currentLang = localStorage.getItem("lang") || "id";
 // === Fungsi Buka Card ===
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-
     // Gambar overlay → ambil data-overlay-img jika ada
     const imgSrc = card.dataset.overlayImg || card.querySelector("img").src;
 
@@ -215,7 +216,7 @@ cards.forEach((card) => {
     const desc = card.getAttribute(`data-desc-${currentLang}`);
 
     cardTitle.textContent = title;
-    cardImage.src = imgSrc; 
+    cardImage.src = imgSrc;
     cardDesc.textContent = desc;
 
     overlay.dataset.cardType = card.classList.contains("left")
@@ -228,7 +229,6 @@ cards.forEach((card) => {
     document.body.style.overflow = "hidden";
   });
 });
-
 
 // === Fungsi Tutup Card ===
 closeBtn.addEventListener("click", () => {
@@ -344,6 +344,7 @@ const allPrizepools = {
     { rank: "Juara 2 (2nd Place)", amount: "Rp. 750.000" },
     { rank: "Juara 3 (3rd Place)", amount: "Rp. 500.000" },
     { rank: "1st Runner Up", amount: "Rp. 250.000" },
+    { rank: "2nd Runner Up", amount: "Rp. 150.000" },
   ],
   // 3. KIMIA (Hadiah Agak Kecil)
   kimia: [
@@ -449,3 +450,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   document.head.appendChild(style);
 });
+
+  document.getElementById("tombolGambar").onclick = function () {
+    document.getElementById("fotoKu").src = "gambarBaru.png";
+  };
+
