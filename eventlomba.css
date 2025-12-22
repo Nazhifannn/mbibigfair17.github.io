@@ -233,7 +233,42 @@ body {
   background: #f5f6fa;
   color: #222;
 }
-
+.hero-ilc1 {
+  position: relative;
+  height: 100vh;
+  background: url('_MG_0593.JPG') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.hero-ilc1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* atur gelap di sini */
+  z-index: 1;
+}
+.hero-ilc2 {
+  position: relative;
+  height: 100vh;
+  background: url('LM100225.JPG') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.hero-ilc2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* atur gelap di sini */
+  z-index: 1;
+}
 /* === HERO === */
 .hero-ilc {
   position: relative;
