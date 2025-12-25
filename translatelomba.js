@@ -1,39 +1,65 @@
-window.addEventListener("scroll", reveal);
+// ========= LANGUAGE SWITCHER YANG 100% BERHASIL =========
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lang = btn.getAttribute("data-lang-btn");
-      setLanguage(lang);
+  const toggle = document.getElementById("langToggle");
+  const options = document.getElementById("langOptions");
+  const flagIcon = document.getElementById("flagIcon");
+  const langText = document.getElementById("langText");
+  const arrow = document.querySelector(".arrow");
 
-      document
-        .querySelectorAll(".lang-btn")
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+  // Buka/tutup dropdown
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    options.classList.toggle("show");
+    arrow.style.transform = options.classList.contains("show")
+      ? "rotate(180deg)"
+      : "rotate(0deg)";
+  });
+
+  // Pilih bahasa
+  document.querySelectorAll(".lang-item").forEach((item) => {
+    item.addEventListener("click", function () {
+      const lang = this.getAttribute("data-lang");
+      const img = this.querySelector("img").src;
+      const text = this.querySelector("span").textContent;
+
+      // Update tombol utama
+      flagIcon.src = img;
+      langText.textContent = lang.toUpperCase();
+
+      // Ganti bahasa di seluruh halaman
+      setLanguage(lang);
+      localStorage.setItem("lang", lang);
+
+      // Tutup dropdown
+      options.classList.remove("show");
+      arrow.style.transform = "rotate(0deg)";
     });
   });
 
-  const activeLang = localStorage.getItem("lang") || "id";
-  document
-    .querySelector(`[data-lang-btn="${activeLang}"]`)
-    ?.classList.add("active");
-});
-function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 100;
+  // Tutup kalau klik di luar
+  document.addEventListener("click", function () {
+    options.classList.remove("show");
+    arrow.style.transform = "rotate(0deg)";
+  });
 
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
+  // Muat bahasa terakhir saat halaman dibuka
+  const saved = localStorage.getItem("lang") || "en";
+  setLanguage(saved);
+
+  // Update tampilan tombol sesuai bahasa yang tersimpan
+  const flagUrl =
+    saved === "id"
+      ? "https://flagcdn.com/w40/id.png"
+      : "https://flagcdn.com/w40/us.png";
+  flagIcon.src = flagUrl;
+  langText.textContent = saved.toUpperCase();
+});
 
 const translations = {
   id: {
+    home:`Beranda`,
+    comp:`Kompetisi`,
+    evnt:`Seminar`,
     ocians:'Olimpiade Social & sains',
     ociansis: 'OCIANS merupakan salah satu cabang lomba dalam rangka sweet seventeen MBI BIG FAIR yang menguji kemampuan siswa dan siswi SMP/MTs sederajat dalam bidang IPA, Matematika, dan IPS dengan cakupan mata pelajaran Matematika, Fisika, Biologi, Kimia, Geografi, Ekonomi, dan Sejarah.Yuk, bergabung dalam 17ᵗʰ MBI BIG FAIR dan buktikan bahwa kamu adalah sang juara! ',
     part:'Bagian dari MBI BIG FAIR 17',
@@ -111,6 +137,9 @@ const translations = {
     qabilna2:'QABILNA Salah satu perlombaan berupa kaligrafi kontemporer. Lomba ini hanya terdiri dari satu babak. Qobilna menguji kemahiran peserta dalam menulis indah ayat Al-Qur’an dan kaidah-kaidah seperti kebenaran lafadz, kerapian, keindahan dan kreativitas. Karya lebih fleksibel dibanding jenis kaligrafi yang lain karena peserta dibebaskan berkreasi sesuka hati.',
   },
   en: {
+     home:`Home`,
+    comp:`Competitions`,
+    evnt:`Event`,
     ocians:'Social & science olympiad',
     ociansis: 'OCIANS is one of the competition branches in the sweet seventeen MBI BIG FAIR which tests the abilities of junior high school students/equivalent in the fields of science, mathematics, and social studies covering subjects of Mathematics, Physics, Biology, Chemistry, Geography, Economics, and History. Come on, join the 17ᵗʰ MBI BIG FAIR and prove that you are the champion! ',
     part:'Part of MBI BIG FAIR 17',
@@ -189,55 +218,22 @@ const translations = {
   },
 };
 
-// Set bahasa default
-const savedLang = localStorage.getItem("lang") || "id";
-updateLanguage(savedLang);
-
-// Event listener untuk lang button
-document.addEventListener("DOMContentLoaded", function () {
-  const idBtn = document.querySelector(".lang-btn-left");
-  const enBtn = document.querySelector(".lang-btn-right");
-
-  // Click event untuk ID button
-  if (idBtn) {
-    idBtn.addEventListener("click", function () {
-      setLanguage("id");
-    });
-  }
-
-  // Click event untuk EN button
-  if (enBtn) {
-    enBtn.addEventListener("click", function () {
-      setLanguage("en");
-    });
-  }
-});
-
+// === SET LANGUAGE FUNCTION ===
 function setLanguage(lang) {
   localStorage.setItem("lang", lang);
-  updateLanguage(lang);
-}
-
-function updateLanguage(lang) {
   document.querySelectorAll("[data-lang]").forEach((el) => {
     const key = el.getAttribute("data-lang");
-    el.textContent = translations[lang][key];
+    if (translations[lang][key]) el.textContent = translations[lang][key];
   });
 
-  // Update active class di lang button
-  const idBtn = document.querySelector(".lang-btn-left");
-  const enBtn = document.querySelector(".lang-btn-right");
-
-  if (idBtn && enBtn) {
-    if (lang === "id") {
-      idBtn.classList.add("active");
-      enBtn.classList.remove("active");
-    } else if (lang === "en") {
-      enBtn.classList.add("active");
-      idBtn.classList.remove("active");
-    }
-  }
+  document.getElementById("id-btn").classList.toggle("active", lang === "id");
+  document.getElementById("en-btn").classList.toggle("active", lang === "en");
 }
+
+window.onload = function () {
+  const savedLang = localStorage.getItem("lang") || "en";
+  setLanguage(savedLang);
+};
 
 /*animasi zoom in*/
 document.addEventListener("DOMContentLoaded", () => {
