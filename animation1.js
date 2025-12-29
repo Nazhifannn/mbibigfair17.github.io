@@ -58,12 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // === TRANSLATION SYSTEM ===
 const translations = {
   en: {
-     home:`Home`,
-    comp:`Competitions`,
-    evnt:`Event`,
-    ready:`Ready To Compete?`,
-    open:`Open The Competitions Card To See Details & Register Directly!`,
-    subilc:`Organizational Leadership`,
+    open: `Open the competition card to see further details or register directly!`,
+    ready: `ready to competitions?`,
+    our: `
+Join this competition and prove your skills among other participants`,
+    mbfth: `
+Ready to compete? Register now and be part of this challenge.
+Open the competition card to see details and register.!`,
     olim: `OLYMPIC`,
     inggris: "ENGLISH",
     arab: "Arabic",
@@ -118,19 +119,20 @@ const translations = {
     kontak: "contact",
     sosmed: "Social Media",
     olimislam: "ISLAMIC OLYMPIAD",
-    leader:`Organizational Leadership`,
-    komleader:`COMPETITION`,
-    ilc:`Organizational Leadership`,
-    titleilc:`Organization Competition`,
+    leader: `Organizational Leadership`,
+    komleader: `COMPETITION`,
+    ilc: `Organizational Leadership`,
+    titleilc: `Organization Competition`,
     mbf: "MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently presented a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
+    mbfl: "MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently delivered a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
+    lokasi: "📍 Competition Venue",
   },
   id: {
-    home:`Beranda`,
-    comp:`Kompetisi`,
-    evnt:`Seminar`,
-    ready:`Siap Berkompetisi?`,
-    open:`Buka kartu kompetisi untuk melihat detail dan langsung mendaftar!`,
-    subilc:`Kepemimpinan Berorganisasi`,
+    open: `Buka kartu kompetisi untuk melihat detail lebih lanjut atau langsung mendaftar!`,
+    ready: `siap berkompetisi?`,
+    our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
+    mbfth: `Siap berkompetisi? Daftarkan dirimu sekarang dan jadilah bagian dari tantangan ini.
+Buka kartu kompetisi untuk melihat detail dan mendaftar!`,
     olim: `KOMPETISI`,
     inggris: "KOMPETISI",
     arab: "Kompetisi",
@@ -186,12 +188,13 @@ const translations = {
     kontak: "Kontak",
     sosmed: "Sosial Media",
     olimislam: "OLIMPIADE ISLAM",
-    leader:`KOMPETISI`,
-    ilc:`Kepemimpinan Berorganisasi`,
-    komleader:`Kepemimpinan Berorganisasi`,
-    titleilc:`Kompetisi Berorganisasi`,
-    mbf: `MBI Big Fair (MBF) adalah acara tahunan yang diselenggarakan oleh MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama hampir 16 tahun, MBI Big Fair secara konsisten menghadirkan berbagai kompetisi dan acara spektakuler setiap tahunnya. Acara ini juga dimeriahkan oleh penampilan dan kreasi luar biasa dari para siswa MBI, yang selalu berhasil memukau.`,
-
+    leader: `KOMPETISI`,
+    ilc: `Kepemimpinan Berorganisasi`,
+    komleader: `Kepemimpinan Berorganisasi`,
+    titleilc: `Kompetisi Berorganisasi`,
+    mbf: "MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently presented a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
+    mbfl: "MBI Big Fair (MBF) adalah acara tahunan yang diselenggarakan oleh MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama hampir 16 tahun, MBI Big Fair secara konsisten menyajikan berbagai kompetisi dan acara spektakuler setiap tahunnya. Acara ini juga dimeriahkan oleh penampilan dan kreasi menakjubkan dari para siswa MBI, yang selalu berhasil memukau.",
+    lokasi: "📍 Lokasi Perlombaan",
   },
 };
 
@@ -279,13 +282,3 @@ stacks.forEach((stack) => {
     inner.addEventListener("blur", () => stack.classList.remove("flipped"));
   }
 });
-
-
-
-
-
-
-
-
-
-

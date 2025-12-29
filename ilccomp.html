@@ -18,19 +18,20 @@
   <body>
    <div class="navbar">
       <!-- Box Merah Tengah -->
-          <div class="menu-box">
+      <div class="menu-box">
         <div class="logo">
           <img src="assets/mbf17.png" alt="Logo MBF" />
         </div>
         <span>17ᵗʰ MBF</span>
-        <a data-lang="home" href="index.html">Home</a>
-        <a data-lang="comp" href="competitions.html">Competitions</a>
-        <a data-lang="evnt" href="event.html">Events</a>
+        <a href="index.html">Home</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="event.html">Events</a>
         <a href="https://www.instagram.com/galangceria17/">Galang Ceria</a>
       </div>
       <div class="lang-selector">
   <div class="lang-toggle" id="langToggle">
     <img id="flagIcon" src="https://flagcdn.com/w40/us.png" alt="Flag">
+    <span id="langText"></span>
     <svg class="arrow" width="12" height="8" viewBox="0 0 12 8">
       <path fill="#fff" d="M0 0l6 8 6-8z"/>
     </svg>
@@ -68,7 +69,7 @@
     </p>
   </section>
  <section class="guest-wow">
-  <h1 class="wow-title">NEXT GUEST STAR</h1>
+  <h1 class="wow-title" data-lang="next">NEXT GUEST STAR</h1>
 <div class="guest-row-alexa">
   <div class="guest-card-alexa wow">
     <img src="alexa .jpg" alt="Alexa">
@@ -76,7 +77,7 @@
 
   <div class="guest-desc-alexa">
     <h2>Alexa</h2>
-    <p>
+    <p data-lang="alexa">
 Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspiratif, berprestasi, dan berwawasan luas. Ia aktif berperan sebagai representasi pelajar Indonesia yang unggul tidak hanya dalam akademik, tetapi juga dalam kepemimpinan, komunikasi, dan pengembangan diri. Dengan kepribadian yang percaya diri serta kemampuan public speaking yang baik, Alexa Salsabila menjadi figur teladan bagi generasi muda untuk berani bermimpi, berkontribusi positif, dan membawa perubahan di lingkungan sekolah maupun masyarakat.
     </p>
   </div>
@@ -85,13 +86,13 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
   
 
 
-  <h2 class="next-title">PREVEOUS GUEST STAR</h2>
+  <h2 class="next-title" data-lang="preveous">PREVEOUS GUEST STAR</h2>
   <div class="guest-main">
     <div class="guest-card wow">
       <img src="DSC09651.JPG">
       <div class="guest-info">
         <h2>Nadia Puti Dianesti</h2>
-        <p>Hadir Pada MBF ke-16.</p>
+        <p data-lang="16">Hadir Pada MBF ke-16.</p>
       </div>
     </div>
 
@@ -99,7 +100,7 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
       <img src="vania.jpg">
       <div class="guest-info">
         <h2>Vania Winola</h2>
-        <p>Hadir Pada MBF ke-15.</p>
+        <p data-lang="15">Hadir Pada MBF ke-15.</p>
       </div>
     </div>
 
@@ -107,7 +108,7 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
       <img src="download (1).png">
       <div class="guest-info">
         <h2>Muhammad Atiatul Muqtadir</h2>
-        <p>Hadir Pada MBF ke-14.</p>
+        <p data-lang="14">Hadir Pada MBF ke-14.</p>
       </div>
     </div>
   </div>
@@ -120,7 +121,7 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
 
     <div class="prize-card gold">
       <h3>1<sup>st</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
+      <p class="subtitle" data-lang="yuwilget">You will get:</p>
       <ul>
         <li data-lang="y1">🏆 Trophy</li>
         <li data-lang="yuang01">💵 Uang Pembinaan Rp1.000.000,00-</li>
@@ -131,7 +132,7 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
 
     <div class="prize-card silver">
       <h3>2<sup>nd</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
+      <p class="subtitle" data-lang="yuwilget">You will get:</p>
       <ul>
         <li data-lang="y1">🏆 Trophy</li>
         <li data-lang="yuang0">💵 Uang Pembinaan Rp750.000,00-</li>
@@ -142,7 +143,7 @@ Alexa Salsabila merupakan Duta SMA Nasional yang dikenal sebagai sosok inspirati
 
     <div class="prize-card bronze">
       <h3>3<sup>rd</sup> Rank</h3>
-      <p class="subtitle">You will get:</p>
+      <p class="subtitle" data-lang="yuwilget">You will get:</p>
       <ul>
         <li data-lang="y1">🏆 Trophy</li>
         <li data-lang="yuang1">💵 Uang Pembinaan Rp500.000,00-</li>
@@ -223,7 +224,7 @@ MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pa
   </section>
    <script src="translatelomba.js"></script>
   </body>
-  <script>translatelomba.js</script>
+
 <!-- Footer -->
  <footer class="footer">
     <div class="footer-container">
