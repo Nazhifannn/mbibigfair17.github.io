@@ -2425,6 +2425,16 @@ html {
   transform: scale(0.9);
   z-index: 2;
 }
+  .btn-gambar {
+  width: 70px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: .2s;
+  top: 540px;
+}
   .navbar {
     gap: 8px;
     padding: 8px 8px;
