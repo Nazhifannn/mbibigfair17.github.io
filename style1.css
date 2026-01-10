@@ -1688,7 +1688,7 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -1877,7 +1877,7 @@ html {
   }
 
   .title-main h1 {
-    font-size: 40px; /* dari 80px → kecil tapi terbaca */
+    font-size: 50px; /* dari 80px → kecil tapi terbaca */
     line-height: 1.1;
     word-break: break-word;
   }
@@ -2142,7 +2142,7 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 5px;
   width: 100%;
   z-index: 1000;
@@ -2618,7 +2618,7 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 2.5px;
   width: 100%;
   z-index: 1000;
