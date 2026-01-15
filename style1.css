@@ -1724,7 +1724,7 @@ html {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 310px;
+  width: 290px;
 }
 
 .menu-box span {
@@ -1749,7 +1749,7 @@ html {
 .lang-selector {
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 5px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
@@ -1774,8 +1774,8 @@ html {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -1785,6 +1785,7 @@ html {
 .lang-text {
   font-weight: 600;
   letter-spacing: 1px;
+  display: none;
 }
 
 .arrow {
@@ -1842,6 +1843,7 @@ html {
   border: 2px solid white;
   flex-shrink: 0;
 }
+
 .cta-text strong {
   font-size: 2rem;
   font-weight: 700;
@@ -1904,8 +1906,8 @@ html {
     letter-spacing: 0.5px;
   }
   .card-stack {
-    width: 190px;
-    height: 260px;
+    width: 250px;
+    height: 330px;
     margin: 20px auto;
   }
 
@@ -1918,14 +1920,14 @@ html {
   .card img,
   .card-a img,
   .card-b img {
-    width: 140px;
+    width: 200px;
     height: auto;
     margin: 0 auto 6px;
     margin-left: 2.5px;
   }
   .card .title {
-    font-size: 1.4rem;
-    margin-bottom: 120px;
+    font-size: 2rem;
+    margin-bottom: 200px;
   }
   .btn-more {
     font-size: 0.7rem;
@@ -1957,17 +1959,17 @@ html {
 
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
-    font-size: 0.65rem !important;
-    padding: 5px 8px !important;
+    font-size: 0.65rem;
+    padding: 8px 8px;
     border-radius: 8px;
-    width: 90%;
-    margin: 4px auto 0;
+    width: 50%;
+    margin: 10px auto 0;
     text-align: center;
   }
 
   /* Bungkus tombol ke bawah */
   .card-b a.btn-more:first-of-type {
-    margin-top: auto; /* dorong ke bawah */
+    margin-top: 100px; /* dorong ke bawah */
   }
   .footer {
   background: #fff;
@@ -2178,7 +2180,7 @@ html {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 280px;
+  width: 260px;
 }
 
 .menu-box span {
@@ -2228,8 +2230,8 @@ html {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -2358,8 +2360,8 @@ html {
     letter-spacing: 0.5px;
   }
   .card-stack {
-    width: 190px;
-    height: 260px;
+    width: 220px;
+    height: 310px;
     margin: 20px auto;
   }
 
@@ -2372,14 +2374,14 @@ html {
   .card img,
   .card-a img,
   .card-b img {
-    width: 140px;
+    width: 200px;
     height: auto;
     margin: 0 auto 6px;
-    margin-left: 0px;
+    margin-left: -15px;
   }
   .card .title {
-    font-size: 1.4rem;
-    margin-bottom: 120px;
+    font-size: 2rem;
+    margin-bottom: 200px;
   }
   .btn-more {
     font-size: 0.7rem;
@@ -2411,17 +2413,17 @@ html {
 
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
-    font-size: 0.65rem !important;
-    padding: 5px 8px !important;
+    font-size: 0.65rem;
+    padding: 8px 8px;
     border-radius: 8px;
-    width: 90%;
-    margin: 4px auto 0;
+    width: 50%;
+    margin: 10px auto 0;
     text-align: center;
   }
-     
+
   /* Bungkus tombol ke bawah */
   .card-b a.btn-more:first-of-type {
-    margin-top: auto; /* dorong ke bawah */
+    margin-top: 100px; /* dorong ke bawah */
   }
   .footer {
   background: #fff;

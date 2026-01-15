@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // === TRANSLATION SYSTEM ===
 const translations = {
-  en: {
+  e: {
     open: `Open the competition card to see further details or register directly!`,
-    ready: `ready to competitions?`,
+    ready: `ready to compete?`,
     our: `
 Join this competition and prove your skills among other participants`,
     mbfth: `
@@ -119,7 +119,7 @@ Open the competition card to see details and register.!`,
     kontak: "contact",
     sosmed: "Social Media",
     olimislam: "ISLAMIC OLYMPIAD",
-    leader: `Organizational Leadership`,
+    leader: `Organizational Leadership    `,
     komleader: `COMPETITION`,
     ilc: `Organizational Leadership`,
     titleilc: `Organization Competition`,
@@ -127,7 +127,7 @@ Open the competition card to see details and register.!`,
     mbfl: "MBI Big Fair (MBF) is an annual event hosted by MBI Amanatul Ummah located in Pacet, Mojokerto. For nearly 16 years, MBI Big Fair has consistently delivered a variety of competitions and spectacular events each year. The event is also enlivened by amazing performances and creations from MBI students, which never fail to impress.",
     lokasi: "📍 Competition Venue",
   },
-  id: {
+  i: {
     open: `Buka kartu kompetisi untuk melihat detail lebih lanjut atau langsung mendaftar!`,
     ready: `siap berkompetisi?`,
     our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
