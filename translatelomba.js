@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const translations = {
-  id: {
+  i: {
     home: `Beranda`,
     comp: `Kompetisi`,
     evnt: `Seminar`,
@@ -159,7 +159,7 @@ const translations = {
     fesban1:
       "FESBAN adalah salah satu perlombaan di MBI BIG FAIR XVII. Lomba ini hanya terdiri dari satu babak. FESBAN menguji kemahiran peserta dalam menyenandungkan sholawat diiringi dengan musik banjari sesuai dengan kriteria penilaian vocal, music banjari, adab dan syair, serta lagu jingle. Mari bergabung bersama MBI BIG FAIR XVII dan jadilah juara!",
   },
-  en: {
+  e: {
     home: `Home`,
     comp: `Competitions`,
     evnt: `Event`,

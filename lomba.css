@@ -770,7 +770,7 @@ html {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -806,7 +806,7 @@ html {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 310px;
+  width: 290px;
 }
 
 .menu-box span {
@@ -831,7 +831,7 @@ html {
 .lang-selector {
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 5px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
@@ -856,8 +856,8 @@ html {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -867,6 +867,7 @@ html {
 .lang-text {
   font-weight: 600;
   letter-spacing: 1px;
+  display: none;
 }
 
 .arrow {
@@ -1231,7 +1232,7 @@ h2[data-lang="allinfo"] {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 5px;
   width: 100%;
   z-index: 1000;
@@ -1267,7 +1268,7 @@ h2[data-lang="allinfo"] {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 280px;
+  width: 260px;
 }
 
 .menu-box span {
@@ -1317,8 +1318,8 @@ h2[data-lang="allinfo"] {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -1385,6 +1386,14 @@ h2[data-lang="allinfo"] {
   border: 2px solid white;
   flex-shrink: 0;
 }
+.cta-text strong {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
 .hero-title-ilc {
   margin-top: -90px;
   font-size: 2.5rem;

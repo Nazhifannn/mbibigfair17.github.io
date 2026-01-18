@@ -1024,7 +1024,8 @@ body {
   box-shadow: none;
 }
 @media (max-width: 400px){
-  .navbar {
+ /* ===== Navbar ===== */
+.navbar {
   flex-wrap: wrap; /* Wajib */
   display: flex;
   align-items: center;
@@ -1032,7 +1033,7 @@ body {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -1068,7 +1069,7 @@ body {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 310px;
+  width: 290px;
 }
 
 .menu-box span {
@@ -1093,7 +1094,7 @@ body {
 .lang-selector {
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 5px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
@@ -1118,8 +1119,8 @@ body {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -1129,6 +1130,7 @@ body {
 .lang-text {
   font-weight: 600;
   letter-spacing: 1px;
+  display: none;
 }
 
 .arrow {
@@ -1599,7 +1601,7 @@ body {
 }
 
 @media (max-width: 350px){
-/* ===== Navbar ===== */
+    /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
   display: flex;
@@ -1608,7 +1610,7 @@ body {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 2.5px;
   width: 100%;
   z-index: 1000;
@@ -1619,14 +1621,14 @@ body {
   position: absolute;
   left: 20px; /* sejajarkan sesuai padding navbar */
   flex: 1;
-  top: -15px;
+  top: -18px;
 }
 
 .logo img {
-  margin-top: 17px;
+  margin-top: 10px;
   align-items: center;
   height: 30px;
-  width: auto;
+  width: 35px;
   border-radius: 10px;
   transform: translateX(-15px);
 }
@@ -1635,17 +1637,17 @@ body {
 .menu-box {
   margin-top: 50px;
   background: #ffffff;
-  padding: 15px 20px;
+  padding: 15px 15px;
   border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: absolute;
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 280px;
+  width: 260px;
 }
 
 .menu-box span {
@@ -1660,16 +1662,16 @@ body {
 .menu-box a {
   font-family: "Poppins";
   color: #ff00f2;
-  font-size: 10px;
+  font-size: 8px;
   transition: 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transform: translateX(50px);
+  transform: translateX(35px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
   position: fixed;
-  top: -30px;
+  top: -25px;
   right: 6px;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
@@ -1695,8 +1697,8 @@ body {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
