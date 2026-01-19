@@ -8,7 +8,7 @@
   right: 20px;
   z-index: 9999;
   transition: .2s;
-  top: 500px;
+  top: 600px;
 }
 
 .btn-gambar:hover {
@@ -2426,14 +2426,14 @@ html {
   z-index: 2;
 }
   .btn-gambar {
-  width: 70px;     /* ukuran gambar tombol */
+  width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 540px;
+  top: 590px;
 }
   .navbar {
     gap: 8px;
@@ -2833,14 +2833,14 @@ html {
 /* Extra small - 360px */
 @media (max-width: 360px) {
   .btn-gambar {
-  width: 70px;     /* ukuran gambar tombol */
+  width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 540px;
+  top: 600px;
 }
 
   #promo-content {
@@ -3162,14 +3162,14 @@ html {
   display: none;
 }
     .btn-gambar {
-  width: 70px;     /* ukuran gambar tombol */
+  width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 540px;
+  top: 600px;
 }
 
   #promo-content {

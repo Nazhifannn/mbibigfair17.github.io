@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const translations = {
   e: {
     open: `Open the competition card to see further details or register directly!`,
-    ready: `ready to compete?`,
+    ready: `Ready to Compete?`,
     our: `
 Join this competition and prove your skills among other participants`,
     mbfth: `
@@ -129,9 +129,9 @@ Open the competition card to see details and register.!`,
   },
   i: {
     open: `Buka kartu kompetisi untuk melihat detail lebih lanjut atau langsung mendaftar!`,
-    ready: `siap berkompetisi?`,
+    ready: `Siap Berkompetisi?`,
     our: `Bergabunglah dalam kompetisi ini dan buktikan kemampuanmu di antara para peserta terbaik`,
-    mbfth: `Siap berkompetisi? Daftarkan dirimu sekarang dan jadilah bagian dari tantangan ini.
+    mbfth: `Siap Berkompetisi? Daftarkan dirimu sekarang dan jadilah bagian dari tantangan ini.
 Buka kartu kompetisi untuk melihat detail dan mendaftar!`,
     olim: `KOMPETISI`,
     inggris: "KOMPETISI",
