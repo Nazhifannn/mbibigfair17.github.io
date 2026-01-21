@@ -1439,69 +1439,7 @@ html {
 }
 /* Tablet - 768px ke bawah */
 @media (max-width: 1024px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
-  /* KONTEN popup */
-#promo-content {
-  width: 300px;
-  max-width: 85%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeScale 0.3s ease;
-}
-
-/* Gambar PROMO */
-#promo-img {
-  width: 200%;
-  height: auto;
-  display: block;
-
-  /* MEMASTIKAN dia tidak absolute */
-  position: static !important;
-}
-
-/* TEKS PROMO */
-#promo-text {
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 25px;
-  text-align: center;
-  width: 100%;
-}
-
-  /* Maskot */
-  .logo img {
-  position: absolute;
-  top: 27%;
-  right: 425px;
-  width: 150px;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  z-index: 999;
-  animation: logoReveal 1s ease forwards;
-  animation-delay: 2s;
-}
-.maskot {
-  position: absolute;
-  width: 300px;
-  opacity: 0;
-  transform: scale(0.9);
-  z-index: 2;
-}
+ 
   .navbar {
     gap: 15px;
     padding: 12px 15px;
@@ -1559,21 +1497,6 @@ html {
 
 /* Mobile landscape - 768px */
 @media (max-width: 768px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
   .navbar {
     gap: 10px;
     padding: 10px 10px;
@@ -1613,21 +1536,7 @@ html {
 
 
 @media (max-width: 768px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
+  
   /* Tablet (768px ke bawah) */
   .btn-gambar {
   width: 150px;     /* ukuran gambar tombol */
@@ -1835,40 +1744,7 @@ html {
 
 /* Mobile portrait - 480px */
 @media (max-width: 480px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
 
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
-    /* Maskot */
-  .logo img {
-  position: absolute;
-  top: 27%;
-  right: 165px;
-  width: 150px;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  z-index: 999;
-  animation: logoReveal 1s ease forwards;
-  animation-delay: 2s;
-}
-.maskot {
-  position: absolute;
-  width: 150px;
-  opacity: 0;
-  transform: scale(0.9);
-  z-index: 2;
-}
   .navbar {
     gap: 8px;
     padding: 8px 8px;
@@ -2079,40 +1955,7 @@ html {
 }
 /* Mobile portrait - 400px */
 @media (max-width: 400px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
-     /* Maskot */
-  .logo img {
-  position: absolute;
-  top: 20%;
-  right: 125px;
-  width: 150px;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  z-index: 999;
-  animation: logoReveal 1s ease forwards;
-  animation-delay: 2s;
-}
-.maskot {
-  position: absolute;
-  width: 150px;
-  opacity: 0;
-  transform: scale(0.9);
-  z-index: 2;
-}
+ 
   .btn-gambar {
   width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
@@ -2559,23 +2402,6 @@ html {
   width: 100%;
 }
 
-/* ===== LAYER ASAP ===== */
-.smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
-
   .hero-video {
   max-width: 100%;
   width: 100%;
@@ -2834,21 +2660,7 @@ html {
 }
 /* Extra small - 300px */
 @media (max-width: 300px) {
-  .smoke-screen {
-  position: fixed;
-  inset: 0;
-  /* Fantasy Mist Background */
-
-  background: black;
-  backdrop-filter: blur(40px);
-  overflow: hidden;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutSmoke 5s ease 3s forwards; /* hilang setelah 6 detik */
-  display: none;
-}
+  
     .btn-gambar {
   width: 100px;     /* ukuran gambar tombol */
   cursor: pointer; /* jadi tangan saat hover */
