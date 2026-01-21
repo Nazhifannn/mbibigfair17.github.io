@@ -1,3 +1,11 @@
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,13 +24,6 @@
 @font-face {
   font-family: "greatvibes";
   src: url("GreatVibes-Regular.ttf") format("truetype");
-}
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
 .section {
   min-height: 80 vh; /* tiap section setidaknya setinggi layar */
@@ -116,8 +117,9 @@ html {
 
 /* TEKS MENU */
 .menu-box a {
+  
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.5px;
   text-decoration: none;
   color: #ff00f2;
@@ -267,41 +269,6 @@ html {
   overflow: hidden;
 }
 
-/* AURORA / LIGHT SWIRLS */
-.speakers-section.fantasy::before,
-.speakers-section.fantasy::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3),
-    transparent 70%
-  );
-  filter: blur(70px);
-  animation: float 8s infinite linear alternate;
-}
-
-.speakers-section.fantasy::before {
-  top: -150px;
-  left: -150px;
-}
-
-.speakers-section.fantasy::after {
-  bottom: -150px;
-  right: -150px;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(40px) rotate(30deg);
-  }
-}
-
 /* TITLE */
 .speakers-section .title {
   color: #ffffff;
@@ -338,30 +305,6 @@ html {
   overflow: hidden;
 }
 
-/* ORNAMENTAL GLOW */
-.fantasy-card::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  top: -40px;
-  right: -40px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
-  filter: blur(40px);
-  opacity: 0.4;
-  transition: 0.4s ease;
-}
-
-.fantasy-card:hover::after {
-  opacity: 0.7;
-}
-
-/* CARD HOVER */
-.fantasy-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
-}
-
 /* IMAGE */
 .speaker-img {
   width: 100%;
@@ -376,11 +319,6 @@ html {
   object-fit: cover;
   transition: 0.4s ease;
 }
-
-.fantasy-card:hover .speaker-img img {
-  transform: scale(1.08);
-}
-
 /* NAME */
 .speaker-name {
   margin-top: 18px;
@@ -1178,7 +1116,7 @@ body {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10     px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -1227,12 +1165,11 @@ body {
 }
 
 .menu-box a {
-  font-family: "Poppins";
   color: #ff00f2;
   font-size: 10px;
   transition: 0.3s;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400px;
   transform: translateX(25px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
@@ -1264,8 +1201,8 @@ body {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -1492,8 +1429,8 @@ body {
 }
 
 .lang-toggle img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -1758,7 +1695,7 @@ body {
 }
 
 .logo img {
-  margin-top: 17px;
+  margin-top: 10px;
   align-items: center;
   height: 30px;
   width: auto;
@@ -1830,8 +1767,8 @@ body {
 }
 
 .lang-toggle img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
