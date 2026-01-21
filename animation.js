@@ -361,8 +361,8 @@ const allPrizepools = {
     { rank: "Juara 1 (1st Place)", amount: "Rp. 2.500.000" },
     { rank: "Juara 2 (2nd Place)", amount: "Rp. 2.000.000" },
     { rank: "Juara 3 (3rd Place)", amount: "Rp. 1.500.000" },
-    { rank: "1st Runner Up", amount: "Rp. 250.000" },
-    { rank: "2nd Runner Up", amount: "Rp. 150.000" },
+    { rank: "Best Vocal", amount: "Rp. 500.000" },
+    { rank: "Best Jinggle", amount: "Rp. 250.000" },
   ],
 };
 
