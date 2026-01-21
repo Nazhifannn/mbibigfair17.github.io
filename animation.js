@@ -41,7 +41,7 @@ const translations = {
     "zoom-text1": "LOGO & MASKOT",
     "zoom-text2": "RESMI KAMI",
     text: "LOGO MBF",
-    left: "LUCKY",
+    left: "LUKY",
     mid: "LOGO",
     right: "LUCY",
     mbf: "APA ITU MBF?",
@@ -52,6 +52,7 @@ const translations = {
               oleh kreasi para santri MBI yang memukau dan luar biasa.`,
     galcer: "APA ITU GALANG CERIA?",
     galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) merupakan acara tahunan berupa lomba pramuka yang diselenggarakan oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang Ceria selalu berhasil menyuguhkan berbagai pengalaman menarik bagi pesertanya.`,
+    home:`Beranda`,
     pamflet: "Pamflet Utama",
     guidebook: "Buku Panduan",
     daftar: `PENDAFTAR MBI BIG FAIR XVI`,
@@ -91,6 +92,7 @@ const translations = {
     mbft: `The MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, located in Pacet, Mojokerto. For nearly 16 years, the MBI Big Fair has consistently presented a variety of spectacular competitions and events. The event is also enlivened by the stunning and extraordinary creations of MBI students.`,
     galcer: "WHAT IS GALANG CERIA",
     galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) is an annual Scouting competition organized by the Nurul Ummah Scout Movement (Ambalan Nurul Ummah) in Pacet, Mojokerto. Over the past 16 years, Galang Ceria has consistently provided a variety of engaging experiences for its participants.`,
+    home:`Home`,
     pamflet: "Main Pamphlet",
     guidebook: "Guidebook",
     daftar: `MBI BIG FAIR XVI REGISTRATION`,
@@ -454,4 +456,3 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("tombolGambar").onclick = function () {
     document.getElementById("fotoKu").src = "gambarBaru.png";
   };
-
