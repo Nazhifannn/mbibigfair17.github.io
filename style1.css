@@ -261,7 +261,6 @@ html {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
-
   color: #ff00f2;
   position: relative;
 }
@@ -1705,9 +1704,9 @@ html {
   margin-top: 15px;
   align-items: center;
   height: 35px;
-  width: auto;
+  width: 30;
   border-radius: 10px;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
 }
 
 /* Menu box tengah */
@@ -1724,7 +1723,7 @@ html {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 290px;
+  width: 280px;
 }
 
 .menu-box span {
@@ -1743,7 +1742,7 @@ html {
   transition: 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transform: translateX(25px);
+  transform: translateX(15px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {

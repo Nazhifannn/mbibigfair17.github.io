@@ -1107,7 +1107,7 @@ body {
   .hero-img {
     height: 60vh;
   }
-  /* ===== Navbar ===== */
+    /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
   display: flex;
@@ -1116,8 +1116,8 @@ body {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -10     px;
-  left: 0;
+  top: -10px;
+  left: 5px;
   width: 100%;
   z-index: 1000;
 }
@@ -1127,15 +1127,16 @@ body {
   position: absolute;
   left: 20px; /* sejajarkan sesuai padding navbar */
   flex: 1;
+  top: -1px;
 }
 
 .logo img {
-  margin-top: 7px;
+  margin-top: 15px;
   align-items: center;
-  height: 35px;
-  width: auto;
+  height: 30px;
+  width: 30px;
   border-radius: 10px;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
 }
 
 /* Menu box tengah */
@@ -1152,7 +1153,7 @@ body {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 310px;
+  width: 280px;
 }
 
 .menu-box span {
@@ -1164,13 +1165,13 @@ body {
   display: none;
 }
 
-.menu-box a {
+.menu-box a { 
   color: #ff00f2;
   font-size: 10px;
   transition: 0.3s;
   text-decoration: none;
-  font-weight: 400px;
-  transform: translateX(25px);
+  font-weight: 800;
+  transform: translateX(5px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
@@ -1343,7 +1344,7 @@ body {
   padding: 20px 40px;
   background: transparent;
   position: fixed;
-  top: -15px;
+  top: -10px;
   left: 5px;
   width: 100%;
   z-index: 1000;
@@ -1354,6 +1355,7 @@ body {
   position: absolute;
   left: 20px; /* sejajarkan sesuai padding navbar */
   flex: 1;
+  top: 5px;
 }
 
 .logo img {
@@ -1379,7 +1381,7 @@ body {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 280px;
+  width: 260px;
 }
 
 .menu-box span {
@@ -1392,13 +1394,12 @@ body {
 }
 
 .menu-box a {
-  font-family: "Poppins";
   color: #ff00f2;
-  font-size: 10px;
+  font-size: 9.5px;
   transition: 0.3s;
   text-decoration: none;
-  font-weight: bold;
-  transform: translateX(20px);
+  font-weight: 600px;
+  transform: translateX(15px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {

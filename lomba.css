@@ -806,7 +806,7 @@ html {
   left: 40%;
   transform: translateX(-50%);
   z-index: 2; /* biar tidak ketumpuk logo */
-  width: 290px;
+  width: 280px;
 }
 
 .menu-box span {
@@ -825,7 +825,7 @@ html {
   transition: 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transform: translateX(25px);
+  transform: translateX(15px);
 }
 /* LANGUAGE SWITCHER – VERSI FINAL & CLEAN */
 .lang-selector {
