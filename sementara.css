@@ -1,0 +1,88 @@
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f6f9;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box {
+        background: #ffffff;
+        padding: 40px 50px;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        max-width: 650px;
+        text-align: center;
+    }
+
+    .box h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .box p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    /* TOMBOL MENCOLOK */
+    .btn-competisi {
+        display: inline-block;
+        padding: 16px 34px;
+        background: linear-gradient(to top, #886eaf, #927cb2);
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-competisi:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 35px rgba(221, 36, 199, 0.6);
+    }
+@media (max-width: 400px) {
+        .box {
+        background: #ffffff;
+        padding: 40px 50px;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        max-width: 650px;
+        text-align: center;
+    }
+        .box h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .box p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    /* TOMBOL MENCOLOK */
+    .btn-competisi {
+        display: inline-block;
+        padding: 16px 34px;
+        background: linear-gradient(to top, #886eaf, #927cb2);
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-competisi:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 35px rgba(221, 36, 199, 0.6);
+    }
+}
