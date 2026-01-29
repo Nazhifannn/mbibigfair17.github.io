@@ -765,6 +765,7 @@ html {
   }
 }
 
+
 .toggle-wrapper {
   width: 100%;
   display: flex;
@@ -1964,7 +1965,7 @@ html {
   right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 590px;
+  top: 550px;
 }
   .navbar {
     gap: 8px;
@@ -2232,7 +2233,7 @@ html {
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 10px;
   color: #1f2937;
   background: transparent;
   transition: all 0.35s ease;
@@ -2371,7 +2372,7 @@ html {
   right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 600px;
+  top: 55 0px;
 }
 
   #promo-content {
@@ -2550,12 +2551,13 @@ html {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 0 50px rgba(255, 0, 200, 0.4);
 }
+
 .toggle-btn {
   padding: 12px 15px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 10px;
   color: #1f2937;
   background: transparent;
   transition: all 0.35s ease;
