@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "fantasy1";
+  src: url("Fantasy Script.otf") format("truetype");
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +14,6 @@
     src: url("Apple.otf") format("truetype");
   }
 }
-@font-face {
-  font-family: "fantasy1";
-  src: url("Fantasy Script.otf") format("truetype");
-}
-
 
 body,
 html {
@@ -22,7 +23,7 @@ html {
 }
 
 .section {
-  min-height: 80 vh; /* tiap section setidaknya setinggi layar */
+  min-height: 80vh; /* tiap section setidaknya setinggi layar */
   width: 100%;
 }
 
@@ -447,10 +448,6 @@ body {
   color: white;
 }
 
-.next-guest-wow {
-  display: flex;
-  justify-content: center;
-}
 
 
 
@@ -1198,6 +1195,24 @@ body {
 .hero-subtitle-ilc {
   font-size: 1rem;
   opacity: 0.9;
+}
+.next-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 100px 0 40px;
+  letter-spacing: 3px;
+  opacity: 0.9;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.wow-title {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 70px;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
 }
 .guest-row-alexa {
     display: flex;
