@@ -1438,6 +1438,7 @@ html {
   transform: scale(0.88);
   box-shadow: none;
 }
+
 /* Tablet - 768px ke bawah */
 @media (max-width: 1024px) {
  
@@ -1766,7 +1767,7 @@ html {
 
   .menu-box {
     padding: 6px 15px;
-    gap: 30px;
+    gap: 20px;
     min-height: 35px;
     border-radius: 30px;
     width: 100%;
@@ -1821,7 +1822,7 @@ html {
   transition: all 0.5s ease;
   z-index: 1;
   top: 100px;
-  left: -95px;
+  left: -120px;
 }
 
 .about-card .logo-container {
@@ -1907,6 +1908,59 @@ html {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 0 50px rgba(255, 0, 200, 0.4);
 }
+.card {
+  max-width: 300px;
+  width: 140px;
+  max-height: 500px;
+  height: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* supaya gambar ikut bentuk card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  object-fit: cover;
+  display: block;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* sesuaikan ukuran gambar, bisa 60–80% */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  z-index: 1;
+}
+/* Kotak tipis di dalam kartu */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #d93acd; /* warna krem tipis seperti contoh */
+  border-radius: 10px;
+  pointer-events: none; /* supaya tidak ganggu klik */
+  box-sizing: border-box;
+}
+.card .text {
+  position: absolute;
+  top: 25px; /* jarak dari atas garis dalam */
+  width: 100%;
+  text-align: center;
+  color: inherit;
+  font-size: 15px;
+  z-index: 2; /* supaya tetap di atas garis */
+  color: #000000;
+}
 
 /* Overlay */
 .overlay {
@@ -1936,6 +1990,153 @@ html {
   position: relative;
   animation: zoomIn 0.5s ease;
   margin-top: 80px;
+}
+.toggle-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.toggle-container {
+  display: flex;
+  background: #f5f7fa;
+  padding: 6px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  gap: 6px;
+}
+
+.toggle-btn {
+  padding: 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size:15px;
+  color: #1f2937;
+  background: transparent;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.toggle-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  opacity: 0;
+  transition: 0.35s;
+  z-index: -1;
+}
+
+.toggle-btn:hover {
+  color: #ff00f2;
+}
+
+.toggle-btn.active {
+  color: #000000;
+}
+
+.toggle-btn.active::before {
+  opacity: 1;
+}
+
+.toggle-btn.active {
+  box-shadow: 0 8px 18px rgba(255, 0, 217, 0.71);
+}
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background-color: #e6e6fa;
+  z-index: 0;
+  transition: width 2s ease;
+}
+
+.event {
+  position: relative;
+  text-align: center;
+  width: 20%;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.circle {
+  width: 45px;
+  height: 50px;
+  background-color: #e6e6fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  color: #886eaf;
+  font-size: 20px;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.date {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: #e6e6fa;
+}
+
+.label {
+  font-size: 12px;
+  font-variant: small-caps;
+  color: #e6e6fa;
+}
+.main-container {
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-left: 13px;
+  margin-right: 40px;
+  text-align: center;
+  width: 95%; /* Lebar wadah utama */
+  max-width: 1500px;
+  height: 80%;
+  padding: 20px;
+  background-color: #e6e6fa;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(50px);
+}
+.prizepools-carousel-container {
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center; /* ✅ posisi tengah horizontal */
+  align-items: center; /* ✅ posisi tengah vertikal */
+}
+
+.prizepool-container {
+  background: linear-gradient(to top, #402c5c, #886eaf);
+  border-radius: 20px;
+  padding: 20px 20px 50px 20px; /* Padding bawah lebih besar untuk navigasi */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  min-width: 250px; /* ⭐ kurangi dari 300px */
+  width: 50%; /* ⭐ tambahkan ini */
+  max-width: 320px; /* ⭐ tambahkan ini */
+  flex-shrink: 1; /* ⭐ ubah dari 0 */
+  text-align: center;
+  position: relative;
 }
 .main-container {
   gap: 40px;
