@@ -2,8 +2,6 @@
   font-family: "fantasy1";
   src: url("Fantasy Script.otf") format("truetype");
 }
-
-
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +31,34 @@ html {
 
 .white {
   background-color: #e6e6fa;
+}
+.back-box {
+  position: fixed;
+  top: 700px;
+  z-index: 999;
+  left: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  color: #7c3aed; /* ungu */
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-box:hover {
+  background:  linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
 }
 
 /* ===== Navbar ===== */
@@ -1021,6 +1047,33 @@ body {
   box-shadow: none;
 }
 @media (max-width: 480px){
+  .back-box {
+  position: fixed;
+  top: 620px;
+  left: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  color: #7c3aed; /* ungu */
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-box:hover {
+  background:  linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
  /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
@@ -1617,6 +1670,33 @@ body {
 }
 
 @media (max-width: 400px){
+  .back-box {
+  position: fixed;
+  top: 630px;
+  left: 10px;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  color: #7c3aed; /* ungu */
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-box:hover {
+  background:  linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
  /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
@@ -2212,6 +2292,33 @@ body {
 }
 
 @media (max-width: 350px){
+  .back-box {
+  position: fixed;
+  top: 640px;
+  left: 10px;
+
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  color: #7c3aed; /* ungu */
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-box:hover {
+  background:  linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
     /* ===== Navbar ===== */
 .navbar {
   flex-wrap: wrap; /* Wajib */
