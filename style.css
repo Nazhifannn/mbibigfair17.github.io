@@ -1746,7 +1746,16 @@ html {
 
 /* Mobile portrait - 480px */
 @media (max-width: 480px) {
-
+  .btn-gambar {
+  width: 100px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 9999;
+  transition: .2s;
+  top: 550px;
+}
   .navbar {
     gap: 8px;
     padding: 8px 8px;
@@ -1797,9 +1806,9 @@ html {
   max-width: 100%;
   width: 100%;
   max-height: 100vh; /* full tinggi layar */
-  height: 80%;
+  height: 100vh;
   object-fit: cover; /* biar gak gepeng */
-  margin-top: 50px;
+  margin-top: 0px;
 }
   .about-card.left,
   .about-card.right {
@@ -2166,7 +2175,7 @@ html {
   right: 10px;
   z-index: 9999;
   transition: .2s;
-  top: 550px;
+  top: 600px;
 }
   .navbar {
     gap: 8px;
@@ -2197,6 +2206,7 @@ html {
 
   .logo1 img {
     height: 32px;
+    transform: translateX(10px);
   }
 
   .menu-box span {
@@ -2205,7 +2215,8 @@ html {
   }
 
   .menu-box a {
-    font-size: 10px;
+    font-size: 10px;  
+    transform: translateX(-15px);
   }
 
   .lang-btn-left {
@@ -2219,9 +2230,9 @@ html {
   max-width: 100%;
   width: 100%;
   max-height: 100vh; /* full tinggi layar */
-  height: 80%;
+  height: 100vh;
   object-fit: cover; /* biar gak gepeng */
-  margin-top: 70px;
+  margin-top: 0px;
 }
   .about-card.left,
   .about-card.right {
@@ -2560,7 +2571,27 @@ html {
   text-align: center;
   position: relative;
 }
-
+}
+@media (max-width: 380px){
+  .about-card {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 0, 180, 0.2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.5s ease;
+  z-index: 1;
+  top: 100px;
+  left: -130px;
+}
 }
 
 /* Extra small - 360px */
@@ -2608,7 +2639,7 @@ html {
   max-width: 100%;
   width: 100%;
   max-height: 100vh; /* full tinggi layar */
-  height: 80%;
+  height: 100vh;
   object-fit: cover; /* biar gak gepeng */
 }
   .navbar {
