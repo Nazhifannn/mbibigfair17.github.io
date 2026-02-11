@@ -9,7 +9,34 @@ body {
   background: #0b0014;
   color: white;
 }
+.back-box {
+  position: fixed;
+  top: 700px;
+  z-index: 999;
+  left: 20px;
 
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  color: #7c3aed; /* ungu */
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-box:hover {
+  background:  linear-gradient(145deg, #c63bad, #7e2eb8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
 /* HEADER */
 .hero {
   height: 100vh;
