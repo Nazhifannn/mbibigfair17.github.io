@@ -1,312 +1,509 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GALANG CERIA KE-17</title>
+<html lang="en">
+  <head>
+      <!-- FAVICON -->
+<link rel="icon" href="./favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon-512x512.png" />
 
-  <!-- Google Font fallback -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBI BIG FAIR 17</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-<!-- INTRO SCREEN -->
-<div id="intro">
-  <div class="intro-content">
-    <h1>Welcome to</h1>
-    <h2>GALANG CERIA<br>OFFICIAL WEBSITE</h2>
-    <span class="intro-line"></span>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@100;300;400;700&display=swap"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap"
+    />
+  </head>
+
+  <body>
+
+    <!-- Popup -->
+    <div id="promo-popup">
+      <div id="promo-content">
+        <img id="promo-img" src="assets/baruuuuuuu.png" alt="gambar promo" />
+        <p id="promo-text">sentuh di manapun untuk melanjutkan</p>
+      </div>
+    </div>
+
+    <div class="section black">
+          <!-- ===== Navbar ===== -->
+      <div class="navbar">
+        <!-- Lang Button Kiri -->
+        <button class="lang-btn lang-btn-left" data-lang-btn="id" id="id-btn">
+          <span class="flag">🇮🇩</span>
+        </button>
+
+        <!-- Menu Box Tengah -->
+        <div class="menu-box">
+          <div class="logo1">
+            <img src="assets/mbf17.png" alt="Logo MBF" />
+          </div>
+          <span>17ᵗʰ MBF</span>
+          <a href="index.html">Home</a>
+          <a href="competitions.html">Competitions</a>
+          <a href="event.html">Events</a>
+          <a href="New folder/index.html">Galang Ceria</a>
+        </div>
+
+        <!-- Lang Button Kanan -->
+        <button class="lang-btn lang-btn-right" data-lang-btn="en" id="en-btn">
+          <span class="flag">EN</span>
+        </button>
+      </div>
+
+      <!-- ===== Video Section ===== -->
+      <section class="video-section">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="video mbf.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <!-- ===== About Section =====   -->
+      <!-- HERO TITLE -->
+      <div class="about-title">
+        <h1 class="title-hero" data-lang="big">The Biggest Event in MBI Amanatul Ummah</h1>
+      </div>
+      <section class="about-fantasy-unique">
+        <div class="floating-lights"></div>
+
+        <!-- Box 1: MBF -->
+        <div class="about-card reveal left">
+          <div class="logo-container">
+            <img src="assets/mbf17.png" alt="Logo MBF" class="logo" />
+          </div>
+          <div class="text">
+            <h2 data-lang="mbf">Apa Itu MBF?</h2>
+            <p data-lang="mbft">
+              
+Sweet Seventeenth MBI Big Fair (MBF) merupakan agenda tahunan yang diselenggarakan oleh MBI Amanatul Ummah, Pacet, Mojokerto. Memasuki tahun ke-17, MBI Big Fair terus melanjutkan tradisinya sebagai wadah kompetisi bergengsi yang menghadirkan beragam perlombaan serta rangkaian acara inspiratif. Perhelatan ini semakin semarak dengan hadirnya karya-karya kreatif, inovatif, dan luar biasa dari para santri MBI, menjadikan MBF sebagai panggung ekspresi bakat, imajinasi, dan prestasi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Box 2: Galang Ceria -->
+        <div class="about-card reveal right">
+          <div class="logo-container">
+            <img src="assets/galcer.png" alt="Logo Galang Ceria" class="logo" />
+          </div>
+          <div class="text">
+            <h2 data-lang="galcer">Apa Itu Galang Ceria?</h2>
+            <p data-lang="galcert">
+              Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif)
+              merupakan acara tahunan berupa lomba pramuka yang diselenggarakan
+              oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang
+              berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang
+              Ceria selalu berhasil menyuguhkan berbagai pengalaman menarik bagi
+              pesertanya.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="slider"></div>
+      </div>
+    </div>
+
+    <div class="section white">
+      <div class="marquee-container">
+        <div class="marquee">
+          <!-- Bisa disingkat pakai loop CSS, tapi struktur dibiarkan -->
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+          <span>SWARNALOKA NIRMANDALA &nbsp;&nbsp;&nbsp;</span>
+        </div>
+      </div>
+
+      <section class="hero-text1">
+        <h1 class="zoom-text1 reveal" data-lang="zoom-text1">OUR OFFICIAL</h1>
+        <h1 class="zoom-text2 reveal" data-lang="zoom-text2">LOGO & MASCOT</h1>
+      </section>
+      <div class="cards">
+        <div
+          class="card left"
+          data-title-id="LUCKY"
+          data-desc-id="Deskripsi maskot putra (PA)."
+          data-title-en="LUCKY"
+          data-desc-en="Description of the male mascot."
+        >
+          <h1 class="text" data-lang="left">MASKOT PA</h1>  
+          <img src="maskot pa.png" alt="" />
+        </div>
+
+        <div
+          class="card middle"
+          data-title-id="FILOSOFI"
+          data-desc-en="Filosofi logo MBF 17..."
+          data-overlay-img="filogo.png"
+        >
+          <h1 class="text" data-lang="mid">LOGO</h1>
+
+          <!-- gambar untuk kartu -->
+          <img src="mbf17.png" alt="gambar 2" />
+        </div>
+
+        <div
+          class="card right"
+          data-title-id="LUCY"
+          data-desc-id="Deskripsi maskot putri (PI)."
+          data-title-en="LUCY"
+          data-desc-en="Description of the female mascot."
+        >
+          <h1 class="text" data-lang="right">MASKOT PI</h1>
+          <img src="maskot pi.png" alt="gambar 3" />
+        </div>
+      </div>
+
+      <!-- === Overlay Detail === -->
+      <div id="cardOverlay" class="overlay hidden">
+        <div class="overlay-content">
+          <button id="close-card" class="close-btn" aria-label="Close overlay">
+            &times;
+          </button>
+
+          <!-- Di sini kita simpan dua versi bahasa -->
+          <h2
+            id="cardTitle"
+            data-title-id=""
+            data-title-en=""
+            data-lang="overlay-title"
+          ></h2>
+          <img id="cardImage" src="" alt="Card Detail" />
+          <p
+            id="cardDesc"
+            data-desc-id=""
+            data-desc-en=""
+            data-lang="overlay-desc"
+          ></p>
+        </div>
+      </div>
+<div class="toggle-wrapper">
+  <div class="toggle-container">
+    <a href="index.html" data-lang="home" class="toggle-btn active">
+       Home
+    </a>
+    <a href="https://drive.google.com/drive/folders/1QX4CagrkIYvlA8Ese7lZYDnnNYK8nEV-" target="_blank" data-lang="pamflet" class="toggle-btn">
+       Main Pamflet
+    </a>
+    <a href="sementara.html"  data-lang="guidebook" class="toggle-btn"
+    >
+       Guidebook
+    </a>
   </div>
 </div>
 
-<!-- HEADER -->
-<header class="hero">
-  <video autoplay muted loop>
-    <source src="ggwp.mp4" type="video/mp4">
-  </video>
-  <div class="hero-content">
-    <h1 class="title">GALANG CERIA KE-17</h1>
-    <p class="tagline">Tuang Ekspresi Imaji, Tumbuhkan Semangat Tunas Muda Di Era Kemajuan Peradaban</p>
-  </div>
-</header>
 
-<!-- OFFICIAL LOGO -->
-<section class="section logo-section reveal">
-  <p class="logo-label">This is our official logo</p>
-
-  <div class="logo-box">
-    <img src="Picture1.png" alt="Logo Galang Ceria Ke-17">
-  </div>
-
-  <!-- LOGO LINKS -->
-  <div class="logo-links">
-    <a href="https://drive.google.com/file/d/1OqBoIKNXDfBI9jNpexDwz0RBj_Z9bFQx/view" class="link-box">
-      <span>Pamflet Resmi</span>
-    </a>
-    <a href="https://dimaswidya.my.canva.site/smartbook-17thgalangceria" class="link-box">
-      <span>Smart Book</span>
-    </a>
-  </div>
-</section>
-
-<!-- APA ITU GALANG CERIA -->
-<section class="section narrow reveal">
-  <h2 class="section-title-left">Apa itu Galang Ceria?</h2>
-  <p>
-GALANG CERIA (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) merupakan ajang nasional bagi Pramuka Penggalang untuk menyalurkan kreativitas, imaji, dan semangat kebersamaan diera modern. Galang Ceria menjadi bagian dari MBI Big Fair yang diselenggarakan oleh Ambalan Nurul Ummah Pangkalan MBI Amanatul Ummah yang berlokasi di Pacet, Mojokerto. Selama 16 tahun terakhir, Galang Ceria selalu berhasil menyuguhkan berbagai pengalaman-pengalaman yang menarik bagi para peserta.
-  </p>
-</section>
-
-<!-- TIMELINE -->
-<section class="section">
-  <h2>Timeline</h2>
-
-  <div class="timeline-wrapper reveal">
-    <div class="timeline-line"></div>
-
-    <div class="timeline">
-      <div class="box">Open Regist<br><b>1 Des 2025</b></div>
-      <div class="box">Close Regist<br><b>4 Apr 2026</b></div>
-      <div class="box">Technical Meeting<br><b>5 Apr 2026</b></div>
-      <div class="box">First Journey<br><b>18 Apr 2026</b></div>
-      <div class="box">Last Journey<br><b>20 Apr 2026</b></div>
-    </div>
-  </div>
-</section>
-
-<section class="section maskot-section">
-  <h2>Maskot Galang Ceria 17</h2>
-
-  <div class="maskot-wrapper reveal">
-    <img src="LUSTER_SPL_AN__MASKOT_-removebg-preview.png" alt="Maskot Luster">
-  </div>
-
-  <p class="maskot-desc">
-•	Maskot Galang Ceria 17 bernama Luster. Ia melambangkan ketangkasan, rasa ingin tahu, dan kegigihan tunas muda dalam menjelajah serta belajar di era kemajuan peradaban. Lewat Luster, bersama kita menyalurkan imajinasi, menumbuhkan ekspresi, dan menginspirasi setiap pramuka muda untuk aktif, cerdas, serta berani menghadapi tantangan di era perkembangan peradaban.
-  </p>
-</section>
-
-<!-- EVENT NON LOMBA -->
-<section class="section">
-  <h2>Event Non Lomba</h2>
-
-  <div class="nonlomba-grid reveal">
-
-    <div class="nonlomba-card bg-first">
-      <h3>First Journey</h3>
-      <p>Upacara pembukaan sebagai awal petualangan 17ᵗʰ Galang Ceria.</p>
-    </div>
-
-    <div class="nonlomba-card bg-feast">
-      <h3>Wonderful Feast</h3>
-      <p>Pesta penyambutan peserta 17ᵗʰ Galang Ceria dengan sorotan lampu dan musik meriah.</p>
-    </div>
-
-    <div class="nonlomba-card bg-night">
-      <h3>Glorious Night</h3>
-      <p>Malam refleksi untuk meresapi makna Trisatya dan Dasa Dharma.</p>
-    </div>
-
-    <div class="nonlomba-card bg-anjang">
-      <h3>Anjangsana</h3>
-      <p>Peserta dan panitia saling berkenalan dan bertukar pesan kesan.</p>
-    </div>
-
-    <div class="nonlomba-card bg-last">
-      <h3>Last Journey</h3>
-      <p>Upacara penutupan sekaligus pemberian apresiasi bagi para juara.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- LOMBA KATEGORI REGU -->
-<section class="section">
-  <h2>Lomba Kategori Regu</h2>
-
-  <div class="regu-grid reveal">
-
-    <div class="regu-card">
-      <img src="REACTION.png" alt="Reaction Logo">
-      <h3>REACTION</h3>
-      <p>
-        REACTION merupakan salah satu perlombaan dalam 17th Galang Ceria.
-        Perlombaan yang menantang peserta untuk mengolah limbah menjadi
-        barang terapan dan bernilai guna.
-      </p>
-    </div>
-
-    <div class="regu-card">
-      <img src="STRING.png" alt="String Logo">
-      <h3>STRING</h3>
-      <p>
-        STRING merupakan salah satu perlombaan dalam 17th Galang Ceria,
-        perlombaan yang menguji keterampilan peserta dalam membuat
-        miniatur burung cendrawasih menggunakan stik dan tali dengan
-        simpul dan ikatan.
-      </p>
-    </div>
-
-    <div class="regu-card">
-      <img src="COVER.png" alt="Cover Logo">
-      <h3>COVER</h3>
-      <p>
-        COVER merupakan salah satu perlombaan dalam 17th Galang Ceria,
-        perlombaan yang mengajak peserta menyusuri rute tertentu
-        dengan berbagai tantangan di setiap posnya.
-      </p>
-    </div>
-
-    <div class="regu-card">
-      <img src="SILENT.png" alt="Silent Logo">
-      <h3>SILENT</h3>
-      <p>
-        SILENT merupakan salah satu perlombaan dalam 17th Galang Ceria,
-        perlombaan yang menguji pengetahuan dan kecerdasan peserta
-        dalam bidang kepramukaan.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- LOMBA KATEGORI PANGKALAN -->
-<section class="section">
-  <h2>Lomba Kategori Pangkalan</h2>
-
-  <div class="pangkalan-grid reveal">
-
-    <div class="pangkalan-card">
-      <img src="ICON.png" alt="ICON" class="pangkalan-logo">
-      <h3>ICON</h3>
-      <p>
-        ICON merupakan salah satu perlombaan dalam 17th Galang Ceria,
-        perlombaan yang menampilkan perpaduan gerakan semaphore
-        dengan tarian nusantara.
-      </p>
-    </div>
-
-    <div class="pangkalan-card">
-      <img src="FAMOUS.png" alt="FAMOUS" class="pangkalan-logo">
-      <h3>FAMOUS</h3>
-      <p>
-        FAMOUS merupakan salah satu perlombaan dalam 17th Galang Ceria,
-        perlombaan yang mempertandingkan kreativitas dan kekompakan tim
-        dalam menampilkan yel-yel.
-      </p>
-    </div>
-
-    <div class="pangkalan-card">
-      <img src="MIRACLE.png" alt="MIRACLE" class="pangkalan-logo">
-      <h3>MIRACLE</h3>
-      <p>
-        MIRACLE merupakan salah satu lomba dalam 17th Galang Ceria,
-        perlombaan yang menampilkan keterampilan baris berbaris
-        yang dikombinasikan dengan unsur kreativitas.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- JUARA -->
-<section class="section juara-section">
-  <h2>JUARA</h2>
-
-  <div class="juara-grid reveal">
-
-    <div class="juara-card">
-      <div class="juara-icon">
-        
+      <div class="wrapper">
+        <h2 data-lang="daftar">PENDAFTAR MBI BIG FAIR XVI</h2>
+        <div class="container2">
+          <div class="box">
+            <h3>+2,000</h3>
+          </div>
+        </div>
       </div>
-      <h3>Juara Umum</h3>
-      <p>
-        Mendapatkan Piala Kwartir Nasional Gerakan Pramuka,
-        Piagam Kwartir Nasional Gerakan Pramuka,
-        dan Uang Pembinaan.
-      </p>
+
+      <p class="te">.</p>
     </div>
 
-    <div class="juara-card">
-      <div class="juara-icon">
-        
+    <div class="section black">
+      <h1 class="text0" data-lang="timeline">Timeline</h1>
+
+      <div class="timeline">
+        <div class="event">
+          <div class="date">1 Desember 2025</div>
+          <div class="circle">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="label" data-lang="dibuka">Pendaftaran Dibuka</div>
+        </div>
+
+        <div class="event">
+          <div class="date">4 April 2026</div>
+          <div class="circle">
+            <i class="fa-solid fa-calendar-xmark"></i>
+          </div>
+          <div class="label" data-lang="ditutup">Pendaftaran Ditutup</div>
+        </div>
+
+        <div class="event">
+          <div class="date">5 April 2026</div>
+          <div class="circle">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <div class="label" data-lang="meeting">Technical Meeting</div>
+        </div>
+
+        <div class="event">
+          <div class="date">17 April 2026</div>
+          <div class="circle">
+            <i class="fa-solid fa-map-pin"></i>
+          </div>
+          <div class="label" data-lang="acara1">Pembukaan Acara</div>
+        </div>
+
+        <div class="event">
+          <div class="date">22 April 2026</div>
+          <div class="circle">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <div class="label" data-lang="acara2">Penutupan Acara</div>
+        </div>
       </div>
-      <h3>Juara Favorite</h3>
-      <p>
-        Mendapatkan Piala Kwartir Daerah Gerakan Pramuka,
-        Piagam Kwartir Daerah Gerakan Pramuka,
-        dan Uang Pembinaan.
-      </p>
-    </div>
-
-    <div class="juara-card">
-      <div class="juara-icon">
-        
+      <div class="text3">
+        <h1 data-lang="pr">PRIZE POOL</h1>
       </div>
-      <h3>The Most Enthusiastic</h3>
-      <p>
-        Mendapatkan Piala Kementrian Pemuda dan Olahraga,
-        Piagam Kementrian Pemuda dan Olahraga,
-        dan Uang Pembinaan.
-      </p>
-    </div>
 
-    <div class="juara-card">
-      <div class="juara-icon">
-        
+      <div class="main-container">
+        <div class="header">
+          <i class="fas fa-trophy trophy-icon"></i>
+          <h1 class="event-title" data-lang="compe">COMPETITIONS</h1>
+        </div>
+
+        <div class="prizepools-carousel-container">
+          <div id="prizepools-wrapper" class="prizepools-wrapper">
+            <div class="prizepool-container" id="event-0">
+              <h2 class="category-title" data-lang="olim">OLYMPIC</h2>
+              <div class="prize-card">
+                <i class="fas fa-ribbon ribbon-icon"></i>
+                <p id="rank-text-0" class="rank-text">Memuat...</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
+                <p id="prize-amount-0" class="prize-amount">Memuat...</p>
+                <div class="navigation-arrows">
+                  <button class="nav-btn prev-btn" data-event-id="0">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nav-btn next-btn" data-event-id="0">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prizepool-container" id="event-1">
+              <h2 class="category-title" data-lang="eng">ENGLISH</h2>
+              <div class="prize-card">
+                <i class="fas fa-ribbon ribbon-icon"></i>
+                <p id="rank-text-1" class="rank-text">Memuat...</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
+                <p id="prize-amount-1" class="prize-amount">Memuat...</p>
+                <div class="navigation-arrows">
+                  <button class="nav-btn prev-btn" data-event-id="1">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nav-btn next-btn" data-event-id="1">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prizepool-container" id="event-2">
+              <h2 class="category-title" data-lang="arab">ARABIC</h2>
+              <div class="prize-card">
+                <i class="fas fa-ribbon ribbon-icon"></i>
+                <p id="rank-text-2" class="rank-text">Memuat...</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
+                <p id="prize-amount-2" class="prize-amount">Memuat...</p>
+                <div class="navigation-arrows">
+                  <button class="nav-btn prev-btn" data-event-id="2">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nav-btn next-btn" data-event-id="2">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prizepool-container" id="event-3">
+              <h2 class="category-title" data-lang="sp">SPECIAL</h2>
+              <div class="prize-card">
+                <i class="fas fa-ribbon ribbon-icon"></i>
+                <p id="rank-text-3" class="rank-text">Memuat...</p>
+                <p class="up-to-text" data-lang="upto">UP TO:</p>
+                <p id="prize-amount-3" class="prize-amount">Memuat...</p>
+                <div class="navigation-arrows">
+                  <button class="nav-btn prev-btn" data-event-id="3">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nav-btn next-btn" data-event-id="3">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3>Juara Mata Lomba</h3>
-      <p>
-        Mendapatkan Piala dan Piagam.
-      </p>
+
+      <section class="media-partners">
+        <h2 class="media-title">Our Media Partners</h2>
+
+       <div class="media-random">
+  <img src="med1.png" />
+  <img src="med2.png" />
+  <img src="med3.png" />
+  <img src="med4.png" />
+  <img src="med5.png" />
+
+  <img src="med6.png" />
+  <img src="med7.png" />
+  <img src="med8.png" />
+  <img src="med9.png" />
+  <img src="med10.png" />
+
+  <img src="med11.png" />
+  <img src="med12.png" />
+  <img src="med13.png" />
+  <img src="med14.png" />
+  <img src="med15.png" />
+
+  <img src="med16.png" />
+  <img src="med17.png" />
+  <img src="med18.png" />
+  <img src="med19.png" />
+  <img src="med20.png" />
+
+  <img src="med21.png" />
+  <img src="med22.png" />
+  <img src="med23.png" />
+  <img src="med24.png" />
+  <img src="med25.png" />
+</div>
+
+      </section>
+    </div>
+    <img src="tunjuk.png" class="btn-gambar" onclick="location.href='competitions.html'">
+
+
+  </body>
+  <script src="animation.js"></script>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <img src="mbf17.png" alt="Logo MBF" class="footer-logo" />
+        <h2>MBF 17</h2>
+
+        <p class="footer-text">
+          © 2025 MBF 17 · MBI Amanatul Ummah <br />
+          Created by IT Team of MBF 17 · All rights reserved
+        </p>
+      </div>
+
+      <!-- KONTAK -->
+      <div class="footer-section">
+        <h3>Kontak</h3>
+
+        <a href="https://wa.me/6281234567890" class="footer-contact">
+          <img
+            src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png"
+            class="icon-img"
+          />
+          +62 821-4161-9032 (Luky)
+        </a>
+
+        <a href="https://wa.me/628987654321" class="footer-contact">
+          <img
+            src="ChatGPT Image Nov 29, 2025, 05_19_53 AM.png"
+            class="icon-img"
+          />
+          +62 819-1932-7044 (Lucy)
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/u/0/?ogbl#inbox"
+          class="footer-contact"
+        >
+          <img
+            src="Screenshot 2025-11-29 055702.png"
+            class="icon-imgemail"
+          />mbibigfairevent@gmail.com</a
+        >
+      </div>
+
+      <!-- SOSIAL MEDIA -->
+      <div class="footer-section">
+        <h3>Sosial Media</h3>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mbibigfair_/" class="social-btn">
+            <img
+              src="ChatGPT Image Nov 29, 2025, 05_23_23 AM.png"
+              class="social-img"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/@MBIBigFair" class="social-btnyt">
+            <img
+              src="ChatGPT Image Nov 29, 2025, 05_27_48 AM.png"
+              class="social-imgyt"
+            />
+          </a>
+
+          <a href="https://mbi-amanatulummah.sch.id/" class="social-btnmbi">
+            <img src="91423835715.png" class="social-imgmbi" />
+          </a>
+        </div>
+      </div>
     </div>
 
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<section class="section">
-  <h2>Countdown Hari H</h2>
-  <div id="countdown" class="reveal">
-    <div class="box"><span id="day">0</span><p>Hari</p></div>
-    <div class="box"><span id="hour">0</span><p>Jam</p></div>
-    <div class="box"><span id="minute">0</span><p>Menit</p></div>
-    <div class="box"><span id="second">0</span><p>Detik</p></div>
-  </div>
-</section>
-
-<!-- CURSOR GLOW -->
-<div class="cursor-glow"></div>
-
-<script src="script.js"></script>
-</body>
+    <div class="footer-bottom">© 2025 MBF 17. All Rights Reserved.</div>
+  </footer>
 </html>
-<section class="section link-section">
-  <h2>Informasi Penting</h2>
-
-  <div class="info-box-wrapper">
-
-    <!-- TWIBBON -->
-    <a href="https://www.twibbonize.com/twibbon17thgalangceria#google_vignette" target="_blank" class="info-box twibbon">
-      <div class="info-icon"></div>
-      <h3>Twibbon Resmi</h3>
-      <p>Gunakan twibbon resmi Galang Ceria Ke-17</p>
-      <span>Klik untuk menggunakan</span>
-    </a>
-
-    <!-- MAPS -->
-    <a href="https://www.google.com/maps/place/MBI+Amanatul+Ummah/@-7.6532222,112.5562933,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7877101328bf87:0x8b314fdc5bf8f7a8!8m2!3d-7.6532222!4d112.5588682!16s%2Fg%2F11b6y3dpnf?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
-       target="_blank"
-       class="info-box maps">
-      <div class="info-icon"></div>
-      <h3>Lokasi Kegiatan</h3>
-      <p>MBI Amanatul Ummah, Pacet – Mojokerto</p>
-      <span>Buka Google Maps</span>
-    </a>
-
-  </div>
-</section>
