@@ -419,19 +419,19 @@ body {
 
 /* BACKGROUND PER EVENT */
 .bg-first::before {
-  background-image: url("upacara\ pembukaan.jpeg");
+  background-image: url("upacara pembukaan.jpeg");
 }
 .bg-feast::before {
-  background-image: url("pesta\ 1.jpeg");
+  background-image: url("pesta 1.jpeg");
 }
 .bg-night::before {
-  background-image: url("dasa\ darma.jpeg");
+  background-image: url("fotogacerweb2.jpg");
 }
 .bg-anjang::before {
-  background-image: url("acara\ lkbb.jpeg");
+  background-image: url("fotogacerwen.jpg");
 }
 .bg-last::before {
-  background-image: url("akhir.jpg");
+  background-image: url("fotogacerweb3.jpg");
 }
 
 /* MOBILE */
