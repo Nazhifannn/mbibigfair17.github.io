@@ -114,10 +114,10 @@
   transform: translateY(10px);
 }
 .card-b img {
-  width: 275px;
-  height: 275px;
-  left: 10px;
-  
+  width: 170px;
+  height: 250px;
+  left: 60px;
+  transform: translateY(-25px);
 }
 /* === KELOMPOK KATEGORI === */
 .categories {
