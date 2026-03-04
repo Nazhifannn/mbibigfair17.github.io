@@ -2012,7 +2012,13 @@ html {
     margin-bottom: 200px; /* ruang besar untuk maskot */
     text-align: center;
   }
-
+  .card-b img {
+  width: 120px;
+  height: 200px;
+  left: 55px;
+  transform: translateY(-25px);
+  z-index: -999;
+}
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
     font-size: 0.65rem;
@@ -2491,6 +2497,13 @@ html {
     margin-bottom: 200px; /* ruang besar untuk maskot */
     text-align: center;
   }
+    .card-b img {
+  width: 120px;
+  height: 200px;
+  left: 55px;
+  transform: translateY(-25px);
+  z-index: -999;
+}
 
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
@@ -2972,6 +2985,13 @@ html {
     margin-bottom: 200px; /* ruang besar untuk maskot */
     text-align: center;
   }
+      .card-b img {
+  width: 120px;
+  height: 200px;
+  left: 55px;
+  transform: translateY(-25px);
+  z-index: -999;
+}
 
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
@@ -3448,6 +3468,13 @@ html {
     margin-bottom: 200px; /* ruang besar untuk maskot */
     text-align: center;
   }
+        .card-b img {
+  width: 100px;
+  height: 150px;
+  left: 40px;
+  transform: translateY(-5px);
+  z-index: -999;
+}
 
   /* === TOMBOL DI BAWAH === */
   .card-b a.btn-more {
