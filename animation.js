@@ -85,7 +85,7 @@ const translations = {
     mid: "LOGO",
     right: "LUCY",
     mbf: "WHAT IS MBF?",
-    mbft: `The Sweet Seventeenth MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, Pacet, Mojokerto. Entering its 17th year, the MBI Big Fair continues its tradition as a prestigious competition platform featuring various competitions and a series of inspiring events. This event is even more lively with the presence of creative, innovative, and extraordinary works from MBI students, making MBF a stage for the expression of talent, imagination, and achievement.`,
+    mbft: `The Sweet Seventeenth MBI Big Fair (MBF) is an annual event organized by MBI Amanatul Ummah, Pacet, Mojokerto. Entering its 17ᵗʰ year, the MBI Big Fair continues its tradition as a prestigious competition platform featuring various competitions and a series of inspiring events. This event is even more lively with the presence of creative, innovative, and extraordinary works from MBI students, making MBF a stage for the expression of talent, imagination, and achievement.`,
     galcer: "WHAT IS GALANG CERIA",
     galcert: `Galang Ceria (Gebyar Penggalang Cerdas, Terampil, dan Atraktif) is an annual Scouting competition organized by the Nurul Ummah Scout Movement (Ambalan Nurul Ummah) in Pacet, Mojokerto. Over the past 16 years, Galang Ceria has consistently provided a variety of engaging experiences for its participants.`,
     home:`Home`,
