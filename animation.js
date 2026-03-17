@@ -1,3 +1,6 @@
+function closePromo(){
+  document.getElementById("promoPopup").style.display = "none";
+}
 window.addEventListener("scroll", reveal);
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
