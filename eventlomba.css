@@ -32,6 +32,12 @@ html {
 .white {
   background-color: #e6e6fa;
 }
+.info-grid a,
+.facility-section a {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .back-box {
   position: fixed;
   top: 700px;
@@ -1339,46 +1345,93 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.section-title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-  margin-top: 100px;
-}
+/* SECTION BASE */
+  .info-section {
+    padding: 50px 16px;
+    border-radius: 12px;
+  }
 
-  /* === FACILITY SECTION === */
-  .facility-section {
-    margin-top: 20px;
+  .section-title {
+    font-size: 22px;
+    margin-top: 60px;
+    letter-spacing: 0.5px;
+  }
+
+  /* INFO GRID */
+  .info-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    gap: 20px;
+    margin: 40px auto 50px auto;
     padding: 0 10px;
   }
 
+  .info-box,
+  .info-box-contact {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  .info-icon,
+  .info-icon-contact {
+    font-size: 36px;
+  }
+
+  .info-box h3,
+  .info-box-contact h3 {
+    font-size: 18px;
+  }
+
+  .info-box p,
+  .info-box-contact p {
+    font-size: 14px;
+  }
+
+  /* BUTTON NORMAL */
+  .info-btn,
+  .info-btn-jj,
+  .info-btn-tw,
+  .info-btn-contact {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  /* BUTTON REGISTER BESAR */
+  .info-btn-register {
+    font-size: 18px;
+    padding: 24px 20px;
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+  }
+
+  /* FACILITY */
   .facility-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 300px;
+    gap: 24px;
+    padding: 0 10px;
   }
 
   .facility-box {
-    padding: 24px 18px;
-    border-radius: 14px;
+    padding: 28px 20px;
+    border-radius: 12px;
   }
 
   .facility-box h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
+    font-size: 20px;
   }
 
-  .facility-box ul li,
-  .facility-box .note {
+  .facility-box ul li {
     font-size: 14px;
   }
 
   .facility-box .date {
     font-size: 16px;
   }
-  .info-btn-register {
+
+  .facility-box .note {
+    font-size: 14px;
+  }
+.info-btn-register {
   display: inline-block;
   background: #886eaf;
   color: #ffffff;
@@ -1390,7 +1443,6 @@ body {
   margin-top: 50px;
   font-size: 25px;
 }
-
   /* === LOCATION === */
   .location {
     padding: 80px 12px;
@@ -1970,37 +2022,81 @@ body {
   margin-top: 100px;
 }
 
-  /* === FACILITY SECTION === */
-  .facility-section {
-    margin-top: 20px;
+ /* INFO GRID */
+  .info-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    gap: 20px;
+    margin: 40px auto 50px auto;
     padding: 0 10px;
   }
 
+  .info-box,
+  .info-box-contact {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  .info-icon,
+  .info-icon-contact {
+    font-size: 36px;
+  }
+
+  .info-box h3,
+  .info-box-contact h3 {
+    font-size: 18px;
+  }
+
+  .info-box p,
+  .info-box-contact p {
+    font-size: 14px;
+  }
+
+  /* BUTTON NORMAL */
+  .info-btn,
+  .info-btn-jj,
+  .info-btn-tw,
+  .info-btn-contact {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  /* BUTTON REGISTER BESAR */
+  .info-btn-register {
+    font-size: 18px;
+    padding: 24px 20px;
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+  }
+
+  /* FACILITY */
   .facility-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 300px;
+    gap: 24px;
+    padding: 0 10px;
   }
 
   .facility-box {
-    padding: 24px 18px;
-    border-radius: 14px;
+    padding: 28px 20px;
+    border-radius: 12px;
   }
 
   .facility-box h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
+    font-size: 20px;
   }
 
-  .facility-box ul li,
-  .facility-box .note {
+  .facility-box ul li {
     font-size: 14px;
   }
 
   .facility-box .date {
     font-size: 16px;
   }
-  .info-btn-register {
+
+  .facility-box .note {
+    font-size: 14px;
+  }
+.info-btn-register {
   display: inline-block;
   background: #886eaf;
   color: #ffffff;
@@ -2574,37 +2670,28 @@ body {
   margin-top: 100px;
 }
 
-  /* === FACILITY SECTION === */
-  .facility-section {
-    margin-top: 20px;
-    padding: 0 10px;
-  }
+  h2[data-lang="allinfo"] {
+  font-size: 35px;
+}
 
-  .facility-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 300px;
-  }
+.facility-section {
+  margin-top: 40px;
+  margin-left: -20px;
+}
+.facility-box ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
 
-  .facility-box {
-    padding: 24px 18px;
-    border-radius: 14px;
-  }
-
-  .facility-box h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .facility-box ul li,
-  .facility-box .note {
-    font-size: 14px;
-  }
-
-  .facility-box .date {
-    font-size: 16px;
-  }
-  .info-btn-register {
+.facility-box ul li {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #000000;
+  text-align: left;
+}
+.info-btn-register {
   display: inline-block;
   background: #886eaf;
   color: #ffffff;
@@ -2616,7 +2703,6 @@ body {
   margin-top: 50px;
   font-size: 25px;
 }
-
   /* === LOCATION === */
   .location {
     padding: 80px 12px;
@@ -3294,37 +3380,24 @@ body {
   margin-top: 100px;
 }
 
-  /* === FACILITY SECTION === */
   .facility-section {
-    margin-top: 20px;
-    padding: 0 10px;
-  }
+  margin-top: 40px;
+  margin-left: -40px;
+}
+.facility-box ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
 
-  .facility-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 300px;
-  }
-
-  .facility-box {
-    padding: 24px 18px;
-    border-radius: 14px;
-  }
-
-  .facility-box h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .facility-box ul li,
-  .facility-box .note {
-    font-size: 14px;
-  }
-
-  .facility-box .date {
-    font-size: 16px;
-  }
-  .info-btn-register {
+.facility-box ul li {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #000000;
+  text-align: left;
+}
+.info-btn-register {
   display: inline-block;
   background: #886eaf;
   color: #ffffff;
@@ -3336,7 +3409,6 @@ body {
   margin-top: 50px;
   font-size: 25px;
 }
-
   /* === LOCATION === */
   .location {
     padding: 80px 12px;
