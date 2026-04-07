@@ -32,12 +32,7 @@ html {
 .white {
   background-color: #e6e6fa;
 }
-.info-grid a,
-.facility-section a {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+
 .back-box {
   position: fixed;
   top: 700px;
