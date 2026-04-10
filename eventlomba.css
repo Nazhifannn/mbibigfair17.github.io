@@ -32,6 +32,11 @@ html {
 .white {
   background-color: #e6e6fa;
 }
+.disabled {
+  pointer-events: none;   /* biar nggak bisa diklik */
+  opacity: 0.5;           /* efek redup */
+  cursor: not-allowed;    /* cursor dilarang */
+}
 
 .back-box {
   position: fixed;
