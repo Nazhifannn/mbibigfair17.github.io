@@ -50,7 +50,7 @@ const translations = {
     f8: "✅ Jajanan Dan Sejenisnya",
     regis: "📅 Pembukaan Pendaftaran",
     regis2: "01 Desember 2025 - 15 April 2026",
-    regisbb:`07 April 2026 - 15 April 2026`,
+    regisbb:`07 April 2026 - 20 April 2026`,
     regis3: "Daftar Secepatnya Sebelum Pendaftaran Ditutup  !",
     regis4: "Daftar Sekarang !",
 
@@ -104,7 +104,7 @@ const translations = {
     f8: "✅ Snack And Beverage",
     regis: "📅 Open Registation",
     regis2: "01 Desember 2025 - 15 April 2026",
-    regisbb:`07 April 2026 - 15 April 2026`,
+    regisbb:`07 April 2026 - 20 April 2026`,
     regis3: "Register immediately, before registration closes  !",
     regis4: "Register Now !",
   }
