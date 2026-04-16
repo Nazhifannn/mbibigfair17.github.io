@@ -67,11 +67,10 @@ html {
 .white {
   background-color: #e6e6fa;
 }
-.info-grid a,
-.facility-section a {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+.disabled {
+  pointer-events: none;   /* biar nggak bisa diklik */
+  opacity: 0.5;           /* efek redup */
+  cursor: not-allowed;    /* cursor dilarang */
 }
 
 /* ===== Navbar ===== */
