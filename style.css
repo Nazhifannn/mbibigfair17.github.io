@@ -26,6 +26,20 @@
   pointer-events: auto;
 }
 
+.btn-gambar2 {
+  width: 200px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: .2s;
+  top: 400px;
+}
+
+.btn-gambar2:hover {
+  transform: scale(1);
+}
 
 
 
@@ -93,8 +107,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:30px;
 }
 
 .promo-desc{
@@ -110,7 +124,7 @@ html {
 }
 
 .promo-img{
-  width:200px;
+  width:300px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
@@ -137,6 +151,9 @@ html {
   color:rgb(255, 0, 0);
   cursor:pointer;
 }
+
+
+
 
 .section {
   min-height: 150vh; /* tiap section setidaknya setinggi layar */
@@ -1424,8 +1441,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .promo-desc{
@@ -1554,7 +1571,7 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
+  font-size:20px;
   margin-bottom:5px;
 }
 
@@ -1665,8 +1682,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .promo-desc{
@@ -1721,6 +1738,16 @@ html {
   z-index: 9999;
   transition: .2s;
   top: 500px;
+}
+  .btn-gambar2 {
+  width: 150px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: .2s;
+  top: 400px;
 }
     /* Maskot */
   .logo img {
@@ -1943,6 +1970,16 @@ html {
   opacity: 1;
   pointer-events: auto;
 }
+  .btn-gambar2 {
+  width: 125px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 9999;
+  transition: .2s;
+  top: 450px;
+}
 /* BACKGROUND POPUP */
 .promo-popup{
   position:fixed;
@@ -1970,8 +2007,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .promo-desc{
@@ -1987,7 +2024,7 @@ html {
 }
 
 .promo-img{
-  width:125px;
+  width:200px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
@@ -2451,6 +2488,16 @@ html {
   pointer-events: auto;
 }
  
+  .btn-gambar2 {
+  width: 125px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 9999;
+  transition: .2s;
+  top: 450px;
+}
 /* BACKGROUND POPUP */
 .promo-popup{
   position:fixed;
@@ -2478,8 +2525,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .promo-desc{
@@ -2495,7 +2542,7 @@ html {
 }
 
 .promo-img{
-  width:125px;
+  width:200px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
@@ -2942,6 +2989,26 @@ html {
 .show {
   opacity: 1;
   pointer-events: auto;
+}  .btn-gambar2 {
+  width: 125px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: .2s;
+  top: 500px;
+}
+
+  .btn-gambar2 {
+  width: 100px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 9999;
+  transition: .2s;
+  top: 475px;
 }
   /* BACKGROUND POPUP */
 .promo-popup{
@@ -2970,8 +3037,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:20px;
 }
 
 .promo-desc{
@@ -2987,7 +3054,7 @@ html {
 }
 
 .promo-img{
-  width:120px;
+  width:175px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
@@ -3062,6 +3129,16 @@ html {
   opacity: 1;
   pointer-events: auto;
 }
+  .btn-gambar2 {
+  width: 100px;     /* ukuran gambar tombol */
+  cursor: pointer; /* jadi tangan saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 9999;
+  transition: .2s;
+  top: 475px;
+}
   /* BACKGROUND POPUP */
 .promo-popup{
   position:fixed;
@@ -3089,8 +3166,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:20px;
 }
 
 .promo-desc{
@@ -3106,7 +3183,7 @@ html {
 }
 
 .promo-img{
-  width:115px;
+  width:150px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
@@ -3448,8 +3525,8 @@ html {
 
 /* TITLE */
 .promo-title{
-  font-size:28px;
-  margin-bottom:5px;
+  font-size:20px;
+  margin-bottom:20px;
 }
 
 .promo-desc{
@@ -3465,7 +3542,7 @@ html {
 }
 
 .promo-img{
-  width:90px;
+  width:150px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
